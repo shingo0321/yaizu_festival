@@ -150,6 +150,11 @@ section.panel.active { display: block; }
   border-top-style: dashed;
 }
 
+.legend-swatch.excel {
+  border-top-color: #1a73e8;
+  border-top-style: solid;
+}
+
 .route-image {
   margin-top: 16px;
   border-top: 1px solid #eee;
