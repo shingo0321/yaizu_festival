@@ -38,15 +38,15 @@ function renderMikoshiRoute() {
   const destination = rest[rest.length - 1];
   const waypoints = rest.slice(0, -1);
 
-  const daddr = [...waypoints, destination].map(encodeURIComponent).join("+to:");
-  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin)}&daddr=${daddr}&output=embed`;
+  const daddr = [...waypoints, destination].map((p) => encodeURIComponent(p.query)).join("+to:");
+  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin.query)}&daddr=${daddr}&output=embed`;
 
   container.innerHTML = `
     <div class="venue-card">
       <h2>${route.title}</h2>
       <iframe class="map-embed" src="${mapSrc}" loading="lazy" allowfullscreen></iframe>
       <ul class="access-list">
-        ${route.points.map((p) => `<li>${p}</li>`).join("")}
+        ${route.points.map((p) => `<li>${p.label}</li>`).join("")}
       </ul>
       <ul class="access-list">
         ${route.notes.map((line) => `<li>${line}</li>`).join("")}

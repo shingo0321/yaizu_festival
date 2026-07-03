@@ -13,7 +13,7 @@
 ## 1. 内容の差し替え
 
 [data.js](data.js) 内の `TODO:` と書かれた箇所を、実際のタイトル・日程・神輿の経路情報に書き換える。
-`mikoshiRoute.points` は出発地から到着地まで経由順に地名・住所を並べる（先頭が出発地、末尾が到着地）。
+`mikoshiRoute.points` は `{ label, query }` の配列。`label` は画面に表示する地点名、`query` はGoogleマップでの検索文字列（住所名 or 緯度経度）。緯度経度はGoogleマップでピンを開き、URLの `@緯度,経度` 部分から取得できる。先頭が出発地、末尾が到着地。
 HTMLやCSSは触らずに済む構成になっている。
 
 ## 2. LINE Developersでの準備（LIFFとして開く場合）
