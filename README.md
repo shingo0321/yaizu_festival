@@ -13,7 +13,7 @@
 ## 1. 内容の差し替え
 
 [data.js](data.js) 内の `TODO:` と書かれた箇所を、実際のタイトル・日程情報に書き換える。
-`mapPins.points` は `{ label, lat, lng }` の配列。地図のピンを立てる（[Leaflet](https://leafletjs.com/) + OpenStreetMapを使用、APIキー不要）。緯度経度はGoogleマップでピンを開き、URLの `@緯度,経度` 部分から取得できる。
+`mapPins.points` は `{ label, lat, lng, mapUrl }` の配列。地図のピンを立てる（[Leaflet](https://leafletjs.com/) + OpenStreetMapを使用、APIキー不要）。緯度経度はGoogleマップでピンを開き、URLの `@緯度,経度` 部分から取得できる。`mapUrl`（任意）にGoogleマップの共有リンクを入れると、ポップアップと一覧に「Googleマップで見る」リンクが表示される。
 `mapPins.excelRouteLine` は上記地点を徒歩で結んだ実際の道なりルート（[OSRM](https://project-osrm.org/) の公開デモサーバーで取得した座標列を直接埋め込み済み）。地点を変更した場合は座標列も再取得が必要。OSRMの公開デモサーバーは本番の大規模利用を想定していないため、小規模利用の前提で使用している。
 `mapPins.officialRouteImage` は地図の下に表示する参考画像（焼津神社公式サイトの神輿渡御順路図を直接参照）。年によって画像URLが変わるため、更新時は焼津神社公式サイトで最新の画像URLを確認する。
 HTMLやCSSは触らずに済む構成になっている。

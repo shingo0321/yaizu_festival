@@ -64,7 +64,13 @@ function renderMapPins() {
           : ""
       }
       <ul class="access-list">
-        ${data.points.map((p) => `<li>${p.label}</li>`).join("")}
+        ${data.points
+          .map((p) =>
+            p.mapUrl
+              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
+              : `<li>${p.label}</li>`
+          )
+          .join("")}
       </ul>
     </div>
   `;
@@ -75,7 +81,12 @@ function renderMapPins() {
     maxZoom: 19
   }).addTo(map);
 
-  const markers = data.points.map((p) => L.marker([p.lat, p.lng]).addTo(map).bindPopup(p.label));
+  const markers = data.points.map((p) => {
+    const popupHtml = p.mapUrl
+      ? `${p.label}<br /><a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>`
+      : p.label;
+    return L.marker([p.lat, p.lng]).addTo(map).bindPopup(popupHtml);
+  });
   const lines = [];
 
   if (data.excelRouteLine) {
