@@ -10,8 +10,7 @@ function renderSchedule() {
     .map(
       (day) => `
         <div class="day-block">
-          <h2>${day.day}</h2>
-          <div class="date">${day.date}</div>
+          <h2>${day.date}</h2>
           ${day.items
             .map(
               (item) => `

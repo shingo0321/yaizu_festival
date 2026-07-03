@@ -8,7 +8,6 @@ const FESTIVAL_DATA = {
   // 焼津祭_2026.xlsx の「8月12日」「8月13日」シートをそのまま反映（本人希望により個人名・自宅名も含む）
   schedule: [
     {
-      day: "1日目",
       date: "8月12日(水)",
       items: [
         { time: "12:00", title: "丸久テント設営、ギャングスター下準備", place: "中野家" },
@@ -28,7 +27,6 @@ const FESTIVAL_DATA = {
       ]
     },
     {
-      day: "2日目",
       date: "8月13日(木)",
       items: [
         { time: "04:50", title: "裏方集合、場所準備、赤飯準備", place: "中野家" },
