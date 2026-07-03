@@ -133,10 +133,11 @@ async function setupLiffShare() {
 
 renderHero();
 renderSchedule();
-const mapPinsInstance = renderMapPins();
+// 地図タブは非表示中。再表示する場合は index.html にタブ・セクションを戻し、
+// 下記を有効化する（renderMapPins自体はそのまま残してある）。
+// const mapPinsInstance = renderMapPins();
 setupTabs((targetId) => {
-  if (targetId === "map-panel") {
-    // 非表示タブの中で初期化されるため、表示された直後にサイズを再計算する
+  if (targetId === "map-panel" && typeof mapPinsInstance !== "undefined") {
     setTimeout(() => mapPinsInstance.invalidateSize(), 0);
   }
 });
