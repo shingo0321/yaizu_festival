@@ -10,7 +10,7 @@ body {
 }
 
 header.hero {
-  background: linear-gradient(135deg, #e63946, #f77f00);
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
   color: #fff;
   padding: 40px 16px 32px;
   text-align: center;
@@ -47,8 +47,8 @@ nav.tabs button {
 }
 
 nav.tabs button.active {
-  color: #e63946;
-  border-bottom-color: #e63946;
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
   font-weight: bold;
 }
 
@@ -92,7 +92,7 @@ section.panel.active { display: block; }
 .timetable-item .time {
   flex: 0 0 56px;
   font-weight: bold;
-  color: #e63946;
+  color: #1a1a1a;
 }
 
 .timetable-item .title { font-weight: 600; white-space: pre-line; }
