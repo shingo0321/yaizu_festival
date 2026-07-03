@@ -35,11 +35,22 @@ function renderMapPins() {
   const container = document.getElementById("map-panel");
   const data = FESTIVAL_DATA.mapPins;
   const routeImg = data.officialRouteImage;
+  const routeLines = data.mikoshiRouteLines;
 
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
       <div id="leaflet-map" class="map-embed"></div>
+      ${
+        routeLines
+          ? `
+        <div class="map-legend">
+          <span><span class="legend-swatch outbound"></span>往路（神社→南→北→魚市場御旅所）</span>
+          <span><span class="legend-swatch return"></span>帰路（魚市場御旅所→神社）</span>
+        </div>
+      `
+          : ""
+      }
       <ul class="access-list">
         ${data.points.map((p) => `<li>${p.label}</li>`).join("")}
       </ul>
@@ -67,6 +78,20 @@ function renderMapPins() {
   }).addTo(map);
 
   const markers = data.points.map((p) => L.marker([p.lat, p.lng]).addTo(map).bindPopup(p.label));
+
+  if (routeLines) {
+    const toLatLngs = (pts) => pts.map((p) => [p.lat, p.lng]);
+
+    // 濃い黒＝往路
+    L.polyline(toLatLngs(routeLines.outbound), { color: "#1a1a1a", weight: 4 }).addTo(map);
+    // 薄い黒（グレー）＝帰路
+    L.polyline(toLatLngs(routeLines.return), { color: "#999999", weight: 4, dashArray: "8,8" }).addTo(map);
+
+    [...routeLines.outbound, ...routeLines.return].forEach((p) => {
+      markers.push(L.marker([p.lat, p.lng]).addTo(map).bindPopup(p.label));
+    });
+  }
+
   const group = L.featureGroup(markers);
   map.fitBounds(group.getBounds().pad(0.3));
 

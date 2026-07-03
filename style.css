@@ -122,6 +122,34 @@ section.panel.active { display: block; }
   line-height: 1.7;
 }
 
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 0;
+  border-top: 3px solid;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.legend-swatch.outbound {
+  border-top-color: #1a1a1a;
+  border-top-style: solid;
+}
+
+.legend-swatch.return {
+  border-top-color: #999999;
+  border-top-style: dashed;
+}
+
 .route-image {
   margin-top: 16px;
   border-top: 1px solid #eee;
