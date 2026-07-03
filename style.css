@@ -140,16 +140,6 @@ section.panel.active { display: block; }
   vertical-align: middle;
 }
 
-.legend-swatch.outbound {
-  border-top-color: #1a1a1a;
-  border-top-style: solid;
-}
-
-.legend-swatch.return {
-  border-top-color: #999999;
-  border-top-style: dashed;
-}
-
 .legend-swatch.excel {
   border-top-color: #1a73e8;
   border-top-style: solid;
