@@ -39,7 +39,7 @@ function renderMikoshiRoute() {
   const waypoints = rest.slice(0, -1);
 
   const daddr = [...waypoints, destination].map((p) => encodeURIComponent(p.query)).join("+to:");
-  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin.query)}&daddr=${daddr}&output=embed`;
+  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin.query)}&daddr=${daddr}&dirflg=w&output=embed`;
 
   container.innerHTML = `
     <div class="venue-card">

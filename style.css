@@ -95,7 +95,7 @@ section.panel.active { display: block; }
   color: #e63946;
 }
 
-.timetable-item .title { font-weight: 600; }
+.timetable-item .title { font-weight: 600; white-space: pre-line; }
 .timetable-item .place { color: #888; font-size: 0.85rem; }
 
 .venue-card {
