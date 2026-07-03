@@ -1,0 +1,137 @@
+:root { color-scheme: light dark; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+  background: #f7f7f8;
+  color: #1a1a1a;
+}
+
+header.hero {
+  background: linear-gradient(135deg, #e63946, #f77f00);
+  color: #fff;
+  padding: 40px 16px 32px;
+  text-align: center;
+}
+
+header.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+header.hero p {
+  margin: 4px 0;
+  opacity: 0.95;
+}
+
+nav.tabs {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+}
+
+nav.tabs button {
+  flex: 1;
+  padding: 14px 8px;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+nav.tabs button.active {
+  color: #e63946;
+  border-bottom-color: #e63946;
+  font-weight: bold;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+section.panel { display: none; }
+section.panel.active { display: block; }
+
+.day-block {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.day-block h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.day-block .date {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.timetable-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.timetable-item:first-of-type { border-top: none; }
+
+.timetable-item .time {
+  flex: 0 0 56px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.timetable-item .title { font-weight: 600; }
+.timetable-item .place { color: #888; font-size: 0.85rem; }
+
+.venue-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.venue-card h2 { margin-top: 0; font-size: 1.1rem; }
+
+.map-embed {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.access-list {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.7;
+}
+
+#share-btn {
+  display: none;
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: #06c755;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
