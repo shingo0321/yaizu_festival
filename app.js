@@ -53,16 +53,6 @@ function renderMapPins() {
       `
           : ""
       }
-      <div id="leaflet-map" class="map-embed"></div>
-      ${
-        data.excelRouteLine
-          ? `
-        <div class="map-legend">
-          <span><span class="legend-swatch excel"></span>徒歩ルート</span>
-        </div>
-      `
-          : ""
-      }
       <ul class="access-list">
         ${data.points
           .map((p) =>
@@ -74,29 +64,6 @@ function renderMapPins() {
       </ul>
     </div>
   `;
-
-  const map = L.map("leaflet-map");
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
-    maxZoom: 19
-  }).addTo(map);
-
-  const markers = data.points.map((p) => {
-    const popupHtml = p.mapUrl
-      ? `${p.label}<br /><a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>`
-      : p.label;
-    return L.marker([p.lat, p.lng]).addTo(map).bindPopup(popupHtml);
-  });
-  const lines = [];
-
-  if (data.excelRouteLine) {
-    lines.push(L.polyline(data.excelRouteLine, { color: "#1a73e8", weight: 4 }).addTo(map));
-  }
-
-  const group = L.featureGroup([...markers, ...lines]);
-  map.fitBounds(group.getBounds().pad(0.3));
-
-  return map;
 }
 
 function setupTabs(onShow) {
@@ -144,11 +111,6 @@ async function setupLiffShare() {
 
 renderHero();
 renderSchedule();
-const mapPinsInstance = renderMapPins();
-setupTabs((targetId) => {
-  if (targetId === "map-panel") {
-    // 非表示タブの中で初期化されるため、表示された直後にサイズを再計算する
-    setTimeout(() => mapPinsInstance.invalidateSize(), 0);
-  }
-});
+renderMapPins();
+setupTabs();
 setupLiffShare();
