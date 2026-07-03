@@ -39,19 +39,6 @@ function renderMapPins() {
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
-      <div id="leaflet-map" class="map-embed"></div>
-      ${
-        data.excelRouteLine
-          ? `
-        <div class="map-legend">
-          <span><span class="legend-swatch excel"></span>徒歩ルート</span>
-        </div>
-      `
-          : ""
-      }
-      <ul class="access-list">
-        ${data.points.map((p) => `<li>${p.label}</li>`).join("")}
-      </ul>
       ${
         routeImg
           ? `
@@ -66,6 +53,19 @@ function renderMapPins() {
       `
           : ""
       }
+      <div id="leaflet-map" class="map-embed"></div>
+      ${
+        data.excelRouteLine
+          ? `
+        <div class="map-legend">
+          <span><span class="legend-swatch excel"></span>徒歩ルート</span>
+        </div>
+      `
+          : ""
+      }
+      <ul class="access-list">
+        ${data.points.map((p) => `<li>${p.label}</li>`).join("")}
+      </ul>
     </div>
   `;
 
