@@ -31,31 +31,49 @@ function renderSchedule() {
     .join("");
 }
 
-function renderMikoshiRoute() {
-  const container = document.getElementById("route-panel");
-  const route = FESTIVAL_DATA.mikoshiRoute;
-  const [origin, ...rest] = route.points;
-  const destination = rest[rest.length - 1];
-  const waypoints = rest.slice(0, -1);
-
-  const daddr = [...waypoints, destination].map((p) => encodeURIComponent(p.query)).join("+to:");
-  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin.query)}&daddr=${daddr}&dirflg=w&output=embed`;
+function renderMapPins() {
+  const container = document.getElementById("map-panel");
+  const data = FESTIVAL_DATA.mapPins;
+  const routeImg = data.officialRouteImage;
 
   container.innerHTML = `
     <div class="venue-card">
-      <h2>${route.title}</h2>
-      <iframe class="map-embed" src="${mapSrc}" loading="lazy" allowfullscreen></iframe>
+      <h2>${data.title}</h2>
+      <div id="leaflet-map" class="map-embed"></div>
       <ul class="access-list">
-        ${route.points.map((p) => `<li>${p.label}</li>`).join("")}
+        ${data.points.map((p) => `<li>${p.label}</li>`).join("")}
       </ul>
-      <ul class="access-list">
-        ${route.notes.map((line) => `<li>${line}</li>`).join("")}
-      </ul>
+      ${
+        routeImg
+          ? `
+        <div class="route-image">
+          <a href="${routeImg.sourceUrl}" target="_blank" rel="noopener noreferrer">
+            <img src="${routeImg.src}" alt="${routeImg.alt}" loading="lazy" />
+          </a>
+          <p class="route-image-caption">
+            <a href="${routeImg.sourceUrl}" target="_blank" rel="noopener noreferrer">${routeImg.caption}</a>
+          </p>
+        </div>
+      `
+          : ""
+      }
     </div>
   `;
+
+  const map = L.map("leaflet-map");
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+    maxZoom: 19
+  }).addTo(map);
+
+  const markers = data.points.map((p) => L.marker([p.lat, p.lng]).addTo(map).bindPopup(p.label));
+  const group = L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.3));
+
+  return map;
 }
 
-function setupTabs() {
+function setupTabs(onShow) {
   const buttons = document.querySelectorAll("nav.tabs button");
   const panels = document.querySelectorAll("section.panel");
 
@@ -65,6 +83,7 @@ function setupTabs() {
       panels.forEach((p) => p.classList.remove("active"));
       btn.classList.add("active");
       document.getElementById(btn.dataset.target).classList.add("active");
+      if (onShow) onShow(btn.dataset.target);
     });
   });
 }
@@ -99,6 +118,11 @@ async function setupLiffShare() {
 
 renderHero();
 renderSchedule();
-renderMikoshiRoute();
-setupTabs();
+const mapPinsInstance = renderMapPins();
+setupTabs((targetId) => {
+  if (targetId === "map-panel") {
+    // 非表示タブの中で初期化されるため、表示された直後にサイズを再計算する
+    setTimeout(() => mapPinsInstance.invalidateSize(), 0);
+  }
+});
 setupLiffShare();

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>焼津祭ポータルサイト</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
@@ -16,12 +18,12 @@
 
   <nav class="tabs">
     <button class="active" data-target="schedule-panel">開催日程</button>
-    <button data-target="route-panel">神輿の経路</button>
+    <button data-target="map-panel">地図</button>
   </nav>
 
   <main>
     <section id="schedule-panel" class="panel active"></section>
-    <section id="route-panel" class="panel"></section>
+    <section id="map-panel" class="panel"></section>
     <button id="share-btn">LINEで友だちにシェア</button>
   </main>
 

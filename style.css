@@ -122,6 +122,29 @@ section.panel.active { display: block; }
   line-height: 1.7;
 }
 
+.route-image {
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.route-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.route-image-caption {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.route-image-caption a {
+  color: #888;
+}
+
 #share-btn {
   display: none;
   width: 100%;
