@@ -31,17 +31,25 @@ function renderSchedule() {
     .join("");
 }
 
-function renderVenue() {
-  const container = document.getElementById("venue-panel");
-  const venue = FESTIVAL_DATA.venue;
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(venue.address)}&output=embed`;
+function renderMikoshiRoute() {
+  const container = document.getElementById("route-panel");
+  const route = FESTIVAL_DATA.mikoshiRoute;
+  const [origin, ...rest] = route.points;
+  const destination = rest[rest.length - 1];
+  const waypoints = rest.slice(0, -1);
+
+  const daddr = [...waypoints, destination].map(encodeURIComponent).join("+to:");
+  const mapSrc = `https://www.google.com/maps?saddr=${encodeURIComponent(origin)}&daddr=${daddr}&output=embed`;
 
   container.innerHTML = `
     <div class="venue-card">
-      <h2>${venue.name}</h2>
+      <h2>${route.title}</h2>
       <iframe class="map-embed" src="${mapSrc}" loading="lazy" allowfullscreen></iframe>
       <ul class="access-list">
-        ${venue.access.map((line) => `<li>${line}</li>`).join("")}
+        ${route.points.map((p) => `<li>${p}</li>`).join("")}
+      </ul>
+      <ul class="access-list">
+        ${route.notes.map((line) => `<li>${line}</li>`).join("")}
       </ul>
     </div>
   `;
@@ -91,6 +99,6 @@ async function setupLiffShare() {
 
 renderHero();
 renderSchedule();
-renderVenue();
+renderMikoshiRoute();
 setupTabs();
 setupLiffShare();

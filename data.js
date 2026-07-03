@@ -26,13 +26,19 @@ const FESTIVAL_DATA = {
     }
   ],
 
-  venue: {
-    name: "TODO: 会場名",
-    address: "静岡県焼津市", // TODO: 実際の住所に変更（Googleマップの検索欄に入る文字列でOK）
-    access: [
-      "TODO: 電車でのアクセス（例: JR焼津駅から徒歩◯分）",
-      "TODO: 車でのアクセス・駐車場情報",
-      "TODO: バスでのアクセス"
+  mikoshiRoute: {
+    title: "TODO: 経路名（例: 神輿渡御ルート）",
+    // 出発地から到着地まで、経由順に地名・住所を入れる（2件以上）
+    points: [
+      "TODO: 出発地（例: 焼津神社）",
+      "TODO: 経由地1",
+      "TODO: 経由地2",
+      "TODO: 到着地"
+    ],
+    notes: [
+      "TODO: 出発時刻",
+      "TODO: 到着予定時刻",
+      "TODO: 交通規制などの注意事項"
     ]
   }
 };
