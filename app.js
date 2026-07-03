@@ -42,7 +42,7 @@ function renderMapPins() {
       <h2>${data.title}</h2>
       <div id="leaflet-map" class="map-embed"></div>
       <div class="map-legend">
-        ${data.excelRouteLine ? `<span><span class="legend-swatch excel"></span>地図シートの徒歩ルート</span>` : ""}
+        ${data.excelRouteLine ? `<span><span class="legend-swatch excel"></span>徒歩ルート</span>` : ""}
         ${
           routeLines
             ? `
