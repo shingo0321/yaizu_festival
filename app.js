@@ -80,36 +80,7 @@ function setupTabs(onShow) {
   });
 }
 
-async function setupLiffShare() {
-  const LIFF_ID = "2010598438-IL4pnvpt";
-  const shareBtn = document.getElementById("share-btn");
-
-  try {
-    await liff.init({ liffId: LIFF_ID });
-    if (liff.isInClient() && liff.isApiAvailable("shareTargetPicker")) {
-      shareBtn.style.display = "block";
-      shareBtn.addEventListener("click", async () => {
-        try {
-          await liff.shareTargetPicker([
-            {
-              type: "text",
-              text: `${FESTIVAL_DATA.title} ${FESTIVAL_DATA.dateRange}\n${location.href}`
-            }
-          ]);
-        } catch (err) {
-          console.error(err);
-        }
-      });
-    }
-  } catch (err) {
-    // LINE外のブラウザではLIFF初期化に失敗することがあるが、
-    // ポータルサイト自体は通常ページとして表示できるため無視する。
-    console.log("LIFF init skipped:", err.message);
-  }
-}
-
 renderHero();
 renderSchedule();
 renderMapPins();
 setupTabs();
-setupLiffShare();

@@ -134,17 +134,3 @@ section.panel.active { display: block; }
 .route-image-caption a {
   color: #888;
 }
-
-#share-btn {
-  display: none;
-  width: 100%;
-  padding: 14px;
-  margin-top: 8px;
-  background: #06c755;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
