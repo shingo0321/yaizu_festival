@@ -80,7 +80,41 @@ function setupTabs(onShow) {
   });
 }
 
+function setupSwipe() {
+  const buttons = document.querySelectorAll("nav.tabs button");
+  let startX = 0;
+  let startY = 0;
+
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.changedTouches[0].screenX;
+      startY = e.changedTouches[0].screenY;
+    },
+    { passive: true }
+  );
+
+  document.addEventListener(
+    "touchend",
+    (e) => {
+      const deltaX = e.changedTouches[0].screenX - startX;
+      const deltaY = e.changedTouches[0].screenY - startY;
+
+      if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
+
+      const currentIndex = [...buttons].findIndex((b) => b.classList.contains("active"));
+      const nextIndex = deltaX < 0 ? currentIndex + 1 : currentIndex - 1;
+
+      if (nextIndex >= 0 && nextIndex < buttons.length) {
+        buttons[nextIndex].click();
+      }
+    },
+    { passive: true }
+  );
+}
+
 renderHero();
 renderSchedule();
 renderMapPins();
 setupTabs();
+setupSwipe();
