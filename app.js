@@ -4,6 +4,13 @@ function renderHero() {
   document.getElementById("hero-date").textContent = FESTIVAL_DATA.dateRange;
 }
 
+function formatTitle(title) {
+  return title
+    .split("\n")
+    .map((line) => (line.startsWith("※") ? `<span class="note">${line}</span>` : line))
+    .join("\n");
+}
+
 function renderSchedule() {
   const container = document.getElementById("schedule-panel");
   container.innerHTML = FESTIVAL_DATA.schedule
@@ -17,7 +24,7 @@ function renderSchedule() {
                 <div class="timetable-item">
                   <div class="time">${item.time}</div>
                   <div>
-                    <div class="title">${item.title}</div>
+                    <div class="title">${formatTitle(item.title)}</div>
                     <div class="place">${item.place}</div>
                   </div>
                 </div>

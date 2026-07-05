@@ -98,6 +98,7 @@ section.panel.active { display: block; }
 
 .timetable-item .title { font-weight: 600; white-space: pre-line; }
 .timetable-item .place { color: #888; font-size: 0.85rem; }
+.timetable-item .title .note { color: #555; font-weight: normal; }
 
 .venue-card {
   background: #fff;
