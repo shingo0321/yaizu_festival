@@ -62,6 +62,19 @@ main {
 section.panel { display: none; }
 section.panel.active { display: block; }
 
+.pdf-link {
+  display: block;
+  text-align: center;
+  background: #fff;
+  color: #0f4c81;
+  border: 1px solid #0f4c81;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .day-block {
   background: #fff;
   border-radius: 12px;

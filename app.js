@@ -13,7 +13,9 @@ function formatTitle(title) {
 
 function renderSchedule() {
   const container = document.getElementById("schedule-panel");
-  container.innerHTML = FESTIVAL_DATA.schedule
+  container.innerHTML = `
+    <a class="pdf-link" href="schedule.pdf" target="_blank" rel="noopener">印刷用PDFを開く</a>
+  ` + FESTIVAL_DATA.schedule
     .map(
       (day) => `
         <div class="day-block">
