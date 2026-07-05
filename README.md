@@ -11,7 +11,8 @@
 
 ## 内容の差し替え
 
-[data.js](data.js) 内の `TODO:` と書かれた箇所を、実際のタイトル・日程情報に書き換える。
+[data.js](data.js) の `roles`・`schedule` は、Dropboxで管理している元データ（Excelファイル）の内容を反映したもの。ローカルにはExcelファイルを置かず、更新時はDropbox上のファイルを直接参照する（共有リンクは別途本人が保管、このREADMEには記載しない）。
+`TODO:` と書かれた箇所は、実際のタイトル・日程情報に書き換える。
 `mapPins.points` は `{ label, lat, lng, mapUrl }` の配列。地図タブの一覧に表示される（インタラクティブな地図表示は現在なし）。`mapUrl`（任意）にGoogleマップの共有リンクを入れると、一覧に「Googleマップで見る」リンクが表示され、タップすると実際のGoogleマップアプリ・サイトが開く。
 `mapPins.officialRouteImage` は地図タブの上部に表示する参考画像（焼津神社公式サイトの神輿渡御順路図を直接参照）。年によって画像URLが変わるため、更新時は焼津神社公式サイトで最新の画像URLを確認する。
 （`mapPins.excelRouteLine` はLeaflet地図表示用に残っているデータだが、現在は使用していない）
