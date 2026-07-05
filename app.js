@@ -65,6 +65,27 @@ function renderMapPins() {
   `;
 }
 
+function renderRoles() {
+  const container = document.getElementById("roles-panel");
+  container.innerHTML = `
+    <div class="venue-card">
+      <h2>役割</h2>
+      <ul class="roles-list">
+        ${FESTIVAL_DATA.roles
+          .map(
+            (r) => `
+              <li>
+                <div class="role-name">${r.role}</div>
+                <div class="role-people">${r.people}</div>
+              </li>
+            `
+          )
+          .join("")}
+      </ul>
+    </div>
+  `;
+}
+
 function setupTabs(onShow) {
   const buttons = document.querySelectorAll("nav.tabs button");
   const panels = document.querySelectorAll("section.panel");
@@ -116,5 +137,6 @@ function setupSwipe() {
 renderHero();
 renderSchedule();
 renderMapPins();
+renderRoles();
 setupTabs();
 setupSwipe();
