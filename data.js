@@ -106,6 +106,12 @@ const FESTIVAL_DATA = {
       [34.857807, 138.323685], [34.857724, 138.323691], [34.857724, 138.323613], [34.857724, 138.323265],
       [34.857732, 138.323053]
     ],
+    // 神輿渡御ルートの簡略図（mikoshi-route.dioから生成したSVG、ローカルに保存）
+    routeDiagram: {
+      src: "mikoshi-route.svg",
+      alt: "神輿渡御ルート簡略図（往路・帰路）",
+      caption: "神輿渡御ルート簡略図（青:往路　緑:帰路）"
+    },
     // 焼津神社公式サイトに掲載の神輿渡御順路図（地図の下に参考画像として表示）
     officialRouteImage: {
       src: "https://yaizujinja.or.jp/wp-content/uploads/2025/08/571efb92fa406a257b34aa688ce0e0c5.jpg",

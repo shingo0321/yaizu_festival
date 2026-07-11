@@ -42,11 +42,22 @@ function renderSchedule() {
 function renderMapPins() {
   const container = document.getElementById("map-panel");
   const data = FESTIVAL_DATA.mapPins;
+  const routeDiagram = data.routeDiagram;
   const routeImg = data.officialRouteImage;
 
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
+      ${
+        routeDiagram
+          ? `
+        <div class="route-image">
+          <img src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
+          <p class="route-image-caption">${routeDiagram.caption}</p>
+        </div>
+      `
+          : ""
+      }
       ${
         routeImg
           ? `
