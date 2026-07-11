@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <title>焼津祭 印刷用</title>
 <style>
-  @page { size: 297mm 210mm; margin: 10mm 12mm; }
+  @page { size: 297mm 210mm; margin: 5mm; }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -52,8 +52,9 @@
     // A4横(297x210mm)・余白10mm/12mm での1ページあたりの本文高さ(px)。
     // 96px/inch, 25.4mm/inch で換算し、印字ずれ対策の安全マージンを引く。
     const MM_TO_PX = 96 / 25.4;
-    const PAGE_CONTENT_HEIGHT_PX = (210 - 10 - 10) * MM_TO_PX - 15;
-    const CONTENT_WIDTH_PX = (297 - 12 - 12) * MM_TO_PX;
+    const PAGE_MARGIN_MM = 5;
+    const PAGE_CONTENT_HEIGHT_PX = (210 - PAGE_MARGIN_MM * 2) * MM_TO_PX - 15;
+    const CONTENT_WIDTH_PX = (297 - PAGE_MARGIN_MM * 2) * MM_TO_PX;
 
     function renderTitle(title) {
       return title

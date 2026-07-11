@@ -15,6 +15,12 @@ A static, frontend-only website (no build step, no dependencies) for 焼津祭 (
   - `mapPins.excelRouteLine` is leftover data for a previous Leaflet-based interactive map and is currently unused.
 - `app.js` — pure rendering of `data.js` content into the DOM; no interactive map logic remains.
 - `index.html` / `style.css` — structure and styling; not expected to need changes for routine content updates.
+- `gate.js` — client-side password gate shown before `data.js`/`app.js` are loaded (deters casual visitors only; the repo itself must be made private for real access control, since `data.js` remains directly fetchable from a public repo regardless of this gate).
+- `print.html` / `gen_schedule_pdf.sh` — generate the printable `schedule.pdf` from `data.js`'s `schedule` via headless Chrome. `print.html` measures actual rendered row heights to auto-paginate onto A4-landscape pages, splitting a day across pages with a `（n/total）` suffix in the heading when it doesn't fit on one page.
+
+## Rules
+
+- **After editing `data.js`'s `schedule`, regenerate the PDF**: run `./gen_schedule_pdf.sh` from this directory to keep `schedule.pdf` in sync. It has drifted out of sync before (edits to `data.js` without regenerating the PDF), so don't skip this.
 
 ## Notes
 
