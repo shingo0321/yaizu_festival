@@ -31,21 +31,60 @@ def style_dict(style):
     return d
 
 
+BR_RE = re.compile(r"(?i)<br[^>]*>")
+
+
+def process_segment(raw):
+    # A <br> is a real line break, so "text<br>" is two lines ("text", "").
+    # But a segment that's *only* br tags (one or several, e.g. the
+    # "Apple-interchange-newline" copy-paste artifact) is the idiom for a
+    # single blank filler line, not one blank line per br.
+    protected = BR_RE.sub("\x00", raw)
+    protected = re.sub(r"(?i)</?span[^>]*>", "", protected)
+    protected = re.sub(r"<[^>]+>", "", protected)
+    protected = html.unescape(protected)
+    parts = [p.strip() for p in protected.split("\x00")]
+    if len(parts) > 1 and not any(parts):
+        return [""]
+    return parts
+
+
 def html_to_lines(value):
+    # mxgraph HTML labels use one <div> per line. Text that sits outside any
+    # <div> (a "loose" run) still renders on its own line, because a bare
+    # inline run sitting between block-level <div> siblings becomes its own
+    # anonymous block box in the browser. So: every top-level <div> and every
+    # top-level loose-text run is (at least) one line, further split by <br>.
     if not value:
         return []
-    v = value
-    v = re.sub(r"(?i)<br\s*/?>", "\n", v)
-    v = re.sub(r"(?i)</div>", "\n", v)
-    v = re.sub(r"(?i)<div[^>]*>", "", v)
-    v = re.sub(r"(?i)</?span[^>]*>", "", v)
-    v = re.sub(r"<[^>]+>", "", v)
-    v = html.unescape(v)
-    lines = [ln.strip() for ln in v.split("\n")]
-    while lines and lines[0] == "":
-        lines.pop(0)
-    while lines and lines[-1] == "":
-        lines.pop()
+
+    tokens = re.split(r"(?i)(<div[^>]*>|</div>)", value)
+    lines = []
+    buf = []
+    depth = 0
+
+    def flush():
+        lines.extend(process_segment("".join(buf)))
+        buf.clear()
+
+    for tok in tokens:
+        if re.match(r"(?i)<div[^>]*>", tok):
+            if depth == 0:
+                if "".join(buf):
+                    flush()
+                else:
+                    buf.clear()
+            depth += 1
+        elif tok.lower() == "</div>":
+            depth = max(0, depth - 1)
+            if depth == 0:
+                flush()
+        else:
+            buf.append(tok)
+
+    if "".join(buf):
+        flush()
+
     return lines
 
 
