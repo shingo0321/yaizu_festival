@@ -10,25 +10,36 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1 id="hero-title"></h1>
-    <p id="hero-date"></p>
-    <p id="hero-subtitle"></p>
-  </header>
+  <div id="gate-overlay" class="gate-overlay">
+    <form id="gate-form" class="gate-form">
+      <h1>焼津祭</h1>
+      <p>パスワードを入力してください</p>
+      <input type="password" id="gate-password" autocomplete="off" autofocus />
+      <button type="submit">開く</button>
+      <p id="gate-error" class="gate-error" hidden>パスワードが違います</p>
+    </form>
+  </div>
 
-  <nav class="tabs">
-    <button class="active" data-target="schedule-panel">開催日程</button>
-    <button data-target="map-panel">地図</button>
-    <button data-target="roles-panel">役割</button>
-  </nav>
+  <div id="site-content" hidden>
+    <header class="hero">
+      <h1 id="hero-title"></h1>
+      <p id="hero-date"></p>
+      <p id="hero-subtitle"></p>
+    </header>
 
-  <main>
-    <section id="schedule-panel" class="panel active"></section>
-    <section id="map-panel" class="panel"></section>
-    <section id="roles-panel" class="panel"></section>
-  </main>
+    <nav class="tabs">
+      <button class="active" data-target="schedule-panel">開催日程</button>
+      <button data-target="map-panel">地図</button>
+      <button data-target="roles-panel">役割</button>
+    </nav>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+    <main>
+      <section id="schedule-panel" class="panel active"></section>
+      <section id="map-panel" class="panel"></section>
+      <section id="roles-panel" class="panel"></section>
+    </main>
+  </div>
+
+  <script src="gate.js"></script>
 </body>
 </html>
