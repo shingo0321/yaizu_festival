@@ -114,7 +114,7 @@ def parse(src_path):
                 "w": float(geom.get("width", 0)),
                 "h": float(geom.get("height", 0)),
                 "fill": style.get("fillColor", "#ffffff"),
-                "stroke": style.get("strokeColor", "#000000"),
+                "stroke": style.get("strokeColor", "#999999"),
                 "align": style.get("align", "center"),
                 "valign": style.get("verticalAlign", "middle"),
                 "lines": html_to_lines(cell.get("value")),
