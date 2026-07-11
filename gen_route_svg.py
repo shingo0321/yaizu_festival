@@ -107,6 +107,7 @@ def parse(src_path):
                 "fill": style.get("fillColor", "#ffffff"),
                 "stroke": style.get("strokeColor", "#000000"),
                 "align": style.get("align", "center"),
+                "valign": style.get("verticalAlign", "middle"),
                 "lines": html_to_lines(cell.get("value")),
             })
         elif cell.get("edge") == "1":
@@ -183,7 +184,13 @@ def render_svg(vertices, edges):
         lines = v["lines"]
         if lines:
             text_h = len(lines) * LINE_H
-            start_y = y + h / 2 - text_h / 2 + LINE_H * 0.75
+            valign = v["valign"]
+            if valign == "top":
+                start_y = y + LINE_H * 0.75
+            elif valign == "bottom":
+                start_y = y + h - text_h + LINE_H * 0.75
+            else:
+                start_y = y + h / 2 - text_h / 2 + LINE_H * 0.75
             align = v["align"]
             if align == "left":
                 tx, anchor = x + 4, "start"

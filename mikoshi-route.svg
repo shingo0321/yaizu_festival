@@ -81,19 +81,13 @@
 <tspan x="524.0" dy="14">⚫︎</tspan>
 </text>
 <rect x="440.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="444.0" y="254.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="444.0" dy="0"></tspan>
-<tspan x="444.0" dy="14"></tspan>
-<tspan x="444.0" dy="14"></tspan>
-<tspan x="444.0" dy="14"></tspan>
-<tspan x="444.0" dy="14"></tspan>
+<text x="444.0" y="342.5" font-size="12" text-anchor="start" fill="#222222">
+<tspan x="444.0" dy="0">⚪︎</tspan>
 <tspan x="444.0" dy="14">コハラ</tspan>
-<tspan x="444.0" dy="14">⚪︎</tspan>
-<tspan x="444.0" dy="14"></tspan>
 </text>
 <rect x="520.0" y="158.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="520.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="540.0" y="254.5" font-size="12" text-anchor="middle" fill="#222222">
+<text x="540.0" y="258.5" font-size="12" text-anchor="middle" fill="#222222">
 <tspan x="540.0" dy="0"></tspan>
 <tspan x="540.0" dy="14"></tspan>
 <tspan x="540.0" dy="14"></tspan>
@@ -131,7 +125,7 @@
 </text>
 <rect x="600.0" y="158.5" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="764.0" y="247.5" font-size="12" text-anchor="start" fill="#222222">
+<text x="764.0" y="244.5" font-size="12" text-anchor="start" fill="#222222">
 <tspan x="764.0" dy="0"></tspan>
 <tspan x="764.0" dy="14"></tspan>
 <tspan x="764.0" dy="14"></tspan>
@@ -189,7 +183,7 @@
 <rect x="1080.0" y="880.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1080.0" y="800.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="960.0" width="120.0" height="80.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="1116.0" y="975.5" font-size="12" text-anchor="end" fill="#222222">
+<text x="1116.0" y="980.5" font-size="12" text-anchor="end" fill="#222222">
 <tspan x="1116.0" dy="0"></tspan>
 <tspan x="1116.0" dy="14"></tspan>
 <tspan x="1116.0" dy="14"></tspan>
@@ -228,13 +222,13 @@
 <rect x="920.0" y="81.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="81.0" width="40.0" height="119.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="-1.0" width="120.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="956.0" y="15.5" font-size="12" text-anchor="end" fill="#222222">
+<text x="956.0" y="21.5" font-size="12" text-anchor="end" fill="#222222">
 <tspan x="956.0" dy="0">三区会所</tspan>
 <tspan x="956.0" dy="14">⚫︎</tspan>
 </text>
 <rect x="1000.0" y="240.0" width="120.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="319.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="940.0" y="329.0" font-size="12" text-anchor="middle" fill="#222222">
+<text x="940.0" y="328.5" font-size="12" text-anchor="middle" fill="#222222">
 <tspan x="940.0" dy="0"></tspan>
 <tspan x="940.0" dy="14">静銀</tspan>
 <tspan x="940.0" dy="14">⚪︎</tspan>
