@@ -206,6 +206,10 @@ section.panel.active { display: block; }
   cursor: zoom-in;
 }
 
+.route-image .pdf-link {
+  margin-top: 12px;
+}
+
 .route-diagram-img {
   border: 1px solid #ddd;
 }
