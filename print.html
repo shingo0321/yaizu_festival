@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>焼津祭 印刷用</title>
+<style>
+  @page { size: 297mm 210mm; margin: 10mm 12mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Hiragino Sans", "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .day-block { page-break-before: always; }
+  .day-block:first-child { page-break-before: auto; }
+  .day-block h2 {
+    font-size: 18px;
+    color: #0f4c81;
+    border-bottom: 2px solid #0f4c81;
+    padding-bottom: 4px;
+    margin: 0 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #e8eef5;
+    font-size: 10px;
+  }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  .col-time { width: 60px; }
+  .col-place { width: 130px; }
+  td.col-time { font-weight: bold; color: #0f4c81; }
+  .title { white-space: pre-line; }
+  .note { display: block; color: #777; font-weight: normal; font-size: 0.85em; }
+</style>
+</head>
+<body>
+  <div id="schedule"></div>
+
+  <script src="data.js"></script>
+  <script>
+    // A4横(297x210mm)・余白10mm/12mm での1ページあたりの本文高さ(px)。
+    // 96px/inch, 25.4mm/inch で換算し、印字ずれ対策の安全マージンを引く。
+    const MM_TO_PX = 96 / 25.4;
+    const PAGE_CONTENT_HEIGHT_PX = (210 - 10 - 10) * MM_TO_PX - 15;
+    const CONTENT_WIDTH_PX = (297 - 12 - 12) * MM_TO_PX;
+
+    function renderTitle(title) {
+      return title
+        .split("\n")
+        .map((line, i) =>
+          line.startsWith("※")
+            ? `<span class="note">${line}</span>`
+            : i === 0
+            ? line
+            : `<br>${line}`
+        )
+        .join("");
+    }
+
+    function rowHtml(item) {
+      return `
+        <tr>
+          <td class="col-time">${item.time}</td>
+          <td class="col-place">${item.place}</td>
+          <td class="title">${renderTitle(item.title)}</td>
+        </tr>
+      `;
+    }
+
+    function dayBlockHtml(label, items) {
+      return `
+        <div class="day-block">
+          <h2>${label}</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col-time">時間</th>
+                <th class="col-place">場所</th>
+                <th>やること</th>
+              </tr>
+            </thead>
+            <tbody>${items.map(rowHtml).join("")}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    // 実際のテーブル行の高さを測るための非表示プローブ。印刷時の本文幅と揃える。
+    function measureRowHeights(day) {
+      const probe = document.createElement("div");
+      probe.style.position = "absolute";
+      probe.style.visibility = "hidden";
+      probe.style.top = "0";
+      probe.style.left = "0";
+      probe.style.width = CONTENT_WIDTH_PX + "px";
+      probe.innerHTML = dayBlockHtml(day.date, day.items);
+      document.body.appendChild(probe);
+
+      const h2Top = probe.querySelector("h2").getBoundingClientRect().top;
+      const theadBottom = probe.querySelector("thead").getBoundingClientRect().bottom;
+      const headerBlockHeight = theadBottom - h2Top;
+      const rowHeights = [...probe.querySelectorAll("tbody tr")].map(
+        (r) => r.getBoundingClientRect().height
+      );
+
+      document.body.removeChild(probe);
+      return { headerBlockHeight, rowHeights };
+    }
+
+    function chunkDay(day) {
+      const { headerBlockHeight, rowHeights } = measureRowHeights(day);
+      const available = PAGE_CONTENT_HEIGHT_PX - headerBlockHeight;
+
+      const chunks = [];
+      let current = [];
+      let currentHeight = 0;
+
+      day.items.forEach((item, i) => {
+        const h = rowHeights[i];
+        if (current.length > 0 && currentHeight + h > available) {
+          chunks.push(current);
+          current = [];
+          currentHeight = 0;
+        }
+        current.push(item);
+        currentHeight += h;
+      });
+      if (current.length) chunks.push(current);
+
+      return chunks;
+    }
+
+    const html = FESTIVAL_DATA.schedule
+      .map((day) => {
+        const chunks = chunkDay(day);
+        return chunks
+          .map((items, i) => {
+            const label =
+              chunks.length > 1 ? `${day.date}（${i + 1}/${chunks.length}）` : day.date;
+            return dayBlockHtml(label, items);
+          })
+          .join("");
+      })
+      .join("");
+
+    document.getElementById("schedule").innerHTML = html;
+  </script>
+</body>
+</html>
