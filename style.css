@@ -222,8 +222,6 @@ section.panel.active { display: block; }
   height: 100%;
   overflow: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
   /* Allow native single-finger pan/scroll but not native pinch-zoom, so our
      own pointer-based pinch handler gets full control of two-finger gestures. */
   touch-action: pan-x pan-y;
@@ -234,6 +232,11 @@ section.panel.active { display: block; }
   max-height: 100%;
   display: block;
   cursor: zoom-in;
+  /* margin:auto centers the image when it's smaller than the viewport, but
+     -- unlike align-items/justify-content:center on the container -- falls
+     back to 0 once the (zoomed-in) image is larger, so every edge stays
+     reachable by scrolling instead of getting clipped by "unsafe" centering. */
+  margin: auto;
 }
 
 .lightbox-close {

@@ -212,11 +212,22 @@ function setupLightbox() {
     return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
   }
 
+  // Where the user last touched/clicked/pinched inside the viewport, so the
+  // +/- buttons zoom around whatever the user was just looking at instead of
+  // always the screen center. Falls back to the viewport center before any
+  // interaction has happened yet.
+  let lastPointer = null;
+
+  function zoomAnchor() {
+    return lastPointer || viewportCenter();
+  }
+
   function open(src, alt) {
     img.src = src;
     img.alt = alt || "";
     zoom = 1;
     baseWidth = 0;
+    lastPointer = null;
     img.style.width = "";
     img.style.height = "";
     img.style.maxWidth = "";
@@ -236,14 +247,17 @@ function setupLightbox() {
     el.addEventListener("click", () => open(el.src, el.alt));
   });
 
-  img.addEventListener("click", (e) => setZoom(zoom * STEP_FACTOR, e.clientX, e.clientY));
+  img.addEventListener("click", (e) => {
+    lastPointer = { x: e.clientX, y: e.clientY };
+    setZoom(zoom * STEP_FACTOR, e.clientX, e.clientY);
+  });
   zoomInBtn.addEventListener("click", () => {
-    const c = viewportCenter();
-    setZoom(zoom * STEP_FACTOR, c.x, c.y);
+    const p = zoomAnchor();
+    setZoom(zoom * STEP_FACTOR, p.x, p.y);
   });
   zoomOutBtn.addEventListener("click", () => {
-    const c = viewportCenter();
-    setZoom(zoom / STEP_FACTOR, c.x, c.y);
+    const p = zoomAnchor();
+    setZoom(zoom / STEP_FACTOR, p.x, p.y);
   });
   closeBtn.addEventListener("click", close);
   lightbox.addEventListener("click", (e) => {
@@ -258,6 +272,7 @@ function setupLightbox() {
     "wheel",
     (e) => {
       e.preventDefault();
+      lastPointer = { x: e.clientX, y: e.clientY };
       const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
       setZoom(zoom * factor, e.clientX, e.clientY);
     },
@@ -272,7 +287,9 @@ function setupLightbox() {
   let pinchStartZoom = 1;
 
   viewport.addEventListener("pointerdown", (e) => {
+    viewport.setPointerCapture(e.pointerId);
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    lastPointer = { x: e.clientX, y: e.clientY };
     if (pointers.size === 2) {
       const [a, b] = [...pointers.values()];
       pinchStartDist = Math.hypot(a.x - b.x, a.y - b.y);
@@ -288,7 +305,10 @@ function setupLightbox() {
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
       const midX = (a.x + b.x) / 2;
       const midY = (a.y + b.y) / 2;
+      lastPointer = { x: midX, y: midY };
       setZoom(pinchStartZoom * (dist / pinchStartDist), midX, midY);
+    } else {
+      lastPointer = { x: e.clientX, y: e.clientY };
     }
   });
 

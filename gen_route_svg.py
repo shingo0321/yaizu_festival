@@ -35,17 +35,26 @@ BR_RE = re.compile(r"(?i)<br[^>]*>")
 
 
 def process_segment(raw):
-    # A <br> is a real line break, so "text<br>" is two lines ("text", "").
-    # But a segment that's *only* br tags (one or several, e.g. the
-    # "Apple-interchange-newline" copy-paste artifact) is the idiom for a
-    # single blank filler line, not one blank line per br.
+    # A <br> between two bits of text is a real line break, so
+    # "text1<br>text2" is two lines. But a segment that's *only* br tags (one
+    # or several, e.g. the "Apple-interchange-newline" copy-paste artifact)
+    # is the idiom for a single blank filler line, not one blank line per br.
+    # And a stray leading/trailing <br> next to real content (e.g. "text<br>"
+    # at the end of a loose run, right before the next <div>) isn't a
+    # deliberate blank line either -- just drop it.
     protected = BR_RE.sub("\x00", raw)
     protected = re.sub(r"(?i)</?span[^>]*>", "", protected)
     protected = re.sub(r"<[^>]+>", "", protected)
     protected = html.unescape(protected)
     parts = [p.strip() for p in protected.split("\x00")]
-    if len(parts) > 1 and not any(parts):
+    if len(parts) == 1:
+        return parts
+    if not any(parts):
         return [""]
+    while parts and parts[0] == "":
+        parts.pop(0)
+    while parts and parts[-1] == "":
+        parts.pop()
     return parts
 
 
