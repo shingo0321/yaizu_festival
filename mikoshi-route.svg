@@ -224,7 +224,7 @@
 <rect x="440.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <rect x="360.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <rect x="280.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
-<text x="300.0" y="88.5" font-size="12" text-anchor="middle" fill="#222222">静清</text>
-<text x="300.0" y="102.5" font-size="12" text-anchor="middle" fill="#222222">信用</text>
-<text x="300.0" y="116.5" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
+<text x="284.0" y="88.5" font-size="12" text-anchor="start" fill="#222222">静清</text>
+<text x="284.0" y="102.5" font-size="12" text-anchor="start" fill="#222222">信用</text>
+<text x="284.0" y="116.5" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
 </svg>

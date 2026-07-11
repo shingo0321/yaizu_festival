@@ -506,7 +506,7 @@
                 <mxCell id="140" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" parent="1" vertex="1">
                     <mxGeometry x="360" y="79" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="141" value="静清&lt;div&gt;信用&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;⚪︎&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" parent="1" vertex="1">
+                <mxCell id="141" value="静清&lt;div&gt;信用&lt;/div&gt;&lt;div style=&quot;&quot;&gt;⚪︎&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=left;" parent="1" vertex="1">
                     <mxGeometry x="280" y="79" width="40" height="40" as="geometry"/>
                 </mxCell>
             </root>

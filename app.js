@@ -66,6 +66,11 @@ function renderMapPins() {
         <div class="route-image">
           <img class="zoomable route-diagram-img" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
           <p class="route-image-caption">${routeDiagram.caption}</p>
+          ${
+            routeDiagram.pdf
+              ? `<a class="pdf-link" href="${routeDiagram.pdf}" target="_blank" rel="noopener">簡略図のPDFを開く</a>`
+              : ""
+          }
         </div>
       `
           : ""

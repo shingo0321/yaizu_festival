@@ -109,6 +109,7 @@ const FESTIVAL_DATA = {
     // 神輿渡御ルートの簡略図（mikoshi-route.dioから生成したSVG、ローカルに保存）
     routeDiagram: {
       src: "mikoshi-route.svg",
+      pdf: "mikoshi-route.pdf",
       alt: "神輿渡御ルート簡略図（往路・帰路）",
       caption: "神輿渡御ルート簡略図（青:往路　緑:帰路）"
     },

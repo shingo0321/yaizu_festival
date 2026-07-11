@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>神輿渡御ルート簡略図</title>
+<style>
+  @page { margin: 0; }
+  html, body { margin: 0; padding: 0; }
+  img { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <img id="route-img" src="mikoshi-route.svg" alt="神輿渡御ルート簡略図" />
+  <script>
+    // Size the @page to match the SVG's own pixel dimensions so the PDF is
+    // one page at the diagram's native aspect ratio, not a fixed A4/Letter.
+    const img = document.getElementById("route-img");
+    img.addEventListener("load", () => {
+      const style = document.createElement("style");
+      style.textContent = `@page { size: ${img.naturalWidth}px ${img.naturalHeight}px; margin: 0; }`;
+      document.head.appendChild(style);
+      document.title = "ready";
+    });
+  </script>
+</body>
+</html>
