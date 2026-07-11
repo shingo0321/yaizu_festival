@@ -52,7 +52,7 @@ function renderMapPins() {
         routeDiagram
           ? `
         <div class="route-image">
-          <img src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
+          <img class="zoomable" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
           <p class="route-image-caption">${routeDiagram.caption}</p>
         </div>
       `
@@ -62,9 +62,7 @@ function renderMapPins() {
         routeImg
           ? `
         <div class="route-image">
-          <a href="${routeImg.sourceUrl}" target="_blank" rel="noopener noreferrer">
-            <img src="${routeImg.src}" alt="${routeImg.alt}" loading="lazy" />
-          </a>
+          <img class="zoomable" src="${routeImg.src}" alt="${routeImg.alt}" loading="lazy" />
           <p class="route-image-caption">
             <a href="${routeImg.sourceUrl}" target="_blank" rel="noopener noreferrer">${routeImg.caption}</a>
           </p>
@@ -154,9 +152,78 @@ function setupSwipe() {
   );
 }
 
+function setupLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const viewport = document.getElementById("lightbox-viewport");
+  const img = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+  const zoomInBtn = document.getElementById("lightbox-zoom-in");
+  const zoomOutBtn = document.getElementById("lightbox-zoom-out");
+
+  const ZOOM_LEVELS = [1, 2, 3, 4];
+  let zoomIndex = 0;
+
+  function applyZoom() {
+    const zoom = ZOOM_LEVELS[zoomIndex];
+    if (zoom === 1) {
+      img.style.width = "";
+      img.style.height = "";
+      img.style.maxWidth = "";
+      img.style.maxHeight = "";
+    } else {
+      img.style.maxWidth = "none";
+      img.style.maxHeight = "none";
+      img.style.width = zoom * 100 + "%";
+      img.style.height = "auto";
+    }
+    zoomOutBtn.disabled = zoomIndex === 0;
+    zoomInBtn.disabled = zoomIndex === ZOOM_LEVELS.length - 1;
+  }
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt || "";
+    zoomIndex = 0;
+    applyZoom();
+    viewport.scrollTo(0, 0);
+    lightbox.hidden = false;
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    img.src = "";
+  }
+
+  function zoomIn() {
+    zoomIndex = Math.min(zoomIndex + 1, ZOOM_LEVELS.length - 1);
+    applyZoom();
+  }
+
+  function zoomOut() {
+    zoomIndex = Math.max(zoomIndex - 1, 0);
+    applyZoom();
+  }
+
+  document.querySelectorAll(".zoomable").forEach((el) => {
+    el.addEventListener("click", () => open(el.src, el.alt));
+  });
+
+  img.addEventListener("click", zoomIn);
+  zoomInBtn.addEventListener("click", zoomIn);
+  zoomOutBtn.addEventListener("click", zoomOut);
+  closeBtn.addEventListener("click", close);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === viewport) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.hidden && e.key === "Escape") close();
+  });
+}
+
 renderHero();
 renderSchedule();
 renderMapPins();
 renderRoles();
 setupTabs();
 setupSwipe();
+setupLightbox();
