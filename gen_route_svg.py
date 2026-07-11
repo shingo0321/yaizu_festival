@@ -2,6 +2,7 @@
 # mikoshi-route.dio（draw.ioの図面ソース）をパースし、地図タブで使うmikoshi-route.svgを再生成する。
 # mikoshi-route.dioを更新したら実行して同期すること。draw.io本体やNode等の外部ツールは不要（標準ライブラリのみ）。
 import html
+import math
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -97,22 +98,95 @@ def html_to_lines(value):
     return lines
 
 
+def edge_points(geom):
+    src = geom.find("mxPoint[@as='sourcePoint']")
+    tgt = geom.find("mxPoint[@as='targetPoint']")
+    pts = []
+    if src is not None:
+        pts.append((float(src.get("x")), float(src.get("y"))))
+    arr = geom.find("Array[@as='points']")
+    if arr is not None:
+        for p in arr.findall("mxPoint"):
+            pts.append((float(p.get("x")), float(p.get("y"))))
+    if tgt is not None:
+        pts.append((float(tgt.get("x")), float(tgt.get("y"))))
+    return pts
+
+
+def point_along(pts, t):
+    # Point at fraction t (0=start, 1=end) along a polyline, by arc length.
+    if not pts:
+        return (0.0, 0.0)
+    if len(pts) == 1:
+        return pts[0]
+    seg_lens = [math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(len(pts) - 1)]
+    total = sum(seg_lens)
+    if total == 0:
+        return pts[0]
+    target = max(0.0, min(1.0, t)) * total
+    acc = 0.0
+    for i, seg_len in enumerate(seg_lens):
+        if acc + seg_len >= target or i == len(seg_lens) - 1:
+            local_t = 0 if seg_len == 0 else (target - acc) / seg_len
+            x = pts[i][0] + (pts[i + 1][0] - pts[i][0]) * local_t
+            y = pts[i][1] + (pts[i + 1][1] - pts[i][1]) * local_t
+            return (x, y)
+        acc += seg_len
+    return pts[-1]
+
+
 def parse(src_path):
     root = ET.parse(src_path).getroot()
+    cells = list(root.iter("mxCell"))
+
+    # Edge polylines by id, needed up front to place labels attached to them
+    # (mxCells with geometry relative="1" and parent set to the edge's id).
+    edge_paths = {}
+    for cell in cells:
+        if cell.get("edge") == "1":
+            geom = cell.find("mxGeometry")
+            if geom is not None:
+                edge_paths[cell.get("id")] = edge_points(geom)
+
     vertices, edges = [], []
 
-    for cell in root.iter("mxCell"):
+    for cell in cells:
         style = style_dict(cell.get("style"))
         geom = cell.find("mxGeometry")
         if geom is None:
             continue
 
-        if cell.get("vertex") == "1":
+        is_edge_label = (
+            cell.get("vertex") == "1"
+            and cell.get("connectable") == "0"
+            and geom.get("relative") == "1"
+            and cell.get("parent") in edge_paths
+        )
+
+        if is_edge_label:
+            lines = html_to_lines(cell.get("value"))
+            if not lines:
+                continue
+            t = (float(geom.get("x", 0)) + 1) / 2
+            px, py = point_along(edge_paths[cell.get("parent")], t)
+            offset = geom.find("mxPoint[@as='offset']")
+            if offset is not None:
+                px += float(offset.get("x", 0))
+                py += float(offset.get("y", 0))
+            vertices.append({
+                "x": px, "y": py, "w": 0.0, "h": 0.0,
+                "box": False,
+                "align": style.get("align", "center"),
+                "valign": style.get("verticalAlign", "middle"),
+                "lines": lines,
+            })
+        elif cell.get("vertex") == "1":
             vertices.append({
                 "x": float(geom.get("x", 0)),
                 "y": float(geom.get("y", 0)),
                 "w": float(geom.get("width", 0)),
                 "h": float(geom.get("height", 0)),
+                "box": True,
                 "fill": style.get("fillColor", "#ffffff"),
                 "stroke": style.get("strokeColor", "#999999"),
                 "align": style.get("align", "center"),
@@ -120,19 +194,8 @@ def parse(src_path):
                 "lines": html_to_lines(cell.get("value")),
             })
         elif cell.get("edge") == "1":
-            src = geom.find("mxPoint[@as='sourcePoint']")
-            tgt = geom.find("mxPoint[@as='targetPoint']")
-            pts = []
-            if src is not None:
-                pts.append((float(src.get("x")), float(src.get("y"))))
-            arr = geom.find("Array[@as='points']")
-            if arr is not None:
-                for p in arr.findall("mxPoint"):
-                    pts.append((float(p.get("x")), float(p.get("y"))))
-            if tgt is not None:
-                pts.append((float(tgt.get("x")), float(tgt.get("y"))))
             edges.append({
-                "pts": pts,
+                "pts": edge_paths.get(cell.get("id"), []),
                 "stroke": style.get("strokeColor", "#6c8ebf"),
                 "dashed": style.get("dashed") == "1",
             })
@@ -183,12 +246,14 @@ def render_svg(vertices, edges):
 
     for v in vertices:
         x, y, w, h = v["x"], v["y"], v["w"], v["h"]
-        # mxgraph's default rectangle style renders white fill + black border
-        # even when fillColor/strokeColor are omitted, so always draw the box.
-        parts.append(
-            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" '
-            f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="1"/>'
-        )
+        if v["box"]:
+            # mxgraph's default rectangle style renders white fill + black
+            # border even when fillColor/strokeColor are omitted, so always
+            # draw the box (edge labels have no box of their own, though).
+            parts.append(
+                f'<rect x="{x}" y="{y}" width="{w}" height="{h}" '
+                f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="1"/>'
+            )
 
         lines = v["lines"]
         if lines:
