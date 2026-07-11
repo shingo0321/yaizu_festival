@@ -198,11 +198,18 @@ def render_svg(vertices, edges):
                 tx, anchor = x + w - 4, "end"
             else:
                 tx, anchor = x + w / 2, "middle"
-            parts.append(f'<text x="{tx}" y="{start_y}" font-size="{FONT_SIZE}" text-anchor="{anchor}" fill="#222222">')
+            # Use an absolute y per line rather than chained tspan dy: an
+            # empty tspan (blank line) has no text content, and browsers
+            # don't advance the cursor for a dy on a childless tspan, which
+            # collapses blank lines and breaks verticalAlign positioning.
             for i, ln in enumerate(lines):
-                dy = 0 if i == 0 else LINE_H
-                parts.append(f'<tspan x="{tx}" dy="{dy}">{html.escape(ln)}</tspan>')
-            parts.append('</text>')
+                if not ln:
+                    continue
+                ly = start_y + i * LINE_H
+                parts.append(
+                    f'<text x="{tx}" y="{ly}" font-size="{FONT_SIZE}" '
+                    f'text-anchor="{anchor}" fill="#222222">{html.escape(ln)}</text>'
+                )
 
     parts.append('</svg>')
     return "\n".join(parts)

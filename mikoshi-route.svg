@@ -42,211 +42,129 @@
 <path d="M 420.0,390.0 L 420.0,230.0" fill="none" stroke="#82b366" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-green)" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 420.0,230.0 L 120.0,230.0" fill="none" stroke="#82b366" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-green)" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="80.0" y="240.0" width="80.0" height="120.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="120.0" y="261.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="120.0" dy="0">◼️</tspan>
-<tspan x="120.0" dy="14">焼津神社</tspan>
-<tspan x="120.0" dy="14"></tspan>
-<tspan x="120.0" dy="14"></tspan>
-<tspan x="120.0" dy="14"></tspan>
-<tspan x="120.0" dy="14"></tspan>
-<tspan x="120.0" dy="14"></tspan>
-</text>
+<text x="120.0" y="261.5" font-size="12" text-anchor="middle" fill="#222222">◼️</text>
+<text x="120.0" y="275.5" font-size="12" text-anchor="middle" fill="#222222">焼津神社</text>
 <rect x="200.0" y="240.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="200.0" y="320.0" width="40.0" height="40.0" fill="#e1d5e7" stroke="#9673a6" stroke-width="1"/>
-<text x="204.0" y="329.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="204.0" dy="0">⚫︎</tspan>
-<tspan x="204.0" dy="14">神社</tspan>
-<tspan x="204.0" dy="14">休憩所</tspan>
-</text>
+<text x="204.0" y="329.5" font-size="12" text-anchor="start" fill="#222222">⚫︎</text>
+<text x="204.0" y="343.5" font-size="12" text-anchor="start" fill="#222222">神社</text>
+<text x="204.0" y="357.5" font-size="12" text-anchor="start" fill="#222222">休憩所</text>
 <rect x="280.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="360.0" y="240.0" width="40.0" height="120.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="380.0" y="268.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="380.0" dy="0">◼️</tspan>
-<tspan x="380.0" dy="14">焼津</tspan>
-<tspan x="380.0" dy="14">御旅所</tspan>
-<tspan x="380.0" dy="14"></tspan>
-<tspan x="380.0" dy="14"></tspan>
-<tspan x="380.0" dy="14"></tspan>
-</text>
+<text x="380.0" y="268.5" font-size="12" text-anchor="middle" fill="#222222">◼️</text>
+<text x="380.0" y="282.5" font-size="12" text-anchor="middle" fill="#222222">焼津</text>
+<text x="380.0" y="296.5" font-size="12" text-anchor="middle" fill="#222222">御旅所</text>
 <rect x="440.0" y="159.0" width="40.0" height="40.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="460.0" y="168.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="460.0" dy="0">四区</tspan>
-<tspan x="460.0" dy="14">会所</tspan>
-<tspan x="460.0" dy="14">⚫︎</tspan>
-</text>
+<text x="460.0" y="168.5" font-size="12" text-anchor="middle" fill="#222222">四区</text>
+<text x="460.0" y="182.5" font-size="12" text-anchor="middle" fill="#222222">会所</text>
+<text x="460.0" y="196.5" font-size="12" text-anchor="middle" fill="#222222">⚫︎</text>
 <rect x="520.0" y="79.0" width="40.0" height="40.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="524.0" y="88.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="524.0" dy="0"></tspan>
-<tspan x="524.0" dy="14">御沓脱</tspan>
-<tspan x="524.0" dy="14">⚫︎</tspan>
-</text>
+<text x="524.0" y="102.5" font-size="12" text-anchor="start" fill="#222222">御沓脱</text>
+<text x="524.0" y="116.5" font-size="12" text-anchor="start" fill="#222222">⚫︎</text>
 <rect x="440.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="444.0" y="342.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="444.0" dy="0">⚪︎</tspan>
-<tspan x="444.0" dy="14">コハラ</tspan>
-</text>
+<text x="444.0" y="342.5" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
+<text x="444.0" y="356.5" font-size="12" text-anchor="start" fill="#222222">コハラ</text>
 <rect x="520.0" y="158.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="520.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="540.0" y="258.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="540.0" dy="0"></tspan>
-<tspan x="540.0" dy="14"></tspan>
-<tspan x="540.0" dy="14"></tspan>
-<tspan x="540.0" dy="14">焼津</tspan>
-<tspan x="540.0" dy="14">警察署</tspan>
-<tspan x="540.0" dy="14">中央</tspan>
-<tspan x="540.0" dy="14">派出所</tspan>
-<tspan x="540.0" dy="14">⚪︎</tspan>
-</text>
+<text x="540.0" y="300.5" font-size="12" text-anchor="middle" fill="#222222">焼津</text>
+<text x="540.0" y="314.5" font-size="12" text-anchor="middle" fill="#222222">警察署</text>
+<text x="540.0" y="328.5" font-size="12" text-anchor="middle" fill="#222222">中央</text>
+<text x="540.0" y="342.5" font-size="12" text-anchor="middle" fill="#222222">派出所</text>
+<text x="540.0" y="356.5" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
 <rect x="600.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="604.0" y="282.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="604.0" dy="0">水</tspan>
-<tspan x="604.0" dy="14">高</tspan>
-<tspan x="604.0" dy="14">通</tspan>
-<tspan x="604.0" dy="14">り</tspan>
-</text>
+<text x="604.0" y="282.5" font-size="12" text-anchor="start" fill="#222222">水</text>
+<text x="604.0" y="296.5" font-size="12" text-anchor="start" fill="#222222">高</text>
+<text x="604.0" y="310.5" font-size="12" text-anchor="start" fill="#222222">通</text>
+<text x="604.0" y="324.5" font-size="12" text-anchor="start" fill="#222222">り</text>
 <rect x="600.0" y="80.0" width="40.0" height="39.5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="620.0" y="89.25" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="620.0" dy="0">⚪︎</tspan>
-<tspan x="620.0" dy="14">塩川</tspan>
-<tspan x="620.0" dy="14">新聞舗</tspan>
-</text>
+<text x="620.0" y="89.25" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
+<text x="620.0" y="103.25" font-size="12" text-anchor="middle" fill="#222222">塩川</text>
+<text x="620.0" y="117.25" font-size="12" text-anchor="middle" fill="#222222">新聞舗</text>
 <rect x="680.0" y="80.0" width="40.0" height="119.5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="80.0" width="40.0" height="119.5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="764.0" y="87.25" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="764.0" dy="0">⚪︎</tspan>
-<tspan x="764.0" dy="14">大石</tspan>
-<tspan x="764.0" dy="14">洋服店</tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-</text>
+<text x="764.0" y="87.25" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
+<text x="764.0" y="101.25" font-size="12" text-anchor="start" fill="#222222">大石</text>
+<text x="764.0" y="115.25" font-size="12" text-anchor="start" fill="#222222">洋服店</text>
 <rect x="600.0" y="158.5" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="764.0" y="244.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="764.0" dy="0"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14"></tspan>
-<tspan x="764.0" dy="14">サスエ</tspan>
-<tspan x="764.0" dy="14">⚪︎</tspan>
-</text>
+<text x="764.0" y="342.5" font-size="12" text-anchor="start" fill="#222222">サスエ</text>
+<text x="764.0" y="356.5" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
 <rect x="840.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="319.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="399.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="780.0" y="409.0" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="780.0" dy="0">⚪︎</tspan>
-<tspan x="780.0" dy="14">アトレ</tspan>
-<tspan x="780.0" dy="14">焼津</tspan>
-</text>
+<text x="780.0" y="409.0" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
+<text x="780.0" y="423.0" font-size="12" text-anchor="middle" fill="#222222">アトレ</text>
+<text x="780.0" y="437.0" font-size="12" text-anchor="middle" fill="#222222">焼津</text>
 <rect x="680.0" y="240.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="399.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="480.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="860.0" y="490.0" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="860.0" dy="0">二区</tspan>
-<tspan x="860.0" dy="14">会所</tspan>
-<tspan x="860.0" dy="14">⚫︎</tspan>
-</text>
+<text x="860.0" y="490.0" font-size="12" text-anchor="middle" fill="#222222">二区</text>
+<text x="860.0" y="504.0" font-size="12" text-anchor="middle" fill="#222222">会所</text>
+<text x="860.0" y="518.0" font-size="12" text-anchor="middle" fill="#222222">⚫︎</text>
 <rect x="920.0" y="399.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="480.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="399.0" width="120.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="480.0" width="120.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="559.0" width="120.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="640.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="940.0" y="650.0" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="940.0" dy="0">青島</tspan>
-<tspan x="940.0" dy="14">ポンプ</tspan>
-<tspan x="940.0" dy="14">⚪︎</tspan>
-</text>
+<text x="940.0" y="650.0" font-size="12" text-anchor="middle" fill="#222222">青島</text>
+<text x="940.0" y="664.0" font-size="12" text-anchor="middle" fill="#222222">ポンプ</text>
+<text x="940.0" y="678.0" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
 <rect x="920.0" y="559.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="720.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="800.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="800.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="1004.0" y="810.0" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1004.0" dy="0"></tspan>
-<tspan x="1004.0" dy="14">田子重</tspan>
-<tspan x="1004.0" dy="14">⚪︎</tspan>
-</text>
+<text x="1004.0" y="823.5" font-size="12" text-anchor="start" fill="#222222">田子重</text>
+<text x="1004.0" y="837.5" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
 <rect x="1000.0" y="640.0" width="120.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="1004.0" y="682.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1004.0" dy="0">中</tspan>
-<tspan x="1004.0" dy="14">央</tspan>
-<tspan x="1004.0" dy="14">通</tspan>
-<tspan x="1004.0" dy="14">り</tspan>
-</text>
+<text x="1004.0" y="682.5" font-size="12" text-anchor="start" fill="#222222">中</text>
+<text x="1004.0" y="696.5" font-size="12" text-anchor="start" fill="#222222">央</text>
+<text x="1004.0" y="710.5" font-size="12" text-anchor="start" fill="#222222">通</text>
+<text x="1004.0" y="724.5" font-size="12" text-anchor="start" fill="#222222">り</text>
 <rect x="1000.0" y="880.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1080.0" y="880.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1080.0" y="800.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="960.0" width="120.0" height="80.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="1116.0" y="980.5" font-size="12" text-anchor="end" fill="#222222">
-<tspan x="1116.0" dy="0"></tspan>
-<tspan x="1116.0" dy="14"></tspan>
-<tspan x="1116.0" dy="14"></tspan>
-<tspan x="1116.0" dy="14"></tspan>
-<tspan x="1116.0" dy="14">青峰プール⚪︎</tspan>
-</text>
+<text x="1116.0" y="1036.5" font-size="12" text-anchor="end" fill="#222222">青峰プール⚪︎</text>
 <rect x="1160.0" y="960.0" width="40.0" height="41.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="1180.0" y="970.0" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="1180.0" dy="0">南</tspan>
-<tspan x="1180.0" dy="14">御旅所</tspan>
-<tspan x="1180.0" dy="14">◼️</tspan>
-</text>
+<text x="1180.0" y="970.0" font-size="12" text-anchor="middle" fill="#222222">南</text>
+<text x="1180.0" y="984.0" font-size="12" text-anchor="middle" fill="#222222">御旅所</text>
+<text x="1180.0" y="998.0" font-size="12" text-anchor="middle" fill="#222222">◼️</text>
 <rect x="1040.0" y="1080.0" width="40.0" height="41.0" fill="#e1d5e7" stroke="#9673a6" stroke-width="1"/>
-<text x="1060.0" y="1083.0" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="1060.0" dy="0">⚫︎</tspan>
-<tspan x="1060.0" dy="14"></tspan>
-<tspan x="1060.0" dy="14">丸川</tspan>
-<tspan x="1060.0" dy="14">休憩所</tspan>
-</text>
+<text x="1060.0" y="1083.0" font-size="12" text-anchor="middle" fill="#222222">⚫︎</text>
+<text x="1060.0" y="1111.0" font-size="12" text-anchor="middle" fill="#222222">丸川</text>
+<text x="1060.0" y="1125.0" font-size="12" text-anchor="middle" fill="#222222">休憩所</text>
 <rect x="1160.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1160.0" y="320.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1160.0" y="280.0" width="40.0" height="41.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="1164.0" y="290.0" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1164.0" dy="0">北</tspan>
-<tspan x="1164.0" dy="14">御旅所</tspan>
-<tspan x="1164.0" dy="14">◼️</tspan>
-</text>
+<text x="1164.0" y="290.0" font-size="12" text-anchor="start" fill="#222222">北</text>
+<text x="1164.0" y="304.0" font-size="12" text-anchor="start" fill="#222222">御旅所</text>
+<text x="1164.0" y="318.0" font-size="12" text-anchor="start" fill="#222222">◼️</text>
 <rect x="1160.0" y="80.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1241.0" y="80.0" width="40.0" height="280.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1320.0" y="39.0" width="40.0" height="41.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="1324.0" y="49.0" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1324.0" dy="0">魚市場</tspan>
-<tspan x="1324.0" dy="14">御旅所</tspan>
-<tspan x="1324.0" dy="14">◼️</tspan>
-</text>
+<text x="1324.0" y="49.0" font-size="12" text-anchor="start" fill="#222222">魚市場</text>
+<text x="1324.0" y="63.0" font-size="12" text-anchor="start" fill="#222222">御旅所</text>
+<text x="1324.0" y="77.0" font-size="12" text-anchor="start" fill="#222222">◼️</text>
 <rect x="920.0" y="81.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="81.0" width="40.0" height="119.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="-1.0" width="120.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="956.0" y="21.5" font-size="12" text-anchor="end" fill="#222222">
-<tspan x="956.0" dy="0">三区会所</tspan>
-<tspan x="956.0" dy="14">⚫︎</tspan>
-</text>
+<text x="956.0" y="21.5" font-size="12" text-anchor="end" fill="#222222">三区会所</text>
+<text x="956.0" y="35.5" font-size="12" text-anchor="end" fill="#222222">⚫︎</text>
 <rect x="1000.0" y="240.0" width="120.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="319.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="940.0" y="328.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="940.0" dy="0"></tspan>
-<tspan x="940.0" dy="14">静銀</tspan>
-<tspan x="940.0" dy="14">⚪︎</tspan>
-</text>
+<text x="940.0" y="342.5" font-size="12" text-anchor="middle" fill="#222222">静銀</text>
+<text x="940.0" y="356.5" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
 <rect x="920.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1160.0" y="840.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1160.0" y="400.0" width="40.0" height="400.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="1164.0" y="589.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1164.0" dy="0">浜</tspan>
-<tspan x="1164.0" dy="14">通</tspan>
-<tspan x="1164.0" dy="14">り</tspan>
-</text>
+<text x="1164.0" y="589.5" font-size="12" text-anchor="start" fill="#222222">浜</text>
+<text x="1164.0" y="603.5" font-size="12" text-anchor="start" fill="#222222">通</text>
+<text x="1164.0" y="617.5" font-size="12" text-anchor="start" fill="#222222">り</text>
 <rect x="1160.0" y="800.0" width="40.0" height="40.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="1164.0" y="809.5" font-size="12" text-anchor="start" fill="#222222">
-<tspan x="1164.0" dy="0">一区</tspan>
-<tspan x="1164.0" dy="14">会所</tspan>
-<tspan x="1164.0" dy="14">⚫︎</tspan>
-</text>
+<text x="1164.0" y="809.5" font-size="12" text-anchor="start" fill="#222222">一区</text>
+<text x="1164.0" y="823.5" font-size="12" text-anchor="start" fill="#222222">会所</text>
+<text x="1164.0" y="837.5" font-size="12" text-anchor="start" fill="#222222">⚫︎</text>
 <rect x="1000.0" y="79.0" width="120.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="559.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="920.0" y="879.5" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
@@ -263,10 +181,8 @@
 <rect x="1160.0" y="-81.0" width="40.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="1000.0" y="-81.0" width="120.0" height="120.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="840.0" y="-80.0" width="120.0" height="39.5" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="900.0" y="-63.75" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="900.0" dy="0">市役所</tspan>
-<tspan x="900.0" dy="14">⚪︎</tspan>
-</text>
+<text x="900.0" y="-63.75" font-size="12" text-anchor="middle" fill="#222222">市役所</text>
+<text x="900.0" y="-49.75" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
 <rect x="760.0" y="0.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="480.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="760.0" y="559.0" width="40.0" height="41.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
@@ -277,9 +193,7 @@
 <rect x="440.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="360.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
 <rect x="280.0" y="79.0" width="40.0" height="40.0" fill="#ffffff" stroke="#000000" stroke-width="1"/>
-<text x="300.0" y="88.5" font-size="12" text-anchor="middle" fill="#222222">
-<tspan x="300.0" dy="0">静清</tspan>
-<tspan x="300.0" dy="14">信用</tspan>
-<tspan x="300.0" dy="14">⚪︎</tspan>
-</text>
+<text x="300.0" y="88.5" font-size="12" text-anchor="middle" fill="#222222">静清</text>
+<text x="300.0" y="102.5" font-size="12" text-anchor="middle" fill="#222222">信用</text>
+<text x="300.0" y="116.5" font-size="12" text-anchor="middle" fill="#222222">⚪︎</text>
 </svg>
