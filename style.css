@@ -224,6 +224,9 @@ section.panel.active { display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Allow native single-finger pan/scroll but not native pinch-zoom, so our
+     own pointer-based pinch handler gets full control of two-finger gestures. */
+  touch-action: pan-x pan-y;
 }
 
 .lightbox-viewport img {
@@ -235,23 +238,25 @@ section.panel.active { display: block; }
 
 .lightbox-close {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: calc(12px + env(safe-area-inset-top, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(20, 20, 20, 0.85);
   color: #fff;
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
 .lightbox-controls {
   position: absolute;
-  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -263,11 +268,13 @@ section.panel.active { display: block; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(20, 20, 20, 0.85);
   color: #fff;
   font-size: 1.3rem;
   cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox-controls button:disabled {

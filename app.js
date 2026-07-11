@@ -160,11 +160,34 @@ function setupLightbox() {
   const zoomInBtn = document.getElementById("lightbox-zoom-in");
   const zoomOutBtn = document.getElementById("lightbox-zoom-out");
 
-  const ZOOM_LEVELS = [1, 2, 3, 4];
-  let zoomIndex = 0;
+  const MIN_ZOOM = 1;
+  const MAX_ZOOM = 6;
+  const STEP_FACTOR = 1.5;
 
-  function applyZoom() {
-    const zoom = ZOOM_LEVELS[zoomIndex];
+  let zoom = 1;
+  let baseWidth = 0; // image width at zoom===1 (fitted via max-width/max-height), measured lazily
+
+  function measureBaseWidth() {
+    img.style.maxWidth = "";
+    img.style.maxHeight = "";
+    img.style.width = "";
+    img.style.height = "";
+    baseWidth = img.getBoundingClientRect().width;
+  }
+
+  // Zooms so the content under (anchorX, anchorY) in viewport coordinates
+  // stays under that same point after the resize, like a mouse/pinch zoom.
+  function setZoom(nextZoom, anchorX, anchorY) {
+    nextZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, nextZoom));
+    if (nextZoom === zoom) return;
+    if (!baseWidth) measureBaseWidth();
+
+    const vpRect = viewport.getBoundingClientRect();
+    const contentX = anchorX - vpRect.left + viewport.scrollLeft;
+    const contentY = anchorY - vpRect.top + viewport.scrollTop;
+    const ratio = nextZoom / zoom;
+
+    zoom = nextZoom;
     if (zoom === 1) {
       img.style.width = "";
       img.style.height = "";
@@ -173,18 +196,33 @@ function setupLightbox() {
     } else {
       img.style.maxWidth = "none";
       img.style.maxHeight = "none";
-      img.style.width = zoom * 100 + "%";
+      img.style.width = baseWidth * zoom + "px";
       img.style.height = "auto";
     }
-    zoomOutBtn.disabled = zoomIndex === 0;
-    zoomInBtn.disabled = zoomIndex === ZOOM_LEVELS.length - 1;
+
+    viewport.scrollLeft = contentX * ratio - (anchorX - vpRect.left);
+    viewport.scrollTop = contentY * ratio - (anchorY - vpRect.top);
+
+    zoomOutBtn.disabled = zoom <= MIN_ZOOM;
+    zoomInBtn.disabled = zoom >= MAX_ZOOM;
+  }
+
+  function viewportCenter() {
+    const r = viewport.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
   }
 
   function open(src, alt) {
     img.src = src;
     img.alt = alt || "";
-    zoomIndex = 0;
-    applyZoom();
+    zoom = 1;
+    baseWidth = 0;
+    img.style.width = "";
+    img.style.height = "";
+    img.style.maxWidth = "";
+    img.style.maxHeight = "";
+    zoomOutBtn.disabled = true;
+    zoomInBtn.disabled = false;
     viewport.scrollTo(0, 0);
     lightbox.hidden = false;
   }
@@ -194,23 +232,19 @@ function setupLightbox() {
     img.src = "";
   }
 
-  function zoomIn() {
-    zoomIndex = Math.min(zoomIndex + 1, ZOOM_LEVELS.length - 1);
-    applyZoom();
-  }
-
-  function zoomOut() {
-    zoomIndex = Math.max(zoomIndex - 1, 0);
-    applyZoom();
-  }
-
   document.querySelectorAll(".zoomable").forEach((el) => {
     el.addEventListener("click", () => open(el.src, el.alt));
   });
 
-  img.addEventListener("click", zoomIn);
-  zoomInBtn.addEventListener("click", zoomIn);
-  zoomOutBtn.addEventListener("click", zoomOut);
+  img.addEventListener("click", (e) => setZoom(zoom * STEP_FACTOR, e.clientX, e.clientY));
+  zoomInBtn.addEventListener("click", () => {
+    const c = viewportCenter();
+    setZoom(zoom * STEP_FACTOR, c.x, c.y);
+  });
+  zoomOutBtn.addEventListener("click", () => {
+    const c = viewportCenter();
+    setZoom(zoom / STEP_FACTOR, c.x, c.y);
+  });
   closeBtn.addEventListener("click", close);
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox || e.target === viewport) close();
@@ -218,6 +252,53 @@ function setupLightbox() {
   document.addEventListener("keydown", (e) => {
     if (!lightbox.hidden && e.key === "Escape") close();
   });
+
+  // Mouse wheel: zoom toward the cursor position.
+  viewport.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+      setZoom(zoom * factor, e.clientX, e.clientY);
+    },
+    { passive: false }
+  );
+
+  // Two-finger pinch: zoom toward the midpoint between the touches.
+  // touch-action on the viewport excludes native pinch-zoom so this gets
+  // full control, while single-finger native pan/scroll still works.
+  const pointers = new Map();
+  let pinchStartDist = 0;
+  let pinchStartZoom = 1;
+
+  viewport.addEventListener("pointerdown", (e) => {
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchStartDist = Math.hypot(a.x - b.x, a.y - b.y);
+      pinchStartZoom = zoom;
+    }
+  });
+
+  viewport.addEventListener("pointermove", (e) => {
+    if (!pointers.has(e.pointerId)) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 2 && pinchStartDist > 0) {
+      const [a, b] = [...pointers.values()];
+      const dist = Math.hypot(a.x - b.x, a.y - b.y);
+      const midX = (a.x + b.x) / 2;
+      const midY = (a.y + b.y) / 2;
+      setZoom(pinchStartZoom * (dist / pinchStartDist), midX, midY);
+    }
+  });
+
+  function releasePointer(e) {
+    pointers.delete(e.pointerId);
+    if (pointers.size < 2) pinchStartDist = 0;
+  }
+  viewport.addEventListener("pointerup", releasePointer);
+  viewport.addEventListener("pointercancel", releasePointer);
+  viewport.addEventListener("pointerleave", releasePointer);
 }
 
 renderHero();
