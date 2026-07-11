@@ -392,8 +392,8 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="104" value="三区会所&lt;div&gt;⚫︎&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=right;verticalAlign=bottom;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="840" y="-1" width="120" height="40" as="geometry"/>
+                <mxCell id="104" value="三区&lt;div&gt;会所&lt;div&gt;⚫︎&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=right;verticalAlign=bottom;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="-1" width="40" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="105" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="240" width="120" height="120" as="geometry"/>
@@ -508,6 +508,9 @@
                 </mxCell>
                 <mxCell id="141" value="静清&lt;div&gt;信用&lt;/div&gt;&lt;div style=&quot;&quot;&gt;⚪︎&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=left;" parent="1" vertex="1">
                     <mxGeometry x="280" y="79" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="840" y="-1" width="40" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

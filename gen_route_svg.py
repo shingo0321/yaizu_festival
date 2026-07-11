@@ -60,40 +60,43 @@ def process_segment(raw):
 
 
 def html_to_lines(value):
-    # mxgraph HTML labels use one <div> per line. Text that sits outside any
-    # <div> (a "loose" run) still renders on its own line, because a bare
-    # inline run sitting between block-level <div> siblings becomes its own
-    # anonymous block box in the browser. So: every top-level <div> and every
-    # top-level loose-text run is (at least) one line, further split by <br>.
+    # mxgraph HTML labels use one <div> per line, at ANY nesting depth: a
+    # <div> is a block, so it forces line breaks around itself even when
+    # nested inside another <div> (e.g. "<div>A<div>B</div></div>" is two
+    # lines, "A" then "B", not one). Text that sits outside any <div> (a
+    # "loose" run) still renders on its own line, because a bare inline run
+    # sitting between block-level siblings becomes its own anonymous block
+    # box in the browser.
     if not value:
         return []
 
     tokens = re.split(r"(?i)(<div[^>]*>|</div>)", value)
     lines = []
-    buf = []
-    depth = 0
+    # Stack of {buf, had_nested}: had_nested tracks whether this div already
+    # emitted its line(s) via a nested <div>, so its own closing tag doesn't
+    # also force a spurious extra (usually blank) line.
+    stack = [{"buf": [], "had_nested": False}]
 
-    def flush():
-        lines.extend(process_segment("".join(buf)))
-        buf.clear()
+    def flush(frame, force):
+        raw = "".join(frame["buf"])
+        if raw or force:
+            lines.extend(process_segment(raw))
+        frame["buf"].clear()
 
     for tok in tokens:
         if re.match(r"(?i)<div[^>]*>", tok):
-            if depth == 0:
-                if "".join(buf):
-                    flush()
-                else:
-                    buf.clear()
-            depth += 1
+            flush(stack[-1], force=False)
+            stack[-1]["had_nested"] = True
+            stack.append({"buf": [], "had_nested": False})
         elif tok.lower() == "</div>":
-            depth = max(0, depth - 1)
-            if depth == 0:
-                flush()
+            frame = stack[-1]
+            flush(frame, force=not frame["had_nested"])
+            if len(stack) > 1:
+                stack.pop()
         else:
-            buf.append(tok)
+            stack[-1]["buf"].append(tok)
 
-    if "".join(buf):
-        flush()
+    flush(stack[-1], force=False)
 
     return lines
 

@@ -182,8 +182,9 @@
 <text x="826.0" y="144.004" font-size="12" text-anchor="middle" fill="#222222">通</text>
 <rect x="818.3" y="147.804" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
 <text x="826.0" y="158.004" font-size="12" text-anchor="middle" fill="#222222">り</text>
-<rect x="840.0" y="-1.0" width="120.0" height="40.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
-<text x="956.0" y="21.5" font-size="12" text-anchor="end" fill="#222222">三区会所</text>
+<rect x="920.0" y="-1.0" width="40.0" height="40.0" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
+<text x="956.0" y="7.5" font-size="12" text-anchor="end" fill="#222222">三区</text>
+<text x="956.0" y="21.5" font-size="12" text-anchor="end" fill="#222222">会所</text>
 <text x="956.0" y="35.5" font-size="12" text-anchor="end" fill="#222222">⚫︎</text>
 <rect x="1000.0" y="240.0" width="120.0" height="120.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <rect x="920.0" y="319.0" width="40.0" height="41.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
@@ -227,4 +228,5 @@
 <text x="284.0" y="88.5" font-size="12" text-anchor="start" fill="#222222">静清</text>
 <text x="284.0" y="102.5" font-size="12" text-anchor="start" fill="#222222">信用</text>
 <text x="284.0" y="116.5" font-size="12" text-anchor="start" fill="#222222">⚪︎</text>
+<rect x="840.0" y="-1.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 </svg>

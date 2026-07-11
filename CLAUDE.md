@@ -24,7 +24,7 @@ A static, frontend-only website (no build step, no dependencies) for 焼津祭 (
 
 ## Rules
 
-- **After editing `data.js`'s `schedule`, regenerate the PDF**: run `./gen_schedule_pdf.sh` from this directory to keep `schedule.pdf` in sync. It has drifted out of sync before (edits to `data.js` without regenerating the PDF), so don't skip this.
+- **After editing `data.js`'s `schedule`, regenerate the PDF**: run `./gen_schedule_pdf.sh` from this directory to keep `schedule.pdf` in sync. It has drifted out of sync before (edits to `data.js` without regenerating the PDF), so don't skip this — including when `schedule` changes as a side effect of other work, not just when explicitly asked to edit it. When in doubt, check `git diff data.js` for `schedule` changes before wrapping up.
 - **After editing `mikoshi-route.dio`, regenerate the SVG**: run `./gen_route_svg.py` from this directory to keep `mikoshi-route.svg` in sync with the diagram source.
 - **After regenerating `mikoshi-route.svg`, regenerate the PDF too**: run `./gen_route_pdf.sh` from this directory to keep `mikoshi-route.pdf` in sync.
 - **`mikoshi-route.dio` is a live file the owner edits directly in the draw.io desktop app between Claude sessions** (and sometimes between messages in the same session), not just through requests made here. Before doing route-diagram work — and especially when asked to "reflect the dio changes" — run `git diff mikoshi-route.dio` first rather than assuming it's unchanged; regenerate the SVG whenever it has changed, even if no one explicitly flagged an edit.
