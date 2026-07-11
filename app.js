@@ -49,16 +49,6 @@ function renderMapPins() {
     <div class="venue-card">
       <h2>${data.title}</h2>
       ${
-        routeDiagram
-          ? `
-        <div class="route-image">
-          <img class="zoomable" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
-          <p class="route-image-caption">${routeDiagram.caption}</p>
-        </div>
-      `
-          : ""
-      }
-      ${
         routeImg
           ? `
         <div class="route-image">
@@ -66,6 +56,16 @@ function renderMapPins() {
           <p class="route-image-caption">
             <a href="${routeImg.sourceUrl}" target="_blank" rel="noopener noreferrer">${routeImg.caption}</a>
           </p>
+        </div>
+      `
+          : ""
+      }
+      ${
+        routeDiagram
+          ? `
+        <div class="route-image">
+          <img class="zoomable route-diagram-img" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
+          <p class="route-image-caption">${routeDiagram.caption}</p>
         </div>
       `
           : ""
@@ -248,6 +248,7 @@ function setupLightbox() {
   });
 
   img.addEventListener("click", (e) => {
+    if (dragged) return; // don't zoom on the click that ends a drag
     lastPointer = { x: e.clientX, y: e.clientY };
     setZoom(zoom * STEP_FACTOR, e.clientX, e.clientY);
   });
@@ -279,18 +280,30 @@ function setupLightbox() {
     { passive: false }
   );
 
-  // Two-finger pinch: zoom toward the midpoint between the touches.
-  // touch-action on the viewport excludes native pinch-zoom so this gets
-  // full control, while single-finger native pan/scroll still works.
+  // One finger/mouse button: drag to pan. Two fingers: pinch to zoom toward
+  // the midpoint. touch-action:none on the viewport hands both gestures
+  // entirely to this pointer-event handling (no native scroll/pinch).
   const pointers = new Map();
   let pinchStartDist = 0;
   let pinchStartZoom = 1;
+  let dragStart = null; // { x, y, scrollLeft, scrollTop }
+  let dragged = false;
+  const DRAG_THRESHOLD = 6; // px of movement before a tap counts as a drag
 
   viewport.addEventListener("pointerdown", (e) => {
     viewport.setPointerCapture(e.pointerId);
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     lastPointer = { x: e.clientX, y: e.clientY };
-    if (pointers.size === 2) {
+    if (pointers.size === 1) {
+      dragStart = {
+        x: e.clientX,
+        y: e.clientY,
+        scrollLeft: viewport.scrollLeft,
+        scrollTop: viewport.scrollTop,
+      };
+      dragged = false;
+    } else if (pointers.size === 2) {
+      dragStart = null;
       const [a, b] = [...pointers.values()];
       pinchStartDist = Math.hypot(a.x - b.x, a.y - b.y);
       pinchStartZoom = zoom;
@@ -300,6 +313,7 @@ function setupLightbox() {
   viewport.addEventListener("pointermove", (e) => {
     if (!pointers.has(e.pointerId)) return;
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
     if (pointers.size === 2 && pinchStartDist > 0) {
       const [a, b] = [...pointers.values()];
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
@@ -307,6 +321,18 @@ function setupLightbox() {
       const midY = (a.y + b.y) / 2;
       lastPointer = { x: midX, y: midY };
       setZoom(pinchStartZoom * (dist / pinchStartDist), midX, midY);
+    } else if (pointers.size === 1 && dragStart) {
+      const dx = e.clientX - dragStart.x;
+      const dy = e.clientY - dragStart.y;
+      if (!dragged && Math.hypot(dx, dy) > DRAG_THRESHOLD) {
+        dragged = true;
+        viewport.classList.add("dragging");
+      }
+      if (dragged) {
+        viewport.scrollLeft = dragStart.scrollLeft - dx;
+        viewport.scrollTop = dragStart.scrollTop - dy;
+      }
+      lastPointer = { x: e.clientX, y: e.clientY };
     } else {
       lastPointer = { x: e.clientX, y: e.clientY };
     }
@@ -315,6 +341,15 @@ function setupLightbox() {
   function releasePointer(e) {
     pointers.delete(e.pointerId);
     if (pointers.size < 2) pinchStartDist = 0;
+    if (pointers.size === 0) {
+      dragStart = null;
+      viewport.classList.remove("dragging");
+      // Deferred so the click event that follows this pointerup (which the
+      // img's click handler checks `dragged` against) still sees it as true.
+      setTimeout(() => {
+        dragged = false;
+      }, 0);
+    }
   }
   viewport.addEventListener("pointerup", releasePointer);
   viewport.addEventListener("pointercancel", releasePointer);

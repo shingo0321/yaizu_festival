@@ -198,6 +198,7 @@ def parse(src_path):
                 "pts": edge_paths.get(cell.get("id"), []),
                 "stroke": style.get("strokeColor", "#6c8ebf"),
                 "dashed": style.get("dashed") == "1",
+                "arrow": style.get("endArrow", "classic") != "none",
             })
 
     return vertices, edges
@@ -238,10 +239,14 @@ def render_svg(vertices, edges):
             continue
         d = "M " + " L ".join(f"{px},{py}" for px, py in pts)
         dash = ' stroke-dasharray="6,4"' if e["dashed"] else ""
-        marker = "url(#arrow-green)" if "82b366" in e["stroke"] else "url(#arrow-blue)"
+        if e["arrow"]:
+            marker = "url(#arrow-green)" if "82b366" in e["stroke"] else "url(#arrow-blue)"
+            marker_attr = f' marker-end="{marker}"'
+        else:
+            marker_attr = ""
         parts.append(
-            f'<path d="{d}" fill="none" stroke="{e["stroke"]}" stroke-width="2.5"{dash} '
-            f'marker-end="{marker}" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'<path d="{d}" fill="none" stroke="{e["stroke"]}" stroke-width="2.5"{dash}'
+            f'{marker_attr} stroke-linecap="round" stroke-linejoin="round"/>'
         )
 
     for v in vertices:
@@ -280,6 +285,22 @@ def render_svg(vertices, edges):
                 if not ln:
                     continue
                 ly = start_y + i * LINE_H
+                if not v["box"]:
+                    # Edge labels (street names) sit on top of the route
+                    # arrows with nothing of their own behind them, so give
+                    # each line an opaque backing -- like draw.io's own
+                    # edge-label halo -- or the dashed line shows through.
+                    bg_w = len(ln) * FONT_SIZE * 0.95 + 4
+                    bg_h = FONT_SIZE * 1.1
+                    if anchor == "middle":
+                        bg_x = tx - bg_w / 2
+                    elif anchor == "end":
+                        bg_x = tx - bg_w
+                    else:
+                        bg_x = tx
+                    parts.append(
+                        f'<rect x="{bg_x}" y="{ly - FONT_SIZE * 0.85}" width="{bg_w}" height="{bg_h}" fill="#ffffff"/>'
+                    )
                 parts.append(
                     f'<text x="{tx}" y="{ly}" font-size="{FONT_SIZE}" '
                     f'text-anchor="{anchor}" fill="#222222">{html.escape(ln)}</text>'

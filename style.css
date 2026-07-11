@@ -206,6 +206,10 @@ section.panel.active { display: block; }
   cursor: zoom-in;
 }
 
+.route-diagram-img {
+  border: 1px solid #ddd;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -222,9 +226,14 @@ section.panel.active { display: block; }
   height: 100%;
   overflow: auto;
   display: flex;
-  /* Allow native single-finger pan/scroll but not native pinch-zoom, so our
-     own pointer-based pinch handler gets full control of two-finger gestures. */
-  touch-action: pan-x pan-y;
+  cursor: grab;
+  /* Panning (1 finger/button) and pinch-zoom (2 fingers) are both handled by
+     our own pointer-event listeners, not the browser's native gestures. */
+  touch-action: none;
+}
+
+.lightbox-viewport.dragging {
+  cursor: grabbing;
 }
 
 .lightbox-viewport img {
