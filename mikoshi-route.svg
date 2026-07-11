@@ -148,9 +148,9 @@
 <rect x="1000.0" y="960.0" width="120.0" height="80.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <text x="1116.0" y="1036.5" font-size="12" text-anchor="end" fill="#222222">青峰プール⚪︎</text>
 <rect x="1160.0" y="960.0" width="40.0" height="41.0" fill="#ffe6cc" stroke="#d79b00" stroke-width="1"/>
-<text x="1180.0" y="970.0" font-size="12" text-anchor="middle" fill="#222222">南</text>
-<text x="1180.0" y="984.0" font-size="12" text-anchor="middle" fill="#222222">御旅所</text>
-<text x="1180.0" y="998.0" font-size="12" text-anchor="middle" fill="#222222">◼️</text>
+<text x="1164.0" y="970.0" font-size="12" text-anchor="start" fill="#222222">南</text>
+<text x="1164.0" y="984.0" font-size="12" text-anchor="start" fill="#222222">御旅所</text>
+<text x="1164.0" y="998.0" font-size="12" text-anchor="start" fill="#222222">◼️</text>
 <rect x="1132.3" y="519.8" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
 <text x="1140.0" y="530.0" font-size="12" text-anchor="middle" fill="#222222">浜</text>
 <rect x="1132.3" y="533.8" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>

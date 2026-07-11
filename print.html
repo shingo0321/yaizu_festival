@@ -13,8 +13,19 @@
     font-size: 16px;
     line-height: 1.3;
   }
-  .day-block { page-break-before: always; }
+  .day-block {
+    page-break-before: always;
+    display: flex;
+    flex-direction: column;
+  }
   .day-block:first-child { page-break-before: auto; }
+  .page-footer {
+    margin-top: auto;
+    padding-top: 8px;
+    text-align: right;
+    font-size: 11px;
+    color: #999;
+  }
   .day-block h2 {
     font-size: 18px;
     color: #0f4c81;
@@ -82,9 +93,9 @@
       `;
     }
 
-    function dayBlockHtml(label, items) {
+    function dayBlockHtml(label, items, pageNum) {
       return `
-        <div class="day-block">
+        <div class="day-block" style="height: ${PAGE_CONTENT_HEIGHT_PX}px;">
           <h2>${label}</h2>
           <table>
             <thead>
@@ -96,6 +107,7 @@
             </thead>
             <tbody>${items.map(rowHtml).join("")}</tbody>
           </table>
+          <div class="page-footer">${pageNum}</div>
         </div>
       `;
     }
@@ -108,7 +120,7 @@
       probe.style.top = "0";
       probe.style.left = "0";
       probe.style.width = CONTENT_WIDTH_PX + "px";
-      probe.innerHTML = dayBlockHtml(day.date, day.items);
+      probe.innerHTML = dayBlockHtml(day.date, day.items, 1);
       document.body.appendChild(probe);
 
       const h2Top = probe.querySelector("h2").getBoundingClientRect().top;
@@ -169,17 +181,20 @@
       return chunks;
     }
 
-    const html = FESTIVAL_DATA.schedule
-      .map((day) => {
-        const chunks = chunkDay(day);
-        return chunks
+    const dayChunks = FESTIVAL_DATA.schedule.map((day) => ({ day, chunks: chunkDay(day) }));
+
+    let pageNum = 0;
+    const html = dayChunks
+      .map(({ day, chunks }) =>
+        chunks
           .map((items, i) => {
+            pageNum += 1;
             const label =
               chunks.length > 1 ? `${day.date}（${i + 1}/${chunks.length}）` : day.date;
-            return dayBlockHtml(label, items);
+            return dayBlockHtml(label, items, pageNum);
           })
-          .join("");
-      })
+          .join("")
+      )
       .join("");
 
     document.getElementById("schedule").innerHTML = html;
