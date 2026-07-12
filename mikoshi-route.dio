@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ArtCQV6iOyG0nHf7ZwCA" name="Page-1">
-        <mxGraphModel dx="747" dy="1839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="370" dy="1834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -138,6 +138,11 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="810" y="370" as="sourcePoint"/>
                         <mxPoint x="810" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="148" value="神&lt;div&gt;武&lt;/div&gt;&lt;div&gt;通&lt;/div&gt;&lt;div&gt;り&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="44">
+                    <mxGeometry x="0.0294" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="45" value="" style="endArrow=classic;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;dashed=1;" parent="1" edge="1">
@@ -509,7 +514,7 @@
                 <mxCell id="141" value="静清&lt;div&gt;信用&lt;/div&gt;&lt;div style=&quot;&quot;&gt;⚪︎&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=left;" parent="1" vertex="1">
                     <mxGeometry x="280" y="79" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="147" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" vertex="1" parent="1">
+                <mxCell id="147" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=center;" parent="1" vertex="1">
                     <mxGeometry x="840" y="-1" width="40" height="40" as="geometry"/>
                 </mxCell>
             </root>

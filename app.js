@@ -75,7 +75,8 @@ function renderMapPins() {
       `
           : ""
       }
-      <ul class="access-list">
+      <h3>往路</h3>
+      <ol class="access-list">
         ${data.points
           .map((p) =>
             p.mapUrl
@@ -83,7 +84,7 @@ function renderMapPins() {
               : `<li>${p.label}</li>`
           )
           .join("")}
-      </ul>
+      </ol>
     </div>
   `;
 }

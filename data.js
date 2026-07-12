@@ -80,13 +80,20 @@ const FESTIVAL_DATA = {
     }
   ],
 
-  // Dropboxで管理する元データの「地図」シートに記載の3地点（各地点のGoogleマップ共有リンクを含む）。
+  // mikoshi-route.md（神輿渡御ルートの往路）に記載の地点（各地点のGoogleマップ共有リンクを含む）。
   mapPins: {
     title: "地図",
     points: [
-      { label: "焼津神社", lat: 34.8650983, lng: 138.3137528, mapUrl: "https://maps.app.goo.gl/qWBpou55kGiv7EaN6" },
-      { label: "ギャングスター", lat: 34.8643354, lng: 138.3143884, mapUrl: "https://maps.app.goo.gl/gcSPTRBJqKVym2ek8" },
-      { label: "丸久食品", lat: 34.85763, lng: 138.3230476, mapUrl: "https://maps.app.goo.gl/Uk82kyPNM1wvgv3a8" }
+      { label: "焼津神社", lat: 34.865930, lng: 138.314590, mapUrl: "https://maps.app.goo.gl/5euf4zw6eezQ6fCWA" },
+      { label: "四区会所", lat: 34.865455, lng: 138.316780, mapUrl: "https://maps.app.goo.gl/dtXtLFaRFSPd8kAB9" },
+      { label: "御沓脱", lat: 34.866112, lng: 138.318123, mapUrl: "https://maps.app.goo.gl/Ee2XHQ6oJMJo2Mbz5" },
+      { label: "焼津警察署中央交番", lat: 34.863671, lng: 138.318090, mapUrl: "https://maps.app.goo.gl/YeH87NMC6kUruYUe7" },
+      { label: "水校通り", lat: 34.863613, lng: 138.318745, mapUrl: "https://maps.app.goo.gl/bFkyir5ExwASyRSL6" },
+      { label: "塩川新聞店舗", lat: 34.866835, lng: 138.319678, mapUrl: "https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8" },
+      { label: "浅草通り", lat: 34.866453, lng: 138.321124, mapUrl: "https://maps.app.goo.gl/1yWWfYh7MdYtM6o36" },
+      { label: "アトレ焼津", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
+      { label: "しずおか焼津信金", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
+      { label: "神武通り", lat: 34.863188, lng: 138.321739, mapUrl: "https://maps.app.goo.gl/WzmupfBLiPNBFhbu9" }
     ],
     // 上記3地点を徒歩で結んだ実際の道なりルート（OSRMのルーティングAPIで取得、無料・APIキー不要）
     excelRouteLine: [

@@ -1,0 +1,15 @@
+# 往路
+1. [焼津神社](https://maps.app.goo.gl/5euf4zw6eezQ6fCWA)
+1. [四区会所](https://maps.app.goo.gl/dtXtLFaRFSPd8kAB9)
+1. https://maps.app.goo.gl/fazk9jBXYbMptFb46
+1. [御沓脱](https://maps.app.goo.gl/Ee2XHQ6oJMJo2Mbz5)
+1. https://maps.app.goo.gl/5EqKuLDYLaQRJNki7
+1. https://maps.app.goo.gl/ZkaU38RrHjoneArg6
+1. [焼津警察署中央交番](https://maps.app.goo.gl/YeH87NMC6kUruYUe7)
+1. [水校通り](https://maps.app.goo.gl/bFkyir5ExwASyRSL6)
+1. [塩川新聞店舗](https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8)
+1. [浅草通り](https://maps.app.goo.gl/1yWWfYh7MdYtM6o36)
+1. [アトレ焼津](https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A)
+1. [しずおか焼津信金](https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A)
+1. [神武通り](https://maps.app.goo.gl/WzmupfBLiPNBFhbu9)
+1. [二区会所](https://maps.app.goo.gl/z6Gfa999n3GHz8CL8)

@@ -115,6 +115,14 @@
 <text x="844.0" y="490.0" font-size="12" text-anchor="start" fill="#222222">二区</text>
 <text x="844.0" y="504.0" font-size="12" text-anchor="start" fill="#222222">会所</text>
 <text x="844.0" y="518.0" font-size="12" text-anchor="start" fill="#222222">⚫︎</text>
+<rect x="802.3" y="430.79900000000004" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="810.0" y="440.999" font-size="12" text-anchor="middle" fill="#222222">神</text>
+<rect x="802.3" y="444.79900000000004" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="810.0" y="454.999" font-size="12" text-anchor="middle" fill="#222222">武</text>
+<rect x="802.3" y="458.79900000000004" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="810.0" y="468.999" font-size="12" text-anchor="middle" fill="#222222">通</text>
+<rect x="802.3" y="472.79900000000004" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="810.0" y="482.999" font-size="12" text-anchor="middle" fill="#222222">り</text>
 <rect x="920.0" y="399.0" width="40.0" height="41.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <rect x="920.0" y="480.0" width="40.0" height="41.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
 <rect x="1000.0" y="399.0" width="120.0" height="41.0" fill="#ffffff" stroke="#999999" stroke-width="1"/>
