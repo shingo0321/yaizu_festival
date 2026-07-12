@@ -7,7 +7,7 @@
 1. https://maps.app.goo.gl/ZkaU38RrHjoneArg6
 1. [焼津警察署中央交番](https://maps.app.goo.gl/YeH87NMC6kUruYUe7)
 1. [水校通り](https://maps.app.goo.gl/bFkyir5ExwASyRSL6)
-1. [塩川新聞店舗](https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8)
+1. [塩川新聞舗](https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8)
 1. [浅草通り](https://maps.app.goo.gl/1yWWfYh7MdYtM6o36)
 1. [アトレ焼津](https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A)
 1. [しずおか焼津信金](https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A)
