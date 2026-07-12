@@ -89,7 +89,7 @@ const FESTIVAL_DATA = {
       { label: "御沓脱", lat: 34.866112, lng: 138.318123, mapUrl: "https://maps.app.goo.gl/Ee2XHQ6oJMJo2Mbz5" },
       { label: "焼津警察署中央交番", lat: 34.863671, lng: 138.318090, mapUrl: "https://maps.app.goo.gl/YeH87NMC6kUruYUe7" },
       { label: "水校通り", lat: 34.863613, lng: 138.318745, mapUrl: "https://maps.app.goo.gl/bFkyir5ExwASyRSL6" },
-      { label: "塩川新聞店舗", lat: 34.866835, lng: 138.319678, mapUrl: "https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8" },
+      { label: "塩川新聞舗", lat: 34.866835, lng: 138.319678, mapUrl: "https://maps.app.goo.gl/CFrQ6NpWVa2Bpusc8" },
       { label: "浅草通り", lat: 34.866453, lng: 138.321124, mapUrl: "https://maps.app.goo.gl/1yWWfYh7MdYtM6o36" },
       { label: "アトレ焼津", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
       { label: "しずおか焼津信金", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
