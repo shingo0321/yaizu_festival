@@ -50,6 +50,19 @@ function renderMapPins() {
   const routeDiagram = data.routeDiagram;
   const routeImg = data.officialRouteImage;
 
+  const pointsList = (points) =>
+    `
+      <ol class="access-list">
+        ${points
+          .map((p) =>
+            p.mapUrl
+              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
+              : `<li>${p.label}</li>`
+          )
+          .join("")}
+      </ol>
+    `;
+
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
@@ -80,28 +93,16 @@ function renderMapPins() {
       `
           : ""
       }
-      <h3>往路</h3>
+    </div>
+    <div class="venue-card">
+      <h2>往路</h2>
       <a class="pdf-link" href="${directionsUrl(data.points)}" target="_blank" rel="noopener">往路をGoogleマップで見る</a>
-      <ol class="access-list">
-        ${data.points
-          .map((p) =>
-            p.mapUrl
-              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
-              : `<li>${p.label}</li>`
-          )
-          .join("")}
-      </ol>
-      <h3>帰路</h3>
+      ${pointsList(data.points)}
+    </div>
+    <div class="venue-card">
+      <h2>帰路</h2>
       <a class="pdf-link" href="${directionsUrl(data.pointsReturn)}" target="_blank" rel="noopener">帰路をGoogleマップで見る</a>
-      <ol class="access-list">
-        ${data.pointsReturn
-          .map((p) =>
-            p.mapUrl
-              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
-              : `<li>${p.label}</li>`
-          )
-          .join("")}
-      </ol>
+      ${pointsList(data.pointsReturn)}
     </div>
   `;
 }
