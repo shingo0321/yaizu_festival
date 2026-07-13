@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ArtCQV6iOyG0nHf7ZwCA" name="Page-1">
-        <mxGraphModel dx="370" dy="1834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="441" dy="1834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -140,7 +140,7 @@
                         <mxPoint x="810" y="540" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="148" value="神&lt;div&gt;武&lt;/div&gt;&lt;div&gt;通&lt;/div&gt;&lt;div&gt;り&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="44">
+                <mxCell id="148" value="神&lt;div&gt;武&lt;/div&gt;&lt;div&gt;通&lt;/div&gt;&lt;div&gt;り&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="44" vertex="1" connectable="0">
                     <mxGeometry x="0.0294" relative="1" as="geometry">
                         <mxPoint y="1" as="offset"/>
                     </mxGeometry>
@@ -241,6 +241,11 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1150" y="871" as="sourcePoint"/>
                         <mxPoint x="1150" y="1010" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="149" value="八&lt;div&gt;雲&lt;/div&gt;&lt;div&gt;通&lt;/div&gt;&lt;div&gt;り&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="69">
+                    <mxGeometry x="-0.2014" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="70" value="南&lt;div&gt;御旅所&lt;/div&gt;&lt;div&gt;◼️&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">

@@ -39,9 +39,9 @@ function renderSchedule() {
     .join("");
 }
 
-function directionsUrl(points) {
-  const waypoints = points.map((p) => `${p.lat},${p.lng}`).join("/");
-  return `https://www.google.com/maps/dir/${waypoints}/?travelmode=walking`;
+function directionsUrl(waypoints) {
+  const path = waypoints.map(([lat, lng]) => `${lat},${lng}`).join("/");
+  return `https://www.google.com/maps/dir/${path}/?travelmode=walking`;
 }
 
 function renderMapPins() {
@@ -82,13 +82,13 @@ function renderMapPins() {
         routeDiagram
           ? `
         <div class="route-image">
-          <img class="zoomable route-diagram-img" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
-          <p class="route-image-caption">${routeDiagram.caption}</p>
           ${
             routeDiagram.pdf
               ? `<a class="pdf-link" href="${routeDiagram.pdf}" target="_blank" rel="noopener">簡略図のPDFを開く</a>`
               : ""
           }
+          <img class="zoomable route-diagram-img" src="${routeDiagram.src}" alt="${routeDiagram.alt}" loading="lazy" />
+          <p class="route-image-caption">${routeDiagram.caption}</p>
         </div>
       `
           : ""
@@ -96,12 +96,12 @@ function renderMapPins() {
     </div>
     <div class="venue-card">
       <h2>往路</h2>
-      <a class="pdf-link" href="${directionsUrl(data.points)}" target="_blank" rel="noopener">往路をGoogleマップで見る</a>
+      <a class="pdf-link" href="${directionsUrl(data.routeWaypoints)}" target="_blank" rel="noopener">往路をGoogleマップで見る</a>
       ${pointsList(data.points)}
     </div>
     <div class="venue-card">
       <h2>帰路</h2>
-      <a class="pdf-link" href="${directionsUrl(data.pointsReturn)}" target="_blank" rel="noopener">帰路をGoogleマップで見る</a>
+      <a class="pdf-link" href="${directionsUrl(data.routeWaypointsReturn)}" target="_blank" rel="noopener">帰路をGoogleマップで見る</a>
       ${pointsList(data.pointsReturn)}
     </div>
   `;
