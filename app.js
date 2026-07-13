@@ -39,6 +39,11 @@ function renderSchedule() {
     .join("");
 }
 
+function directionsUrl(points) {
+  const waypoints = points.map((p) => `${p.lat},${p.lng}`).join("/");
+  return `https://www.google.com/maps/dir/${waypoints}/?travelmode=walking`;
+}
+
 function renderMapPins() {
   const container = document.getElementById("map-panel");
   const data = FESTIVAL_DATA.mapPins;
@@ -76,6 +81,7 @@ function renderMapPins() {
           : ""
       }
       <h3>往路</h3>
+      <a class="pdf-link" href="${directionsUrl(data.points)}" target="_blank" rel="noopener">往路をGoogleマップで見る</a>
       <ol class="access-list">
         ${data.points
           .map((p) =>
@@ -86,6 +92,7 @@ function renderMapPins() {
           .join("")}
       </ol>
       <h3>帰路</h3>
+      <a class="pdf-link" href="${directionsUrl(data.pointsReturn)}" target="_blank" rel="noopener">帰路をGoogleマップで見る</a>
       <ol class="access-list">
         ${data.pointsReturn
           .map((p) =>
