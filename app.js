@@ -40,11 +40,23 @@ function renderSchedule() {
 }
 
 function directionsUrl(waypoints) {
-  const path = waypoints.map(([lat, lng]) => `${lat},${lng}`).join("/");
-  // "!3e2" is Google Maps' travel-mode code for walking (0=car, 1=transit,
-  // 2=walking, 3=cycling); the ?travelmode= query param only works with the
-  // ?api=1 URL form, not this path-based /maps/dir/ form.
-  return `https://www.google.com/maps/dir/${path}/data=!4m2!4m1!3e2`;
+  // Google's documented "Universal URL" directions scheme (?api=1) is the
+  // reliable way to force walking mode; the path-based /maps/dir/lat,lng/...
+  // form doesn't consistently honor a travel mode without the full internal
+  // `data=` payload Google itself generates, which isn't practical to fake.
+  const [originLat, originLng] = waypoints[0];
+  const [destLat, destLng] = waypoints[waypoints.length - 1];
+  const params = new URLSearchParams({
+    api: "1",
+    origin: `${originLat},${originLng}`,
+    destination: `${destLat},${destLng}`,
+    travelmode: "walking",
+  });
+  const middle = waypoints.slice(1, -1);
+  if (middle.length) {
+    params.set("waypoints", middle.map(([lat, lng]) => `${lat},${lng}`).join("|"));
+  }
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
 function renderMapPins() {
