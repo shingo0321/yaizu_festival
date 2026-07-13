@@ -80,7 +80,7 @@ const FESTIVAL_DATA = {
     }
   ],
 
-  // mikoshi-route.md（神輿渡御ルートの往路）に記載の地点（各地点のGoogleマップ共有リンクを含む）。
+  // mikoshi-route.md（神輿渡御ルートの往路・帰路）に記載の地点（各地点のGoogleマップ共有リンクを含む）。
   mapPins: {
     title: "地図",
     points: [
@@ -93,7 +93,21 @@ const FESTIVAL_DATA = {
       { label: "浅草通り", lat: 34.866453, lng: 138.321124, mapUrl: "https://maps.app.goo.gl/1yWWfYh7MdYtM6o36" },
       { label: "アトレ焼津", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
       { label: "しずおか焼津信金", lat: 34.863440, lng: 138.320205, mapUrl: "https://maps.app.goo.gl/Gndx9iHNucTi3Pc4A" },
-      { label: "神武通り", lat: 34.863188, lng: 138.321739, mapUrl: "https://maps.app.goo.gl/WzmupfBLiPNBFhbu9" }
+      { label: "神武通り", lat: 34.863188, lng: 138.321739, mapUrl: "https://maps.app.goo.gl/WzmupfBLiPNBFhbu9" },
+      { label: "二区会所", lat: 34.861364, lng: 138.321310, mapUrl: "https://maps.app.goo.gl/z6Gfa999n3GHz8CL8" },
+      { label: "静銀", lat: 34.863112, lng: 138.322150, mapUrl: "https://maps.app.goo.gl/ZvG7MVG5JJrcBrH6A" },
+      { label: "中央通り", lat: 34.863031, lng: 138.322652, mapUrl: "https://maps.app.goo.gl/kQTCWtBAxSf1MFTh9" },
+      { label: "田子重", lat: 34.857875, lng: 138.321953, mapUrl: "https://maps.app.goo.gl/o895LxNkZJdiqQ3H9" },
+      { label: "八雲通り", lat: 34.857709, lng: 138.323701, mapUrl: "https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7" },
+      { label: "南御旅所", lat: 34.855508, lng: 138.323867, mapUrl: "https://maps.app.goo.gl/n8ddXExY18nFU3NY8" },
+      { label: "浜通り", lat: 34.857743, lng: 138.323687, mapUrl: "https://maps.app.goo.gl/7sU3sYM74JhDUWMU9" },
+      { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" },
+      { label: "魚市場御旅所", lat: 34.864839, lng: 138.326198, mapUrl: "https://maps.app.goo.gl/xc5TQDrHjsgktMVC9" },
+      { label: "三区会所", lat: 34.865772, lng: 138.323161, mapUrl: "https://maps.app.goo.gl/AeA29AyfD5pS25SX6" },
+      { label: "焼津市役所", lat: 34.866916, lng: 138.322732, mapUrl: "https://maps.app.goo.gl/mwJk7MQUZnMvYL116" },
+      { label: "昭和通り", lat: 34.867037, lng: 138.322368, mapUrl: "https://maps.app.goo.gl/srTUFfwJtyjvBpcT8" },
+      { label: "焼津御旅所", lat: 34.865169, lng: 138.316678, mapUrl: "https://maps.app.goo.gl/ZLitTzhQcAkJ4fTv6" },
+      { label: "焼津神社（帰路）", lat: 34.865920, lng: 138.314616, mapUrl: "https://maps.app.goo.gl/Kcv3Fc85Fj2mbsUd7" }
     ],
     // 上記3地点を徒歩で結んだ実際の道なりルート（OSRMのルーティングAPIで取得、無料・APIキー不要）
     excelRouteLine: [
