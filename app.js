@@ -41,7 +41,10 @@ function renderSchedule() {
 
 function directionsUrl(waypoints) {
   const path = waypoints.map(([lat, lng]) => `${lat},${lng}`).join("/");
-  return `https://www.google.com/maps/dir/${path}/?travelmode=walking`;
+  // "!3e2" is Google Maps' travel-mode code for walking (0=car, 1=transit,
+  // 2=walking, 3=cycling); the ?travelmode= query param only works with the
+  // ?api=1 URL form, not this path-based /maps/dir/ form.
+  return `https://www.google.com/maps/dir/${path}/data=!4m2!4m1!3e2`;
 }
 
 function renderMapPins() {
