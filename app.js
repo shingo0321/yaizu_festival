@@ -85,6 +85,16 @@ function renderMapPins() {
           )
           .join("")}
       </ol>
+      <h3>帰路</h3>
+      <ol class="access-list">
+        ${data.pointsReturn
+          .map((p) =>
+            p.mapUrl
+              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
+              : `<li>${p.label}</li>`
+          )
+          .join("")}
+      </ol>
     </div>
   `;
 }

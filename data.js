@@ -101,13 +101,15 @@ const FESTIVAL_DATA = {
       { label: "八雲通り", lat: 34.857709, lng: 138.323701, mapUrl: "https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7" },
       { label: "南御旅所", lat: 34.855508, lng: 138.323867, mapUrl: "https://maps.app.goo.gl/n8ddXExY18nFU3NY8" },
       { label: "浜通り", lat: 34.857743, lng: 138.323687, mapUrl: "https://maps.app.goo.gl/7sU3sYM74JhDUWMU9" },
-      { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" },
+      { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" }
+    ],
+    pointsReturn: [
       { label: "魚市場御旅所", lat: 34.864839, lng: 138.326198, mapUrl: "https://maps.app.goo.gl/xc5TQDrHjsgktMVC9" },
       { label: "三区会所", lat: 34.865772, lng: 138.323161, mapUrl: "https://maps.app.goo.gl/AeA29AyfD5pS25SX6" },
       { label: "焼津市役所", lat: 34.866916, lng: 138.322732, mapUrl: "https://maps.app.goo.gl/mwJk7MQUZnMvYL116" },
       { label: "昭和通り", lat: 34.867037, lng: 138.322368, mapUrl: "https://maps.app.goo.gl/srTUFfwJtyjvBpcT8" },
       { label: "焼津御旅所", lat: 34.865169, lng: 138.316678, mapUrl: "https://maps.app.goo.gl/ZLitTzhQcAkJ4fTv6" },
-      { label: "焼津神社（帰路）", lat: 34.865920, lng: 138.314616, mapUrl: "https://maps.app.goo.gl/Kcv3Fc85Fj2mbsUd7" }
+      { label: "焼津神社", lat: 34.865920, lng: 138.314616, mapUrl: "https://maps.app.goo.gl/Kcv3Fc85Fj2mbsUd7" }
     ],
     // 上記3地点を徒歩で結んだ実際の道なりルート（OSRMのルーティングAPIで取得、無料・APIキー不要）
     excelRouteLine: [
