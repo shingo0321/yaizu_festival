@@ -19,7 +19,7 @@
 1. [田子重](https://maps.app.goo.gl/o895LxNkZJdiqQ3H9)
 1. [八雲通り](https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7)
 1. [南御旅所](https://maps.app.goo.gl/n8ddXExY18nFU3NY8)
-1. https://maps.app.goo.gl/eeHa1qEPT3NFJPor9
+1. https://maps.app.goo.gl/XPAeThWiFrf3XZhw8
 1. https://maps.app.goo.gl/ByfP4Ge6aFmkgHRq9
 1. https://maps.app.goo.gl/QTxFaEriB8jobQvUA
 1. [浜通り](https://maps.app.goo.gl/7sU3sYM74JhDUWMU9)
@@ -31,12 +31,12 @@
 1. https://maps.app.goo.gl/uFPuDZBmb6roQQtz9
 1. https://maps.app.goo.gl/HsX8tLTc94p73AJv7
 1. [魚市場御旅所](https://maps.app.goo.gl/xc5TQDrHjsgktMVC9)
-1. https://maps.app.goo.gl/fcuMivxU2L9Hgq2c6
+1. https://maps.app.goo.gl/YFMjhH9HbTeCt7uh6
 1. https://maps.app.goo.gl/KYH1P82DF1KQmxEq5
 1. https://maps.app.goo.gl/PuLwaKa5HuZZdqpX8
 1. https://maps.app.goo.gl/UsrmCCLBo7EDqUy66
 1. [三区会所](https://maps.app.goo.gl/AeA29AyfD5pS25SX6)
-1. https://maps.app.goo.gl/YWdFd5tghFgARjAs8
+1. https://maps.app.goo.gl/JYUkYYBM9XuXfDoy5
 1. https://maps.app.goo.gl/KQhUW9VGthdVt9v4A
 1. [焼津市役所](https://maps.app.goo.gl/mwJk7MQUZnMvYL116)
 1. [昭和通り](https://maps.app.goo.gl/srTUFfwJtyjvBpcT8)
