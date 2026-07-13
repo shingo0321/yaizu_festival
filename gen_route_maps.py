@@ -222,7 +222,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
         return (wx - px0, wy - py0)
 
     line_pts_orig = [to_px(p["lat"], p["lng"]) for p in route_pts]
-    line_pts = build_display_path(line_pts_orig, sep=22, close_thresh=34, angle_thresh_deg=25)
+    line_pts = build_display_path(line_pts_orig, sep=60, close_thresh=140, angle_thresh_deg=35)
 
     # pass 1: route line + arrows
     draw.line(line_pts, fill=line_color, width=5, joint="curve")
@@ -277,7 +277,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
     label_boxes = []
     for i, (mx, my) in enumerate(marker_draw):
         name = named_pts[i]["label"]
-        text = f"{i + 1} {name}"
+        text = name
         preferred_angle = None
         if name.endswith("通り"):
             idx = find_route_index(named_pts[i]["lat"], named_pts[i]["lng"])
@@ -288,9 +288,15 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
                     preferred_angle = math.atan2(dy, dx)
         rect = place_label(draw, mx, my, text, FONT_LABEL, W, H, occupied, line_pts, preferred_angle=preferred_angle)
         occupied.append(rect)
-        label_boxes.append((rect, text))
+        label_boxes.append((rect, text, (mx, my)))
 
-    for rect, text in label_boxes:
+    # leader lines from each marker to its own label, so the pairing is
+    # explicit even when the label sits some distance away
+    for rect, text, (mx, my) in label_boxes:
+        rcx, rcy = (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
+        draw.line([(mx, my), (rcx, rcy)], fill=(90, 90, 90), width=2)
+
+    for rect, text, _ in label_boxes:
         draw.rectangle(rect, fill=(255, 255, 255, 235), outline=(90, 90, 90), width=1)
         draw.text((rect[0] + 6, rect[1] + 4), text, font=FONT_LABEL, fill=(20, 20, 20))
 
@@ -311,5 +317,5 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
     print("saved", out_path, img.size)
 
 if __name__ == "__main__":
-    render_leg(ROUTE["往路"], POINTS_OUT, "mikoshi-route-outbound.jpg", (30, 80, 220), pad_px=90)
-    render_leg(ROUTE["帰路"], POINTS_RET, "mikoshi-route-return.jpg", (30, 140, 60), pad_px=90)
+    render_leg(ROUTE["往路"], POINTS_OUT, "final_outbound2.jpg", (30, 80, 220), pad_px=90)
+    render_leg(ROUTE["帰路"], POINTS_RET, "final_return2.jpg", (30, 140, 60), pad_px=90)
