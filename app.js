@@ -39,26 +39,6 @@ function renderSchedule() {
     .join("");
 }
 
-function directionsUrl(waypoints) {
-  // Google's documented "Universal URL" directions scheme (?api=1) is the
-  // reliable way to force walking mode; the path-based /maps/dir/lat,lng/...
-  // form doesn't consistently honor a travel mode without the full internal
-  // `data=` payload Google itself generates, which isn't practical to fake.
-  const [originLat, originLng] = waypoints[0];
-  const [destLat, destLng] = waypoints[waypoints.length - 1];
-  const params = new URLSearchParams({
-    api: "1",
-    origin: `${originLat},${originLng}`,
-    destination: `${destLat},${destLng}`,
-    travelmode: "walking",
-  });
-  const middle = waypoints.slice(1, -1);
-  if (middle.length) {
-    params.set("waypoints", middle.map(([lat, lng]) => `${lat},${lng}`).join("|"));
-  }
-  return `https://www.google.com/maps/dir/?${params.toString()}`;
-}
-
 function renderMapPins() {
   const container = document.getElementById("map-panel");
   const data = FESTIVAL_DATA.mapPins;
@@ -111,12 +91,12 @@ function renderMapPins() {
     </div>
     <div class="venue-card">
       <h2>往路</h2>
-      <a class="pdf-link" href="${directionsUrl(data.routeWaypoints)}" target="_blank" rel="noopener">往路をGoogleマップで見る</a>
+      <a class="pdf-link" href="${data.routeMapArtifactUrl}#outbound" target="_blank" rel="noopener">往路の地図を見る</a>
       ${pointsList(data.points)}
     </div>
     <div class="venue-card">
       <h2>帰路</h2>
-      <a class="pdf-link" href="${directionsUrl(data.routeWaypointsReturn)}" target="_blank" rel="noopener">帰路をGoogleマップで見る</a>
+      <a class="pdf-link" href="${data.routeMapArtifactUrl}#return" target="_blank" rel="noopener">帰路の地図を見る</a>
       ${pointsList(data.pointsReturn)}
     </div>
   `;
