@@ -91,12 +91,28 @@ function renderMapPins() {
     </div>
     <div class="venue-card">
       <h2>往路</h2>
-      <a class="pdf-link" href="${data.routeMapArtifactUrl}#outbound" target="_blank" rel="noopener">往路の地図を見る</a>
+      ${
+        data.routeMapOutbound
+          ? `
+        <div class="route-image">
+          <img class="zoomable" src="${data.routeMapOutbound}" alt="往路の実地図（番号は下の地点リストに対応）" loading="lazy" />
+        </div>
+      `
+          : ""
+      }
       ${pointsList(data.points)}
     </div>
     <div class="venue-card">
       <h2>帰路</h2>
-      <a class="pdf-link" href="${data.routeMapArtifactUrl}#return" target="_blank" rel="noopener">帰路の地図を見る</a>
+      ${
+        data.routeMapReturn
+          ? `
+        <div class="route-image">
+          <img class="zoomable" src="${data.routeMapReturn}" alt="帰路の実地図（番号は下の地点リストに対応）" loading="lazy" />
+        </div>
+      `
+          : ""
+      }
       ${pointsList(data.pointsReturn)}
     </div>
   `;

@@ -129,9 +129,10 @@ const FESTIVAL_DATA = {
       [34.857807, 138.323685], [34.857724, 138.323691], [34.857724, 138.323613], [34.857724, 138.323265],
       [34.857732, 138.323053]
     ],
-    // 往路・帰路それぞれの実座標を実際の地図（OpenStreetMap）に重ねたClaude Artifact。
-    // 「#outbound」「#return」でそれぞれのセクションに直接リンクする。
-    routeMapArtifactUrl: "https://claude.ai/code/artifact/b8c358a7-92e9-4b4f-8124-b1894cdb7237",
+    // 往路・帰路それぞれの実座標を実際の地図（OpenStreetMap）に重ね、番号付きで
+    // 焼き込んだ画像（ローカルに保存、地点リストの番号と対応）。
+    routeMapOutbound: "mikoshi-route-outbound.jpg",
+    routeMapReturn: "mikoshi-route-return.jpg",
     // 神輿渡御ルートの簡略図（mikoshi-route.dioから生成したSVG、ローカルに保存）
     routeDiagram: {
       src: "mikoshi-route.svg",
