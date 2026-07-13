@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>神輿渡御ルート地図</title>
+<style>
+  @page { margin: 0; }
+  html, body { margin: 0; padding: 0; }
+  img { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <img id="route-img" src="" alt="神輿渡御ルート地図" />
+  <script>
+    const img = document.getElementById("route-img");
+    const params = new URLSearchParams(location.search);
+    img.src = params.get("src");
+    img.addEventListener("load", () => {
+      const style = document.createElement("style");
+      style.textContent = `@page { size: ${img.naturalWidth}px ${img.naturalHeight}px; margin: 0; }`;
+      document.head.appendChild(style);
+      document.title = "ready";
+    });
+  </script>
+</body>
+</html>

@@ -133,7 +133,9 @@ const FESTIVAL_DATA = {
     // 往路・帰路それぞれの実座標を実際の地図（OpenStreetMap）に重ね、番号付きで
     // 焼き込んだ画像（ローカルに保存、地点リストの番号と対応）。
     routeMapOutbound: "mikoshi-route-outbound.jpg",
+    routeMapOutboundPdf: "mikoshi-route-outbound.pdf",
     routeMapReturn: "mikoshi-route-return.jpg",
+    routeMapReturnPdf: "mikoshi-route-return.pdf",
     // 神輿渡御ルートの簡略図（mikoshi-route.dioから生成したSVG、ローカルに保存）
     routeDiagram: {
       src: "mikoshi-route.svg",

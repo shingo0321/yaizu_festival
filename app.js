@@ -95,6 +95,11 @@ function renderMapPins() {
         data.routeMapOutbound
           ? `
         <div class="route-image">
+          ${
+            data.routeMapOutboundPdf
+              ? `<a class="pdf-link" href="${data.routeMapOutboundPdf}" target="_blank" rel="noopener">往路のPDFを開く</a>`
+              : ""
+          }
           <img class="zoomable" src="${data.routeMapOutbound}" alt="往路の実地図（番号は下の地点リストに対応）" loading="lazy" />
         </div>
       `
@@ -108,6 +113,11 @@ function renderMapPins() {
         data.routeMapReturn
           ? `
         <div class="route-image">
+          ${
+            data.routeMapReturnPdf
+              ? `<a class="pdf-link" href="${data.routeMapReturnPdf}" target="_blank" rel="noopener">帰路のPDFを開く</a>`
+              : ""
+          }
           <img class="zoomable" src="${data.routeMapReturn}" alt="帰路の実地図（番号は下の地点リストに対応）" loading="lazy" />
         </div>
       `
