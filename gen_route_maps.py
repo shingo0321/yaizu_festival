@@ -222,7 +222,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
         return (wx - px0, wy - py0)
 
     line_pts_orig = [to_px(p["lat"], p["lng"]) for p in route_pts]
-    line_pts = build_display_path(line_pts_orig, sep=60, close_thresh=140, angle_thresh_deg=35)
+    line_pts = build_display_path(line_pts_orig, sep=22, close_thresh=34, angle_thresh_deg=25)
 
     # pass 1: route line + arrows
     draw.line(line_pts, fill=line_color, width=5, joint="curve")
