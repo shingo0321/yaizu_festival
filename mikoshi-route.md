@@ -27,6 +27,7 @@
 1. [北御旅所](https://maps.app.goo.gl/jQtywX7DthJRSvPi8)
 
 # 帰路
+1. [北御旅所](https://maps.app.goo.gl/jQtywX7DthJRSvPi8)
 1. https://maps.app.goo.gl/uFPuDZBmb6roQQtz9
 1. https://maps.app.goo.gl/HsX8tLTc94p73AJv7
 1. [魚市場御旅所](https://maps.app.goo.gl/xc5TQDrHjsgktMVC9)

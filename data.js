@@ -104,6 +104,7 @@ const FESTIVAL_DATA = {
       { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" }
     ],
     pointsReturn: [
+      { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" },
       { label: "魚市場御旅所", lat: 34.864839, lng: 138.326198, mapUrl: "https://maps.app.goo.gl/xc5TQDrHjsgktMVC9" },
       { label: "三区会所", lat: 34.865772, lng: 138.323161, mapUrl: "https://maps.app.goo.gl/AeA29AyfD5pS25SX6" },
       { label: "焼津市役所", lat: 34.866916, lng: 138.322732, mapUrl: "https://maps.app.goo.gl/mwJk7MQUZnMvYL116" },
