@@ -294,6 +294,11 @@ function setupLightbox() {
     el.addEventListener("click", () => open(el.src, el.alt));
   });
 
+  // Belt-and-suspenders alongside draggable="false"/-webkit-user-drag:none —
+  // a native image drag would otherwise hijack the mouse-down-and-move that
+  // our own pointer handlers use to pan, silently breaking click-drag scroll.
+  img.addEventListener("dragstart", (e) => e.preventDefault());
+
   img.addEventListener("click", (e) => {
     if (dragged) return; // don't zoom on the click that ends a drag
     lastPointer = { x: e.clientX, y: e.clientY };

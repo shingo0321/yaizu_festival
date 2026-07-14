@@ -251,6 +251,11 @@ section.panel.active { display: block; }
      back to 0 once the (zoomed-in) image is larger, so every edge stays
      reachable by scrolling instead of getting clipped by "unsafe" centering. */
   margin: auto;
+  /* Without this, a mouse-drag on the img starts the browser's native
+     "drag this image" gesture instead of our pointermove-based pan, so
+     click-and-drag scrolling silently does nothing. */
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .lightbox-close {
