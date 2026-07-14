@@ -218,6 +218,10 @@ section.panel.active { display: block; }
 .lightbox {
   position: fixed;
   inset: 0;
+  /* On mobile Safari, inset:0 alone can size a fixed element to the layout
+     viewport rather than the currently-visible one, letting its top edge
+     end up under the toolbar. dvh tracks the actual visible viewport. */
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.92);
   z-index: 200;
 }
@@ -269,7 +273,7 @@ section.panel.active { display: block; }
 
 .lightbox-close {
   position: absolute;
-  top: calc(12px + env(safe-area-inset-top, 0px));
+  top: calc(44px + env(safe-area-inset-top, 0px));
   right: calc(28px + env(safe-area-inset-right, 0px));
   width: 40px;
   height: 40px;
