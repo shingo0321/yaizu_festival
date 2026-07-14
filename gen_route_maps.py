@@ -232,9 +232,11 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
     # marker positions (named points, in order) using ORIGINAL (non-bulged) coords
     marker_true = [to_px(p["lat"], p["lng"]) for p in named_pts]
 
-    # auto-detect near-duplicate marker coordinates and nudge + leader line
+    # auto-detect near-duplicate marker coordinates and nudge apart (no
+    # true-position leader line back to the shared point — when two named
+    # stops legitimately share one location, that connector just reads as a
+    # stray unexplained line rather than useful information)
     marker_draw = list(marker_true)
-    leaders = []
     placed = []
     for i, (x, y) in enumerate(marker_true):
         conflict = None
@@ -247,16 +249,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
             nx = marker_draw[conflict][0] + math.cos(ang) * marker_r * 2.6
             ny = marker_draw[conflict][1] - math.sin(ang) * marker_r * 2.6
             marker_draw[i] = (nx, ny)
-            leaders.append((i, (x, y), (nx, ny)))
         placed.append(i)
-
-    # pass 2 (drawn before labels/markers): leader lines
-    for i, true_pt, draw_pt in leaders:
-        draw.line([true_pt, draw_pt], fill=(120, 120, 120), width=2)
-        draw.ellipse(
-            [true_pt[0] - 3, true_pt[1] - 3, true_pt[0] + 3, true_pt[1] + 3],
-            fill=(120, 120, 120),
-        )
 
     def find_route_index(lat, lng):
         for idx, p in enumerate(route_pts):
