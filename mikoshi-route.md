@@ -19,7 +19,7 @@
 1. [田子重](https://maps.app.goo.gl/o895LxNkZJdiqQ3H9)
 1. [八雲通り](https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7)
 1. [南御旅所](https://maps.app.goo.gl/n8ddXExY18nFU3NY8)
-1. https://maps.app.goo.gl/XPAeThWiFrf3XZhw8
+1. https://maps.app.goo.gl/qetLSEBtuvs7WAUj9
 1. https://maps.app.goo.gl/ByfP4Ge6aFmkgHRq9
 1. https://maps.app.goo.gl/QTxFaEriB8jobQvUA
 1. [浜通り](https://maps.app.goo.gl/7sU3sYM74JhDUWMU9)
