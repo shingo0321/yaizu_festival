@@ -22,7 +22,7 @@ FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシッ�
 # awkward. Keyed by stop label text; keep small enough to avoid reintroducing
 # an overlap the algorithm already avoided.
 LABEL_NUDGE = {
-    "アトレ焼津": (0, 26),
+    "アトレ焼津": (-20, 50),
 }
 
 def lonlat_to_world_px(lat, lng, zoom):
