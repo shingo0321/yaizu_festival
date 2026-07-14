@@ -3,7 +3,7 @@
 1. [四区会所](https://maps.app.goo.gl/dtXtLFaRFSPd8kAB9)
 1. https://maps.app.goo.gl/fazk9jBXYbMptFb46
 1. [御沓脱](https://maps.app.goo.gl/Ee2XHQ6oJMJo2Mbz5)
-1. https://maps.app.goo.gl/5EqKuLDYLaQRJNki7
+1. https://maps.app.goo.gl/oDUjUQCPUU3oJnZJ8
 1. https://maps.app.goo.gl/ZkaU38RrHjoneArg6
 1. [焼津警察署中央交番](https://maps.app.goo.gl/YeH87NMC6kUruYUe7)
 1. [水校通り](https://maps.app.goo.gl/bFkyir5ExwASyRSL6)
@@ -19,7 +19,7 @@
 1. [田子重](https://maps.app.goo.gl/o895LxNkZJdiqQ3H9)
 1. [八雲通り](https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7)
 1. [南御旅所](https://maps.app.goo.gl/n8ddXExY18nFU3NY8)
-1. https://maps.app.goo.gl/qetLSEBtuvs7WAUj9
+1. https://maps.app.goo.gl/jTnuY9i1YDurSTAVA
 1. https://maps.app.goo.gl/ByfP4Ge6aFmkgHRq9
 1. https://maps.app.goo.gl/QTxFaEriB8jobQvUA
 1. [浜通り](https://maps.app.goo.gl/zCf6JCym2Ff99WNS8)
@@ -36,7 +36,7 @@
 1. https://maps.app.goo.gl/PuLwaKa5HuZZdqpX8
 1. https://maps.app.goo.gl/UsrmCCLBo7EDqUy66
 1. [三区会所](https://maps.app.goo.gl/AeA29AyfD5pS25SX6)
-1. https://maps.app.goo.gl/Tbpx3uuJZ3AFPLN89
+1. https://maps.app.goo.gl/CN5cRC5XP7tAMLZ88
 1. https://maps.app.goo.gl/KQhUW9VGthdVt9v4A
 1. [焼津市役所](https://maps.app.goo.gl/mwJk7MQUZnMvYL116)
 1. [昭和通り](https://maps.app.goo.gl/srTUFfwJtyjvBpcT8)
