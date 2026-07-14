@@ -235,6 +235,15 @@ section.panel.active { display: block; }
   /* Panning (1 finger/button) and pinch-zoom (2 fingers) are both handled by
      our own pointer-event listeners, not the browser's native gestures. */
   touch-action: none;
+  /* scrollLeft/scrollTop are driven entirely from JS; the native scrollbar
+     isn't needed for interaction and, at the viewport's full-screen size,
+     its track sits right under the close button. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lightbox-viewport::-webkit-scrollbar {
+  display: none;
 }
 
 .lightbox-viewport.dragging {

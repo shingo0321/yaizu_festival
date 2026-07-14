@@ -317,14 +317,24 @@ function setupLightbox() {
     if (!lightbox.hidden && e.key === "Escape") close();
   });
 
-  // Mouse wheel: zoom toward the cursor position.
+  // Mouse wheel / trackpad. Browsers report a trackpad pinch as a wheel
+  // event with ctrlKey set — treat that (and plain mouse-wheel scroll) as
+  // zoom toward the cursor. A two-finger trackpad *scroll* is a plain wheel
+  // event with both deltaX/deltaY and no ctrlKey — let that pan (including
+  // diagonally) instead, or it'd never be reachable since touch-action:none
+  // blocks the browser's own native scroll handling here.
   viewport.addEventListener(
     "wheel",
     (e) => {
       e.preventDefault();
-      lastPointer = { x: e.clientX, y: e.clientY };
-      const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
-      setZoom(zoom * factor, e.clientX, e.clientY);
+      if (e.ctrlKey) {
+        lastPointer = { x: e.clientX, y: e.clientY };
+        const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+        setZoom(zoom * factor, e.clientX, e.clientY);
+      } else {
+        viewport.scrollLeft += e.deltaX;
+        viewport.scrollTop += e.deltaY;
+      }
     },
     { passive: false }
   );
