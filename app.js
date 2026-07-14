@@ -172,6 +172,7 @@ function setupSwipe() {
   document.addEventListener(
     "touchstart",
     (e) => {
+      if (e.target.closest("#lightbox")) return; // panning/pinching the map shouldn't also swipe tabs
       startX = e.changedTouches[0].screenX;
       startY = e.changedTouches[0].screenY;
     },
@@ -181,6 +182,7 @@ function setupSwipe() {
   document.addEventListener(
     "touchend",
     (e) => {
+      if (e.target.closest("#lightbox")) return;
       const deltaX = e.changedTouches[0].screenX - startX;
       const deltaY = e.changedTouches[0].screenY - startY;
 
