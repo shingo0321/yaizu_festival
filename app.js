@@ -313,9 +313,6 @@ function setupLightbox() {
     setZoom(zoom / STEP_FACTOR, p.x, p.y);
   });
   closeBtn.addEventListener("click", close);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox || e.target === viewport) close();
-  });
   document.addEventListener("keydown", (e) => {
     if (!lightbox.hidden && e.key === "Escape") close();
   });
