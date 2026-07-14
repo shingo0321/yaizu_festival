@@ -17,6 +17,14 @@ FONT_DIR = "/System/Library/Fonts/Supplemental/"
 FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 19)
 FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 20)
 
+# Manual (dx, dy) pixel nudges applied after automatic placement, for labels
+# the auto collision-avoidance placed somewhere technically-clear but visually
+# awkward. Keyed by stop label text; keep small enough to avoid reintroducing
+# an overlap the algorithm already avoided.
+LABEL_NUDGE = {
+    "アトレ焼津": (0, 26),
+}
+
 def lonlat_to_world_px(lat, lng, zoom):
     n = 2 ** zoom
     x = (lng + 180.0) / 360.0 * n * TILE
@@ -280,6 +288,9 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
                 if dx or dy:
                     preferred_angle = math.atan2(dy, dx)
         rect = place_label(draw, mx, my, text, FONT_LABEL, W, H, occupied, line_pts, preferred_angle=preferred_angle)
+        if name in LABEL_NUDGE:
+            ndx, ndy = LABEL_NUDGE[name]
+            rect = (rect[0] + ndx, rect[1] + ndy, rect[2] + ndx, rect[3] + ndy)
         occupied.append(rect)
         label_boxes.append((rect, text, (mx, my)))
 
