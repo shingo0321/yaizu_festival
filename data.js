@@ -100,7 +100,7 @@ const FESTIVAL_DATA = {
       { label: "田子重", lat: 34.857875, lng: 138.321953, mapUrl: "https://maps.app.goo.gl/o895LxNkZJdiqQ3H9" },
       { label: "八雲通り", lat: 34.857709, lng: 138.323701, mapUrl: "https://maps.app.goo.gl/Wh6fS4cGPAN5mNQg7" },
       { label: "南御旅所", lat: 34.855508, lng: 138.323867, mapUrl: "https://maps.app.goo.gl/n8ddXExY18nFU3NY8" },
-      { label: "浜通り", lat: 34.857743, lng: 138.323687, mapUrl: "https://maps.app.goo.gl/7sU3sYM74JhDUWMU9" },
+      { label: "浜通り", lat: 34.857862, lng: 138.323687, mapUrl: "https://maps.app.goo.gl/MHhHrcd8UwGxJjk76" },
       { label: "北御旅所", lat: 34.863576, lng: 138.324642, mapUrl: "https://maps.app.goo.gl/jQtywX7DthJRSvPi8" }
     ],
     pointsReturn: [

@@ -22,7 +22,7 @@
 1. https://maps.app.goo.gl/qetLSEBtuvs7WAUj9
 1. https://maps.app.goo.gl/ByfP4Ge6aFmkgHRq9
 1. https://maps.app.goo.gl/QTxFaEriB8jobQvUA
-1. [浜通り](https://maps.app.goo.gl/7sU3sYM74JhDUWMU9)
+1. [浜通り](https://maps.app.goo.gl/MHhHrcd8UwGxJjk76)
 1. https://maps.app.goo.gl/uFPuDZBmb6roQQtz9
 1. [北御旅所](https://maps.app.goo.gl/jQtywX7DthJRSvPi8)
 
@@ -36,7 +36,7 @@
 1. https://maps.app.goo.gl/PuLwaKa5HuZZdqpX8
 1. https://maps.app.goo.gl/UsrmCCLBo7EDqUy66
 1. [三区会所](https://maps.app.goo.gl/AeA29AyfD5pS25SX6)
-1. https://maps.app.goo.gl/JYUkYYBM9XuXfDoy5
+1. https://maps.app.goo.gl/ZTNA6BNCmMiDCysp7
 1. https://maps.app.goo.gl/KQhUW9VGthdVt9v4A
 1. [焼津市役所](https://maps.app.goo.gl/mwJk7MQUZnMvYL116)
 1. [昭和通り](https://maps.app.goo.gl/srTUFfwJtyjvBpcT8)
