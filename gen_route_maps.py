@@ -16,8 +16,8 @@ with open("rest_areas.json", encoding="utf-8") as f:
     REST_AREAS = json.load(f)
 
 FONT_DIR = "/System/Library/Fonts/Supplemental/"
-FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 34)
-FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 34)
+FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 39)
+FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 39)
 
 # Manual (dx, dy) pixel nudges applied after automatic placement, for labels
 # the auto collision-avoidance placed somewhere technically-clear but visually
@@ -25,15 +25,23 @@ FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシッ�
 # an overlap the algorithm already avoided.
 LABEL_NUDGE = {
     "アトレ焼津": (-20, 50),
-    "昭和通り": (-33, 38),
-    "焼津市役所": (192, -68),
+    "昭和通り": (-20, 150),
+    "焼津市役所": (240, -68),
     "南御旅所": (69, 74),
-    "しずおか焼津信金": (113, 15),
+    "しずおか焼津信金": (25, 0),
     "塩川新聞舗": (-165, -66),
     "神武通り": (-30, 148),
     "三区会所": (204, 86),
     "焼津御旅所": (86, -75),
-    "焼津警察署中央交番": (0, 167),
+    "焼津警察署中央交番": (-40, 167),
+    "静銀": (108, -147),
+}
+
+# Rest-area star markers to suppress on a specific leg's map even though the
+# area's name matches a named point shown there (e.g. shared stops like
+# 北御旅所 appear on both legs, but the rest-area marker is only wanted on one).
+REST_AREA_SKIP_ON_LEG = {
+    ("駐車場（北御旅所）", "帰路"),
 }
 
 # Manual line-break override for label display text, keyed by stop label
@@ -196,8 +204,8 @@ def multiline_size(draw, text, font, line_spacing=6):
 
 def place_label(draw, cx, cy, text, font, W, H, occupied, line_pts, preferred_angle=None):
     tw, th = multiline_size(draw, text, font)
-    th = max(th, 40)
-    pad = 9
+    th = max(th, 46)
+    pad = 10
     box_w, box_h = tw + pad * 2, th + pad * 2
     candidates = []
     # angle offsets tried in preference order: straight ahead first, widening
@@ -269,7 +277,7 @@ def point_seg_dist(px, py, p0, p1):
     projx, projy = x0 + t * dx, y0 + t * dy
     return dist((px, py), (projx, projy))
 
-def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=27):
+def render_leg(route_pts, named_pts, out_path, line_color, leg_name, pad_px=90, marker_r=32):
     world = [lonlat_to_world_px(p["lat"], p["lng"], ZOOM) for p in route_pts]
     xs = [w[0] for w in world]
     ys = [w[1] for w in world]
@@ -316,7 +324,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
             # (2*marker_r + small gap) — kept tight so the nudged marker
             # doesn't drift far from its true (shared) coordinate
             ang = math.radians(35)
-            sep = marker_r * 2 + 8
+            sep = marker_r * 2 + 16
             nx = marker_draw[conflict][0] + math.cos(ang) * sep
             ny = marker_draw[conflict][1] - math.sin(ang) * sep
             marker_draw[i] = (nx, ny)
@@ -413,13 +421,15 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
     for area in REST_AREAS:
         if area["area"] not in leg_point_labels:
             continue
+        if (area["label"], leg_name) in REST_AREA_SKIP_ON_LEG:
+            continue
         sx, sy = to_px(area["lat"], area["lng"])
         if 0 <= sx <= W and 0 <= sy <= H:
-            draw_star(draw, sx, sy, 20, fill=(255, 200, 0), outline=(120, 80, 0))
+            draw_star(draw, sx, sy, 20, fill=(255, 105, 180), outline=(150, 30, 90))
 
     img.save(out_path, quality=92)
     print("saved", out_path, img.size)
 
 if __name__ == "__main__":
-    render_leg(ROUTE["往路"], POINTS_OUT, "mikoshi-route-outbound.jpg", (30, 80, 220), pad_px=90)
-    render_leg(ROUTE["帰路"], POINTS_RET, "mikoshi-route-return.jpg", (30, 140, 60), pad_px=90)
+    render_leg(ROUTE["往路"], POINTS_OUT, "mikoshi-route-outbound.jpg", (30, 80, 220), "往路", pad_px=90)
+    render_leg(ROUTE["帰路"], POINTS_RET, "mikoshi-route-return.jpg", (30, 140, 60), "帰路", pad_px=90)
