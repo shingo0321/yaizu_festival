@@ -184,6 +184,10 @@ section.panel.active { display: block; }
   line-height: 1.7;
 }
 
+.access-list-dot {
+  list-style-type: "・ ";
+}
+
 .route-image {
   margin-bottom: 16px;
 }

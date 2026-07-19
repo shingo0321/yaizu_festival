@@ -45,9 +45,10 @@ function renderMapPins() {
   const routeDiagram = data.routeDiagram;
   const routeImg = data.officialRouteImage;
 
-  const pointsList = (points) =>
-    `
-      <ol class="access-list">
+  const pointsList = (points, { dot = false } = {}) => {
+    const tag = dot ? "ul" : "ol";
+    return `
+      <${tag} class="access-list${dot ? " access-list-dot" : ""}">
         ${points
           .map(
             (p) => `
@@ -66,8 +67,9 @@ function renderMapPins() {
             `
           )
           .join("")}
-      </ol>
+      </${tag}>
     `;
+  };
 
   container.innerHTML = `
     <div class="venue-card">
@@ -145,7 +147,7 @@ function renderMapPins() {
         .map(
           (g) => `
         <h3>${g.area}</h3>
-        ${pointsList(g.points)}
+        ${pointsList(g.points, { dot: true })}
       `
         )
         .join("")}
