@@ -12,10 +12,12 @@ with open("points_out.json", encoding="utf-8") as f:
     POINTS_OUT = json.load(f)
 with open("points_ret.json", encoding="utf-8") as f:
     POINTS_RET = json.load(f)
+with open("rest_areas.json", encoding="utf-8") as f:
+    REST_AREAS = json.load(f)
 
 FONT_DIR = "/System/Library/Fonts/Supplemental/"
-FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 25)
-FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 26)
+FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 34)
+FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 34)
 
 # Manual (dx, dy) pixel nudges applied after automatic placement, for labels
 # the auto collision-avoidance placed somewhere technically-clear but visually
@@ -23,6 +25,32 @@ FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシッ�
 # an overlap the algorithm already avoided.
 LABEL_NUDGE = {
     "アトレ焼津": (-20, 50),
+    "昭和通り": (-33, 38),
+    "焼津市役所": (192, -68),
+    "南御旅所": (69, 74),
+    "しずおか焼津信金": (113, 15),
+    "塩川新聞舗": (-165, -66),
+    "神武通り": (-30, 148),
+    "三区会所": (204, 86),
+    "焼津御旅所": (86, -75),
+    "焼津警察署中央交番": (0, 167),
+}
+
+# Manual line-break override for label display text, keyed by stop label
+# text. Only affects rendering (draw.multiline_text); the underlying name
+# used for matching LABEL_NUDGE / "〜通り" heading-bias stays the original
+# unbroken label.
+LABEL_BREAK = {
+    "焼津警察署中央交番": "焼津警察署\n中央交番",
+    "しずおか焼津信金": "しずおか\n焼津信金",
+}
+
+# Manual (dx, dy) pixel nudges applied to a marker's own drawn position (not
+# its label), for stops whose true coordinate sits so close to another named
+# stop that the markers would visually overlap or crowd each other even
+# though they are legitimately distinct points. Keyed by stop label text.
+MARKER_NUDGE = {
+    "浜通り": (0, -55),
 }
 
 def lonlat_to_world_px(lat, lng, zoom):
@@ -118,17 +146,39 @@ def build_display_path(pts, sep=11, close_thresh=17, angle_thresh_deg=25):
         new_pts.append(p1)
     return new_pts
 
-def draw_arrow(draw, p0, p1, color):
+def draw_arrow(draw, p0, p1, color, avoid=None):
     L = dist(p0, p1)
     if L < 36:
         return
-    mx, my = (p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2
     dx, dy = (p1[0] - p0[0]) / L, (p1[1] - p0[1]) / L
-    size = 9
+    size = 20
+    # try the midpoint first, then slide along the segment (both directions)
+    # to dodge any marker circle the midpoint would land under
+    candidates_t = [0.5, 0.35, 0.65, 0.2, 0.8]
+    chosen = None
+    for t in candidates_t:
+        cx, cy = p0[0] + (p1[0] - p0[0]) * t, p0[1] + (p1[1] - p0[1]) * t
+        if avoid and any(dist((cx, cy), (mx, my)) < mr for mx, my, mr in avoid):
+            continue
+        chosen = (cx, cy)
+        break
+    if chosen is None:
+        return
+    mx, my = chosen
     left = (mx - dx * size - dy * size * 0.6, my - dy * size + dx * size * 0.6)
     right = (mx - dx * size + dy * size * 0.6, my - dy * size - dx * size * 0.6)
     tip = (mx + dx * size * 0.4, my + dy * size * 0.4)
     draw.polygon([tip, left, right], fill=color)
+
+def draw_star(draw, cx, cy, r_outer, fill, outline, outline_width=2):
+    """5-point star, point-up, outer radius r_outer, inner radius ~0.4x."""
+    r_inner = r_outer * 0.4
+    pts = []
+    for i in range(10):
+        ang = -math.pi / 2 + i * math.pi / 5
+        r = r_outer if i % 2 == 0 else r_inner
+        pts.append((cx + r * math.cos(ang), cy + r * math.sin(ang)))
+    draw.polygon(pts, fill=fill, outline=outline, width=outline_width)
 
 def text_bbox(draw, xy, text, font):
     l, t, r, b = draw.textbbox(xy, text, font=font)
@@ -137,10 +187,17 @@ def text_bbox(draw, xy, text, font):
 def rects_overlap(a, b, pad=3):
     return not (a[2] + pad < b[0] or b[2] + pad < a[0] or a[3] + pad < b[1] or b[3] + pad < a[1])
 
+def multiline_size(draw, text, font, line_spacing=6):
+    lines = text.split("\n")
+    tw = max(draw.textlength(line, font=font) for line in lines)
+    line_h = font.size + line_spacing
+    th = line_h * len(lines) - line_spacing
+    return tw, th
+
 def place_label(draw, cx, cy, text, font, W, H, occupied, line_pts, preferred_angle=None):
-    tw = draw.textlength(text, font=font)
-    th = 30
-    pad = 7
+    tw, th = multiline_size(draw, text, font)
+    th = max(th, 40)
+    pad = 9
     box_w, box_h = tw + pad * 2, th + pad * 2
     candidates = []
     # angle offsets tried in preference order: straight ahead first, widening
@@ -212,7 +269,7 @@ def point_seg_dist(px, py, p0, p1):
     projx, projy = x0 + t * dx, y0 + t * dy
     return dist((px, py), (projx, projy))
 
-def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=20):
+def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=27):
     world = [lonlat_to_world_px(p["lat"], p["lng"], ZOOM) for p in route_pts]
     xs = [w[0] for w in world]
     ys = [w[1] for w in world]
@@ -232,32 +289,62 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
     line_pts_orig = [to_px(p["lat"], p["lng"]) for p in route_pts]
     line_pts = build_display_path(line_pts_orig, sep=22, close_thresh=34, angle_thresh_deg=25)
 
-    # pass 1: route line + arrows
-    draw.line(line_pts, fill=line_color, width=5, joint="curve")
-    for i in range(len(line_pts) - 1):
-        draw_arrow(draw, line_pts[i], line_pts[i + 1], line_color)
-
     # marker positions (named points, in order) using ORIGINAL (non-bulged) coords
     marker_true = [to_px(p["lat"], p["lng"]) for p in named_pts]
 
     # auto-detect near-duplicate marker coordinates and nudge apart (no
     # true-position leader line back to the shared point — when two named
     # stops legitimately share one location, that connector just reads as a
-    # stray unexplained line rather than useful information)
+    # stray unexplained line rather than useful information).
+    # Detection threshold is a fixed pixel distance (tuned for ZOOM=18), not
+    # scaled by marker_r: true duplicates share the exact same source
+    # coordinate (dist ~0, from two labels reusing one maps.app.goo.gl link),
+    # while genuinely distinct-but-nearby stops (e.g. two points ~8m apart on
+    # the same street) must never be nudged just because markers got bigger.
+    DUPLICATE_PX = 10
     marker_draw = list(marker_true)
+    is_duplicate_nudged = [False] * len(marker_true)
     placed = []
     for i, (x, y) in enumerate(marker_true):
         conflict = None
         for j in placed:
-            if dist((x, y), marker_draw[j]) < marker_r * 1.6:
+            if dist((x, y), marker_draw[j]) < DUPLICATE_PX:
                 conflict = j
                 break
         if conflict is not None:
+            # just enough separation for the two circles not to touch
+            # (2*marker_r + small gap) — kept tight so the nudged marker
+            # doesn't drift far from its true (shared) coordinate
             ang = math.radians(35)
-            nx = marker_draw[conflict][0] + math.cos(ang) * marker_r * 2.6
-            ny = marker_draw[conflict][1] - math.sin(ang) * marker_r * 2.6
+            sep = marker_r * 2 + 8
+            nx = marker_draw[conflict][0] + math.cos(ang) * sep
+            ny = marker_draw[conflict][1] - math.sin(ang) * sep
             marker_draw[i] = (nx, ny)
+            is_duplicate_nudged[i] = True
         placed.append(i)
+
+    for i, p in enumerate(named_pts):
+        if p["label"] in MARKER_NUDGE:
+            ndx, ndy = MARKER_NUDGE[p["label"]]
+            marker_draw[i] = (marker_draw[i][0] + ndx, marker_draw[i][1] + ndy)
+
+    # pass 1: route line + arrows (markers already positioned so arrows can
+    # dodge them instead of being drawn underneath and hidden)
+    draw.line(line_pts, fill=line_color, width=5, joint="curve")
+    marker_circles = [(mx, my, marker_r + 6) for mx, my in marker_draw]
+    for i in range(len(line_pts) - 1):
+        draw_arrow(draw, line_pts[i], line_pts[i + 1], line_color, avoid=marker_circles)
+
+    # thin connector back to the true coordinate for markers that got pushed
+    # apart from an exact-duplicate point, so the offset doesn't read as an
+    # unexplained/wrong position — drawn under the markers themselves
+    for i, dup in enumerate(is_duplicate_nudged):
+        if dup:
+            draw.line([marker_true[i], marker_draw[i]], fill=(150, 30, 30), width=2)
+            draw.ellipse(
+                [marker_true[i][0] - 4, marker_true[i][1] - 4, marker_true[i][0] + 4, marker_true[i][1] + 4],
+                fill=(150, 30, 30),
+            )
 
     def find_route_index(lat, lng):
         for idx, p in enumerate(route_pts):
@@ -278,7 +365,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
     label_boxes = []
     for i, (mx, my) in enumerate(marker_draw):
         name = named_pts[i]["label"]
-        text = name
+        text = LABEL_BREAK.get(name, name)
         preferred_angle = None
         if name.endswith("通り"):
             idx = find_route_index(named_pts[i]["lat"], named_pts[i]["lng"])
@@ -302,7 +389,7 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
 
     for rect, text, _ in label_boxes:
         draw.rectangle(rect, fill=(255, 255, 255, 235), outline=(90, 90, 90), width=1)
-        draw.text((rect[0] + 6, rect[1] + 4), text, font=FONT_LABEL, fill=(20, 20, 20))
+        draw.multiline_text((rect[0] + 6, rect[1] + 4), text, font=FONT_LABEL, fill=(20, 20, 20), spacing=6)
 
     # pass 4: markers on top
     for i, (mx, my) in enumerate(marker_draw):
@@ -316,6 +403,19 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=2
         bbox = draw.textbbox((0, 0), num, font=FONT_BOLD)
         tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
         draw.text((mx - tw / 2 - bbox[0], my - th / 2 - bbox[1]), num, font=FONT_BOLD, fill=(255, 255, 255))
+
+    # pass 5: rest-area (休憩所) star markers — only for areas whose name
+    # matches a named point actually shown (with its own callout) on this
+    # leg's map; areas with no corresponding labeled stop (e.g. 集合場所,
+    # which isn't a route waypoint) are skipped rather than shown floating
+    # with no map context
+    leg_point_labels = {p["label"] for p in named_pts}
+    for area in REST_AREAS:
+        if area["area"] not in leg_point_labels:
+            continue
+        sx, sy = to_px(area["lat"], area["lng"])
+        if 0 <= sx <= W and 0 <= sy <= H:
+            draw_star(draw, sx, sy, 20, fill=(255, 200, 0), outline=(120, 80, 0))
 
     img.save(out_path, quality=92)
     print("saved", out_path, img.size)
