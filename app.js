@@ -125,6 +125,23 @@ function renderMapPins() {
       }
       ${pointsList(data.pointsReturn)}
     </div>
+    ${
+      data.restAreas
+        ? `
+    <div class="venue-card">
+      <h2>${data.restAreas.title}</h2>
+      ${data.restAreas.groups
+        .map(
+          (g) => `
+        <h3>${g.area}</h3>
+        ${pointsList(g.points)}
+      `
+        )
+        .join("")}
+    </div>
+    `
+        : ""
+    }
   `;
 }
 

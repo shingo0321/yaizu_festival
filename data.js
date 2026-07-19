@@ -143,6 +143,44 @@ const FESTIVAL_DATA = {
       alt: "神輿渡御ルート簡略図（往路・帰路）",
       caption: "神輿渡御ルート簡略図（青:往路　緑:帰路）"
     },
+    // 休憩所・駐車場など、エリアごとの集合／待機場所（各リンクはGoogleマップ共有リンクを解決した座標）
+    restAreas: {
+      title: "休憩所",
+      groups: [
+        {
+          area: "集合場所",
+          points: [
+            { label: "中野家", lat: 34.865797, lng: 138.321319, mapUrl: "https://maps.app.goo.gl/inZJiRoX8iTsF2c67" }
+          ]
+        },
+        {
+          area: "焼津神社",
+          points: [
+            { label: "ギャングスター", lat: 34.864337, lng: 138.314363, mapUrl: "https://maps.app.goo.gl/QwKxGKrKa4aBZh1Y8" }
+          ]
+        },
+        {
+          area: "南御旅所",
+          points: [
+            { label: "丸久駐車場", lat: 34.857538, lng: 138.323784, mapUrl: "https://maps.app.goo.gl/RDvXaHLEkyUp4aH5A" },
+            { label: "本人休憩所", lat: 34.8569762, lng: 138.3226702, mapUrl: "https://maps.app.goo.gl/1kmxx98ycEYdm8P96" },
+            { label: "馬方休憩所", lat: 34.854391, lng: 138.323192, mapUrl: "https://maps.app.goo.gl/zqu8X7JYVsVikAXD8" }
+          ]
+        },
+        {
+          area: "北御旅所",
+          points: [
+            { label: "駐車場", lat: 34.864206, lng: 138.324295, mapUrl: "https://maps.app.goo.gl/dj4fn5q31Dw89k8y7" }
+          ]
+        },
+        {
+          area: "焼津御旅所",
+          points: [
+            { label: "秋山宅", lat: 34.865784, lng: 138.316792, mapUrl: "https://maps.app.goo.gl/9o91rHGGBsQnavCv7" }
+          ]
+        }
+      ]
+    },
     // 焼津神社公式サイトに掲載の神輿渡御順路図（地図の下に参考画像として表示）
     officialRouteImage: {
       src: "https://yaizujinja.or.jp/wp-content/uploads/2025/08/571efb92fa406a257b34aa688ce0e0c5.jpg",
