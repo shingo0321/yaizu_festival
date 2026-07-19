@@ -170,7 +170,7 @@ const FESTIVAL_DATA = {
         {
           area: "北御旅所",
           points: [
-            { label: "駐車場", lat: 34.864206, lng: 138.324295, mapUrl: "https://maps.app.goo.gl/dj4fn5q31Dw89k8y7" }
+            { label: "駐車場", lat: 34.864206, lng: 138.324295, mapUrl: "https://maps.app.goo.gl/dj4fn5q31Dw89k8y7", image: "kita-parking.jpg" }
           ]
         },
         {
