@@ -14,8 +14,8 @@ with open("points_ret.json", encoding="utf-8") as f:
     POINTS_RET = json.load(f)
 
 FONT_DIR = "/System/Library/Fonts/Supplemental/"
-FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 19)
-FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 20)
+FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 25)
+FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 26)
 
 # Manual (dx, dy) pixel nudges applied after automatic placement, for labels
 # the auto collision-avoidance placed somewhere technically-clear but visually
@@ -139,8 +139,8 @@ def rects_overlap(a, b, pad=3):
 
 def place_label(draw, cx, cy, text, font, W, H, occupied, line_pts, preferred_angle=None):
     tw = draw.textlength(text, font=font)
-    th = 24
-    pad = 6
+    th = 30
+    pad = 7
     box_w, box_h = tw + pad * 2, th + pad * 2
     candidates = []
     # angle offsets tried in preference order: straight ahead first, widening
@@ -212,7 +212,7 @@ def point_seg_dist(px, py, p0, p1):
     projx, projy = x0 + t * dx, y0 + t * dy
     return dist((px, py), (projx, projy))
 
-def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=15):
+def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=20):
     world = [lonlat_to_world_px(p["lat"], p["lng"], ZOOM) for p in route_pts]
     xs = [w[0] for w in world]
     ys = [w[1] for w in world]
@@ -321,5 +321,5 @@ def render_leg(route_pts, named_pts, out_path, line_color, pad_px=90, marker_r=1
     print("saved", out_path, img.size)
 
 if __name__ == "__main__":
-    render_leg(ROUTE["往路"], POINTS_OUT, "final_outbound2.jpg", (30, 80, 220), pad_px=90)
-    render_leg(ROUTE["帰路"], POINTS_RET, "final_return2.jpg", (30, 140, 60), pad_px=90)
+    render_leg(ROUTE["往路"], POINTS_OUT, "mikoshi-route-outbound.jpg", (30, 80, 220), pad_px=90)
+    render_leg(ROUTE["帰路"], POINTS_RET, "mikoshi-route-return.jpg", (30, 140, 60), pad_px=90)
