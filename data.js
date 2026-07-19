@@ -176,7 +176,7 @@ const FESTIVAL_DATA = {
         {
           area: "焼津御旅所",
           points: [
-            { label: "秋山宅", lat: 34.865784, lng: 138.316792, mapUrl: "https://maps.app.goo.gl/9o91rHGGBsQnavCv7" }
+            { label: "秋山宅", lat: 34.865784, lng: 138.316792, mapUrl: "https://maps.app.goo.gl/9o91rHGGBsQnavCv7", image: "akiyama-house.jpg" }
           ]
         }
       ]

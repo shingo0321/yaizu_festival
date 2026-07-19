@@ -209,6 +209,19 @@ section.panel.active { display: block; }
   cursor: zoom-in;
 }
 
+.point-photo {
+  margin: 6px 0 4px;
+}
+
+.point-photo img.zoomable {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  cursor: zoom-in;
+}
+
 .route-image .pdf-link {
   margin-top: 12px;
 }

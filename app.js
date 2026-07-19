@@ -49,10 +49,21 @@ function renderMapPins() {
     `
       <ol class="access-list">
         ${points
-          .map((p) =>
-            p.mapUrl
-              ? `<li>${p.label}（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）</li>`
-              : `<li>${p.label}</li>`
+          .map(
+            (p) => `
+              <li>
+                ${p.label}${
+                  p.mapUrl
+                    ? `（<a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>）`
+                    : ""
+                }
+                ${
+                  p.image
+                    ? `<div class="point-photo"><img class="zoomable" src="${p.image}" alt="${p.label}" loading="lazy" /></div>`
+                    : ""
+                }
+              </li>
+            `
           )
           .join("")}
       </ol>
