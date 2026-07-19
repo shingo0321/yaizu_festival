@@ -142,7 +142,7 @@ function renderMapPins() {
       data.restAreas
         ? `
     <div class="venue-card">
-      <h2>${data.restAreas.title}</h2>
+      <h2 hidden>${data.restAreas.title}</h2>
       ${data.restAreas.groups
         .map(
           (g) => `
