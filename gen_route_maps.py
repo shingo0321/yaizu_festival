@@ -24,17 +24,17 @@ FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシッ�
 # awkward. Keyed by stop label text; keep small enough to avoid reintroducing
 # an overlap the algorithm already avoided.
 LABEL_NUDGE = {
-    "アトレ焼津": (-20, 50),
-    "昭和通り": (-20, 150),
+    "アトレ焼津": (0, 150),
+    "昭和通り": (-220, 70),
     "焼津市役所": (240, -68),
-    "南御旅所": (69, 74),
-    "しずおか焼津信金": (25, 0),
-    "塩川新聞舗": (-165, -66),
-    "神武通り": (-30, 148),
+    "南御旅所": (50, -10),
+    "しずおか焼津信金": (25, -55),
+    "塩川新聞舗": (-190, -65),
+    "神武通り": (-135, -15),
     "三区会所": (204, 86),
-    "焼津御旅所": (86, -75),
+    "焼津御旅所": (60, 15),
     "焼津警察署中央交番": (-40, 167),
-    "静銀": (108, -147),
+    "八雲通り": (0, 25),
 }
 
 # Rest-area star markers to suppress on a specific leg's map even though the
@@ -309,6 +309,27 @@ def render_leg(route_pts, named_pts, out_path, line_color, leg_name, pad_px=90, 
     # coordinate (dist ~0, from two labels reusing one maps.app.goo.gl link),
     # while genuinely distinct-but-nearby stops (e.g. two points ~8m apart on
     # the same street) must never be nudged just because markers got bigger.
+    def route_index_of(lat, lng):
+        for idx, p in enumerate(route_pts):
+            if abs(p["lat"] - lat) < 1e-9 and abs(p["lng"] - lng) < 1e-9:
+                return idx
+        return None
+
+    def route_heading_at(idx):
+        """Direction the route leaves point idx, skipping any zero-length
+        (duplicate) segments, so the vector is never (0, 0)."""
+        if idx is None:
+            return None
+        j = idx + 1
+        while j < len(line_pts_orig):
+            dx = line_pts_orig[j][0] - line_pts_orig[idx][0]
+            dy = line_pts_orig[j][1] - line_pts_orig[idx][1]
+            if dx or dy:
+                L = math.hypot(dx, dy)
+                return dx / L, dy / L
+            j += 1
+        return None
+
     DUPLICATE_PX = 10
     marker_draw = list(marker_true)
     is_duplicate_nudged = [False] * len(marker_true)
@@ -322,11 +343,17 @@ def render_leg(route_pts, named_pts, out_path, line_color, leg_name, pad_px=90, 
         if conflict is not None:
             # just enough separation for the two circles not to touch
             # (2*marker_r + small gap) — kept tight so the nudged marker
-            # doesn't drift far from its true (shared) coordinate
-            ang = math.radians(35)
+            # doesn't drift far from its true (shared) coordinate.
+            # Nudge along the route's own outgoing heading at this point so
+            # the second marker still reads as sitting on the path, instead
+            # of floating off to an arbitrary fixed-angle side.
             sep = marker_r * 2 + 16
-            nx = marker_draw[conflict][0] + math.cos(ang) * sep
-            ny = marker_draw[conflict][1] - math.sin(ang) * sep
+            heading = route_heading_at(route_index_of(named_pts[i]["lat"], named_pts[i]["lng"]))
+            if heading is None:
+                ang = math.radians(35)
+                heading = (math.cos(ang), -math.sin(ang))
+            nx = marker_draw[conflict][0] + heading[0] * sep
+            ny = marker_draw[conflict][1] + heading[1] * sep
             marker_draw[i] = (nx, ny)
             is_duplicate_nudged[i] = True
         placed.append(i)
@@ -340,8 +367,27 @@ def render_leg(route_pts, named_pts, out_path, line_color, leg_name, pad_px=90, 
     # dodge them instead of being drawn underneath and hidden)
     draw.line(line_pts, fill=line_color, width=5, joint="curve")
     marker_circles = [(mx, my, marker_r + 6) for mx, my in marker_draw]
+
+    def seg_angle(p0, p1):
+        return math.atan2(p1[1] - p0[1], p1[0] - p0[0])
+
+    def angle_diff(a, b):
+        d = abs(a - b) % (2 * math.pi)
+        return min(d, 2 * math.pi - d)
+
     for i in range(len(line_pts) - 1):
-        draw_arrow(draw, line_pts[i], line_pts[i + 1], line_color, avoid=marker_circles)
+        p0, p1 = line_pts[i], line_pts[i + 1]
+        # skip the arrow on a short "jog" segment whose direction diverges
+        # sharply from the previous segment's — its own arrow reads as
+        # pointing off in the wrong direction, and the longer surrounding
+        # segments already carry the direction cue
+        seg_len = dist(p0, p1)
+        if seg_len < 100 and i > 0:
+            prev_ang = seg_angle(line_pts[i - 1], p0)
+            this_ang = seg_angle(p0, p1)
+            if angle_diff(prev_ang, this_ang) > math.radians(50):
+                continue
+        draw_arrow(draw, p0, p1, line_color, avoid=marker_circles)
 
     # thin connector back to the true coordinate for markers that got pushed
     # apart from an exact-duplicate point, so the offset doesn't read as an
