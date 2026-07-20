@@ -90,6 +90,7 @@ function renderMapPins() {
         routeDiagram && routeDiagram.pdf
           ? `
         <div class="route-image">
+          <p class="route-image-caption">概略図</p>
           <a class="pdf-link" href="${routeDiagram.pdf}" target="_blank" rel="noopener">簡略図のPDFを開く</a>
         </div>
       `
