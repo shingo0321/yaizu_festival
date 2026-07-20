@@ -50,7 +50,23 @@
   cursor: pointer;
 }
 
-.gate-error { color: #c0392b; margin: 8px 0 0; font-size: 0.85rem; }
+.gate-error {
+  color: #c0392b;
+  background: #fdecea;
+  border: 1px solid #f1a9a0;
+  border-radius: 8px;
+  margin: 12px 0 0;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: gate-error-shake 0.3s;
+}
+
+@keyframes gate-error-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
 
 * { box-sizing: border-box; }
 
