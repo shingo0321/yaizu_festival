@@ -82,7 +82,7 @@ const FESTIVAL_DATA = {
 
   // mikoshi-route.md（神輿渡御ルートの往路・帰路）に記載の地点（各地点のGoogleマップ共有リンクを含む）。
   mapPins: {
-    title: "地図",
+    title: "順路",
     points: [
       { label: "焼津神社", lat: 34.865930, lng: 138.314590, mapUrl: "https://maps.app.goo.gl/5euf4zw6eezQ6fCWA" },
       { label: "四区会所", lat: 34.865455, lng: 138.316780, mapUrl: "https://maps.app.goo.gl/dtXtLFaRFSPd8kAB9" },
