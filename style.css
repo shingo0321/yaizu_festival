@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 
-.gate-error {
+.gate-form p.gate-error {
   color: #c0392b;
   background: #fdecea;
   border: 1px solid #f1a9a0;
