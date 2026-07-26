@@ -11,8 +11,8 @@
 ## 南御旅所休憩所
 
 - 本人休憩所（[Googleマップで見る](https://maps.app.goo.gl/1kmxx98ycEYdm8P96)）
+- 馬方休憩所（[Googleマップで見る](https://www.google.com/maps?q=34.8534970,138.3228699)）
 - 丸久駐車場（[Googleマップで見る](https://maps.app.goo.gl/RDvXaHLEkyUp4aH5A)） 写真: maruku-parking.jpg
-- 馬方休憩所（[Googleマップで見る](https://maps.app.goo.gl/MyxsbnGqZtuCvBf27)）
 
 ## 北御旅所休憩所
 

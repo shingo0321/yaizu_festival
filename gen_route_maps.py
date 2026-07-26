@@ -15,9 +15,22 @@ with open("points_ret.json", encoding="utf-8") as f:
 with open("rest_areas.json", encoding="utf-8") as f:
     REST_AREAS = json.load(f)
 
-FONT_DIR = "/System/Library/Fonts/Supplemental/"
-FONT_BOLD = ImageFont.truetype(FONT_DIR + "Arial Bold.ttf", 39)
-FONT_LABEL = ImageFont.truetype("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 39)
+import os
+
+def first_existing_font(candidates, size):
+    for path in candidates:
+        if os.path.exists(path):
+            return ImageFont.truetype(path, size)
+    raise FileNotFoundError(f"None of the candidate fonts exist: {candidates}")
+
+FONT_BOLD = first_existing_font([
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    "C:/Windows/Fonts/arialbd.ttf",
+], 39)
+FONT_LABEL = first_existing_font([
+    "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
+    "C:/Windows/Fonts/meiryob.ttc",
+], 39)
 
 # Manual (dx, dy) pixel nudges applied after automatic placement, for labels
 # the auto collision-avoidance placed somewhere technically-clear but visually

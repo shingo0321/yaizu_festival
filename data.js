@@ -163,8 +163,8 @@ const FESTIVAL_DATA = {
           area: "南御旅所休憩所",
           points: [
             { label: "本人休憩所", lat: 34.8569762, lng: 138.3226702, mapUrl: "https://maps.app.goo.gl/1kmxx98ycEYdm8P96" },
-            { label: "丸久駐車場", lat: 34.857538, lng: 138.323784, mapUrl: "https://maps.app.goo.gl/RDvXaHLEkyUp4aH5A", image: "maruku-parking.jpg" },
-            { label: "馬方休憩所", lat: 34.8535605, lng: 138.3232757, mapUrl: "https://maps.app.goo.gl/MyxsbnGqZtuCvBf27" }
+            { label: "馬方休憩所", lat: 34.8534970, lng: 138.3228699, mapUrl: "https://www.google.com/maps?q=34.8534970,138.3228699" },
+            { label: "丸久駐車場", lat: 34.857538, lng: 138.323784, mapUrl: "https://maps.app.goo.gl/RDvXaHLEkyUp4aH5A", image: "maruku-parking.jpg" }
           ]
         },
         {
