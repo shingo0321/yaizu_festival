@@ -12,7 +12,7 @@
 
 - 本人休憩所（[Googleマップで見る](https://maps.app.goo.gl/1kmxx98ycEYdm8P96)）
 - 丸久駐車場（[Googleマップで見る](https://maps.app.goo.gl/RDvXaHLEkyUp4aH5A)） 写真: maruku-parking.jpg
-- 馬方休憩所（[Googleマップで見る](https://maps.app.goo.gl/zqu8X7JYVsVikAXD8)） 写真: umakata-rest.jpg
+- 馬方休憩所（[Googleマップで見る](https://maps.app.goo.gl/MyxsbnGqZtuCvBf27)） 写真: umakata-rest.jpg
 
 ## 北御旅所休憩所
 
