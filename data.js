@@ -188,5 +188,11 @@ const FESTIVAL_DATA = {
       sourceUrl: "https://yaizujinja.or.jp/news/20250801/1495/",
       caption: "出典: 焼津神社公式サイト（令和7年 神輿渡御順路略図）"
     }
+  },
+
+  // 焼津神社大祭要綱のスキャンPDF（work/フォルダの原本スキャンを結合・傾き補正した27ページ版）
+  guidelines: {
+    title: "令和8年度 焼津神社大祭要綱",
+    pdf: "taisai-yoko.pdf"
   }
 };

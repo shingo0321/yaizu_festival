@@ -174,6 +174,17 @@ function renderRoles() {
   `;
 }
 
+function renderGuidelines() {
+  const container = document.getElementById("yoko-panel");
+  const data = FESTIVAL_DATA.guidelines;
+  container.innerHTML = `
+    <div class="venue-card">
+      <h2>${data.title}</h2>
+      <a class="pdf-link" href="${data.pdf}" target="_blank" rel="noopener">要綱PDFを開く</a>
+    </div>
+  `;
+}
+
 function setupTabs(onShow) {
   const buttons = document.querySelectorAll("nav.tabs button");
   const panels = document.querySelectorAll("section.panel");
@@ -444,6 +455,7 @@ renderHero();
 renderSchedule();
 renderMapPins();
 renderRoles();
+renderGuidelines();
 setupTabs();
 setupSwipe();
 setupLightbox();
