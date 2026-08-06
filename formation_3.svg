@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30.0 -40.0 540.0 740.0" width="540" height="740" font-family="sans-serif">
+<rect x="30.0" y="-40.0" width="540.0" height="740.0" fill="#ffffff"/>
+<defs><marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6c8ebf"/></marker><marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#82b366"/></marker></defs>
+<path d="M 240.0,120.0 L 300.0,80.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 300.0,120.0 L 300.0,80.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 360.0,120.0 L 300.0,80.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 259.5,320.0 L 259.5,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 340.0,320.0 L 340.0,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 139.5,320.0 L 139.5,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 459.5,320.0 L 459.5,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 139.5,440.0 L 139.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 259.5,440.0 L 259.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 339.5,440.0 L 339.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 459.5,440.0 L 459.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 199.5,520.0 L 199.5,480.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 399.5,520.0 L 399.5,480.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="80.0" y="0.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="80.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="120.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="160.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="240.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="320.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="280.0" y="160.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="260.0" y="40.0" width="80.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="300.0" y="63.5" font-size="12" text-anchor="middle" fill="#222222">大丸</text>
+<rect x="222.3" y="128.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="230.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">③</text>
+<rect x="292.3" y="128.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="300.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">④</text>
+<rect x="362.3" y="128.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="370.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">⑤</text>
+<rect x="92.3" y="48.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="100.0" y="58.5" font-size="12" text-anchor="middle" fill="#222222">①</text>
+<rect x="480.0" y="0.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="492.3" y="48.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="500.0" y="58.5" font-size="12" text-anchor="middle" fill="#222222">②</text>
+<rect x="292.3" y="208.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="300.0" y="218.5" font-size="12" text-anchor="middle" fill="#222222">⑥</text>
+<rect x="400.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="440.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="480.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="132.3" y="328.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="140.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">⑦</text>
+<rect x="252.3" y="328.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">⑧</text>
+<rect x="332.3" y="328.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="340.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">⑨</text>
+<rect x="452.3" y="328.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="460.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">⑩</text>
+<rect x="120.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="132.3" y="448.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="140.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">⑪</text>
+<rect x="240.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="252.3" y="448.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">⑫</text>
+<rect x="320.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="332.3" y="448.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="340.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">⑬</text>
+<rect x="440.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="452.3" y="448.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="460.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">⑭</text>
+<rect x="180.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="192.3" y="528.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="200.0" y="538.5" font-size="12" text-anchor="middle" fill="#222222">⑮</text>
+<rect x="380.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="392.3" y="528.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="400.0" y="538.5" font-size="12" text-anchor="middle" fill="#222222">⑯</text>
+<rect x="180.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="280.0" y="560.0" width="40.0" height="80.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="300.0" y="603.5" font-size="12" text-anchor="middle" fill="#222222">馬</text>
+<rect x="192.3" y="608.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="200.0" y="618.5" font-size="12" text-anchor="middle" fill="#222222">⑰</text>
+<rect x="242.3" y="638.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="250.0" y="648.5" font-size="12" text-anchor="middle" fill="#222222">⑲</text>
+<rect x="380.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="392.3" y="608.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="400.0" y="618.5" font-size="12" text-anchor="middle" fill="#222222">⑱</text>
+<rect x="342.3" y="638.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="350.0" y="648.5" font-size="12" text-anchor="middle" fill="#222222">⑳</text>
+</svg>

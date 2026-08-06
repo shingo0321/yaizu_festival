@@ -7,9 +7,9 @@ const FESTIVAL_DATA = {
 
   // Dropboxで管理する元データの「役割」シートをそのまま反映
   roles: [
-    { role: "人馬", people: "ショウ、カツヨシ\nクリス、ユウタ\nヤスナリ、シンゴ\n○○、○○\n○○、○○" },
+    { role: "人馬", people: "ショウ、カツヨシ\nクリス、ユウタ\nヤスナリ、シンゴ" },
     { role: "馬", people: "コウスケ、ケイスケ" },
-    { role: "交通", people: "シンゴ、コウさん" },
+    { role: "交通", people: "シンゴ、ヤスナリ" },
     { role: "うちわ", people: "ユウジロウさん、パパさん" },
     { role: "かさ", people: "タロウ、ケタ" },
     { role: "荷物", people: "ユウシ、テツオ" },
@@ -193,6 +193,17 @@ const FESTIVAL_DATA = {
   // 焼津神社大祭要綱のスキャンPDF（work/フォルダの原本スキャンを結合・傾き補正した27ページ版）
   guidelines: {
     title: "令和8年度 焼津神社大祭要綱",
-    pdf: "taisai-yoko.pdf"
+    pdf: "taisai-yoko.pdf",
+    // formation.md（隊列の配置）をapply_formation.pyでformation_1〜3.dioに反映し、
+    // gen_formation_svg.py/gen_formation_pdf.shでSVG・PDFを生成したもの。
+    // 見出し（title）はformation.mdの「# formation_N:タイトル」から転記。
+    formations: {
+      title: "御神子神事",
+      items: [
+        { title: "御神子神事（1回目）", src: "formation_1.svg", pdf: "formation_1.pdf" },
+        { title: "御神子神事（２回目）", src: "formation_2.svg", pdf: "formation_2.pdf" },
+        { title: "浅草通り", src: "formation_3.svg", pdf: "formation_3.pdf" }
+      ]
+    }
   }
 };

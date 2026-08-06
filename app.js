@@ -177,11 +177,36 @@ function renderRoles() {
 function renderGuidelines() {
   const container = document.getElementById("yoko-panel");
   const data = FESTIVAL_DATA.guidelines;
+  const formations = data.formations;
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
       <a class="pdf-link" href="${data.pdf}" target="_blank" rel="noopener">要綱PDFを開く</a>
     </div>
+    ${
+      formations
+        ? `
+    <div class="venue-card">
+      <h2>${formations.title}</h2>
+      ${formations.items
+        .map(
+          (f) => `
+        <h3>${f.title}</h3>
+        <div class="route-image">
+          ${
+            f.pdf
+              ? `<a class="pdf-link" href="${f.pdf}" target="_blank" rel="noopener">PDFを開く</a>`
+              : ""
+          }
+          <img class="zoomable" src="${f.src}" alt="${f.title}" loading="lazy" />
+        </div>
+      `
+        )
+        .join("")}
+    </div>
+    `
+        : ""
+    }
   `;
 }
 

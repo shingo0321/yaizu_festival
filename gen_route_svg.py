@@ -184,14 +184,20 @@ def parse(src_path):
                 "lines": lines,
             })
         elif cell.get("vertex") == "1":
+            # draw.io's "text;..." style is a plain label shape (no border/fill
+            # by design, unlike a real rectangle vertex) -- render it like an
+            # edge-label, text only, or every numbered/name box in formation
+            # diagrams grows a spurious rectangle around it.
+            is_plain_text = style.get("text") is True
             vertices.append({
                 "x": float(geom.get("x", 0)),
                 "y": float(geom.get("y", 0)),
                 "w": float(geom.get("width", 0)),
                 "h": float(geom.get("height", 0)),
-                "box": True,
+                "box": not is_plain_text,
                 "fill": style.get("fillColor", "#ffffff"),
                 "stroke": style.get("strokeColor", "#999999"),
+                "stroke_width": float(style.get("strokeWidth", 1)),
                 "align": style.get("align", "center"),
                 "valign": style.get("verticalAlign", "middle"),
                 "lines": html_to_lines(cell.get("value")),
@@ -199,7 +205,18 @@ def parse(src_path):
         elif cell.get("edge") == "1":
             edges.append({
                 "pts": edge_paths.get(cell.get("id"), []),
-                "stroke": style.get("strokeColor", "#6c8ebf"),
+                # Same fallback as a box's own default stroke (see above) --
+                # unstyled edges (e.g. formation.dio's connector lines) should
+                # read as the same color as the boxes they connect, not the
+                # route-diagram's blue default (mikoshi-route.dio always sets
+                # strokeColor explicitly, so this fallback never applies there).
+                "stroke": style.get("strokeColor", "#999999"),
+                # Same fallback (1) as a box's own default width -- unstyled
+                # edges should read as thin as the boxes they connect, not
+                # the route-diagram's bold default (mikoshi-route.dio always
+                # sets strokeWidth explicitly, so this fallback never applies
+                # there).
+                "stroke_width": float(style.get("strokeWidth", 1)),
                 "dashed": style.get("dashed") == "1",
                 "arrow": style.get("endArrow", "classic") != "none",
             })
@@ -248,7 +265,7 @@ def render_svg(vertices, edges):
         else:
             marker_attr = ""
         parts.append(
-            f'<path d="{d}" fill="none" stroke="{e["stroke"]}" stroke-width="2.5"{dash}'
+            f'<path d="{d}" fill="none" stroke="{e["stroke"]}" stroke-width="{e["stroke_width"]}"{dash}'
             f'{marker_attr} stroke-linecap="round" stroke-linejoin="round"/>'
         )
 
@@ -260,7 +277,7 @@ def render_svg(vertices, edges):
             # draw the box (edge labels have no box of their own, though).
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{w}" height="{h}" '
-                f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="1"/>'
+                f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="{v["stroke_width"]}"/>'
             )
 
         lines = v["lines"]

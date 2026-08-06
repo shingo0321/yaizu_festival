@@ -5,19 +5,45 @@
 <title>神輿渡御ルート地図</title>
 <style>
   @page { margin: 0; }
-  html, body { margin: 0; padding: 0; }
+  html, body { margin: 0; padding: 0; font-family: sans-serif; }
+  #title {
+    display: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 16px;
+    font-size: 20px;
+    font-weight: 700;
+  }
   img { display: block; width: 100%; height: auto; }
 </style>
 </head>
 <body>
+  <h1 id="title"></h1>
   <img id="route-img" src="" alt="神輿渡御ルート地図" />
   <script>
+    // Fixed rather than measured: the header's rendered width (and thus its
+    // wrapped height) only settles once the dynamic @page width below is
+    // applied, so measuring it first would be measuring the wrong width.
+    const HEADER_H = 48;
+
     const img = document.getElementById("route-img");
+    const titleEl = document.getElementById("title");
     const params = new URLSearchParams(location.search);
+    const title = params.get("title");
+
+    if (title) {
+      titleEl.textContent = title;
+      titleEl.style.display = "block";
+      titleEl.style.height = HEADER_H + "px";
+      titleEl.style.lineHeight = HEADER_H + "px";
+      img.alt = title;
+    }
+
     img.src = params.get("src");
     img.addEventListener("load", () => {
+      const totalHeight = img.naturalHeight + (title ? HEADER_H : 0);
       const style = document.createElement("style");
-      style.textContent = `@page { size: ${img.naturalWidth}px ${img.naturalHeight}px; margin: 0; }`;
+      style.textContent = `@page { size: ${img.naturalWidth}px ${totalHeight}px; margin: 0; }`;
       document.head.appendChild(style);
       document.title = "ready";
     });
