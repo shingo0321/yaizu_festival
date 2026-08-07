@@ -201,8 +201,7 @@ const FESTIVAL_DATA = {
       title: "陣形",
       items: [
         { title: "御神子神事（1回目）", src: "formation_1.svg", pdf: "formation_1.pdf" },
-        { title: "御神子神事（２回目）", src: "formation_2.svg", pdf: "formation_2.pdf" },
-        { title: "浅草通り", src: "formation_3.svg", pdf: "formation_3.pdf" }
+        { title: "御神子神事（２回目）", src: "formation_2.svg", pdf: "formation_2.pdf" }
       ]
     }
   }
