@@ -12,8 +12,20 @@ SRC = DIR / "mikoshi-route.dio"
 OUT = DIR / "mikoshi-route.svg"
 
 FONT_SIZE = 12
+MIN_FONT_SIZE = 7
 LINE_H = 14
 PAD = 40
+
+
+def est_text_width(s, font_size):
+    # Rough average-glyph-width heuristic (no font metrics available):
+    # full-width (CJK etc.) glyphs render roughly square, ascii glyphs
+    # roughly half that -- good enough to decide whether text overflows
+    # its box, not for pixel-perfect layout.
+    total = 0.0
+    for ch in s:
+        total += font_size * (0.6 if ch.isascii() else 1.0)
+    return total
 
 
 def style_dict(style):
@@ -236,7 +248,7 @@ def bounding_box(vertices, edges):
     return min(xs) - PAD, min(ys) - PAD, max(xs) + PAD, max(ys) + PAD
 
 
-def render_svg(vertices, edges):
+def render_svg(vertices, edges, fit_font=False):
     min_x, min_y, max_x, max_y = bounding_box(vertices, edges)
     vb_w, vb_h = max_x - min_x, max_y - min_y
 
@@ -282,14 +294,34 @@ def render_svg(vertices, edges):
 
         lines = v["lines"]
         if lines:
-            text_h = len(lines) * LINE_H
+            font_size = FONT_SIZE
+            if fit_font and w > 0:
+                # Boxed/labelled text has a fixed width in the source
+                # diagram (unlike edge labels, which size their own
+                # backing rect to the text) -- shrink the font just
+                # enough that the longest line still fits on one line,
+                # rather than letting it spill into neighboring shapes.
+                max_line_w = max((est_text_width(ln, FONT_SIZE) for ln in lines if ln), default=0)
+                avail_w = w - 6
+                if max_line_w > avail_w > 0:
+                    font_size = max(MIN_FONT_SIZE, FONT_SIZE * avail_w / max_line_w)
+                # A box with several lines (explicit <BR>s) can overflow
+                # vertically even once each line fits the width -- shrink
+                # further so the whole stack still fits inside the box,
+                # or the top/bottom lines spill into neighboring shapes.
+                if h > 0:
+                    tentative_h = len(lines) * LINE_H * font_size / FONT_SIZE
+                    if tentative_h > h:
+                        font_size = max(MIN_FONT_SIZE, font_size * h / tentative_h)
+            line_h = LINE_H * font_size / FONT_SIZE
+            text_h = len(lines) * line_h
             valign = v["valign"]
             if valign == "top":
-                start_y = y + LINE_H * 0.75
+                start_y = y + line_h * 0.75
             elif valign == "bottom":
-                start_y = y + h - text_h + LINE_H * 0.75
+                start_y = y + h - text_h + line_h * 0.75
             else:
-                start_y = y + h / 2 - text_h / 2 + LINE_H * 0.75
+                start_y = y + h / 2 - text_h / 2 + line_h * 0.75
             align = v["align"]
             if align == "left":
                 tx, anchor = x + 4, "start"
@@ -304,14 +336,14 @@ def render_svg(vertices, edges):
             for i, ln in enumerate(lines):
                 if not ln:
                     continue
-                ly = start_y + i * LINE_H
+                ly = start_y + i * line_h
                 if not v["box"]:
                     # Edge labels (street names) sit on top of the route
                     # arrows with nothing of their own behind them, so give
                     # each line an opaque backing -- like draw.io's own
                     # edge-label halo -- or the dashed line shows through.
-                    bg_w = len(ln) * FONT_SIZE * 0.95 + 4
-                    bg_h = FONT_SIZE * 1.1
+                    bg_w = len(ln) * font_size * 0.95 + 4
+                    bg_h = font_size * 1.1
                     if anchor == "middle":
                         bg_x = tx - bg_w / 2
                     elif anchor == "end":
@@ -319,10 +351,10 @@ def render_svg(vertices, edges):
                     else:
                         bg_x = tx
                     parts.append(
-                        f'<rect x="{bg_x}" y="{ly - FONT_SIZE * 0.85}" width="{bg_w}" height="{bg_h}" fill="#ffffff"/>'
+                        f'<rect x="{bg_x}" y="{ly - font_size * 0.85}" width="{bg_w}" height="{bg_h}" fill="#ffffff"/>'
                     )
                 parts.append(
-                    f'<text x="{tx}" y="{ly}" font-size="{FONT_SIZE}" '
+                    f'<text x="{tx}" y="{ly}" font-size="{font_size}" '
                     f'text-anchor="{anchor}" fill="#222222">{html.escape(ln)}</text>'
                 )
 

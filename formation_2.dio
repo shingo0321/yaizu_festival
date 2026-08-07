@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Kp1I_7jeYSORbNfFEQ7B" name="Page-1">
-        <mxGraphModel dx="510" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="512" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -46,25 +46,25 @@
                         <mxPoint x="300" y="80" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ケイスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="13" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;3.サスケ父&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="200" y="120" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;カワムラ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="14" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;4.カワムラ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="270" y="120" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ケイちゃん&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="15" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;5.リクト父&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="340" y="120" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;サトシ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="18" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;1.コウスケ&lt;BR&gt;⇨ヤスナリ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="70" y="40" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="480" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ケタ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="20" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;2.ケイスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="470" y="40" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ナツメ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="21" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;6.ユウシ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="270" y="200" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="" style="endArrow=none;html=1;" parent="1" edge="1">
@@ -100,16 +100,16 @@
                         <mxPoint x="459.5" y="280" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="30" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;タロウ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="30" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;7.ケタ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="110" y="320" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;サスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="31" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;8.ユウスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="230" y="320" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;リクト&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="32" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;9.ソウスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="310" y="320" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ソウスケ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="33" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;10.サトシ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="430" y="320" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -121,32 +121,20 @@
                         <mxPoint x="139.5" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="36" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ヒロキ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="36" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;11.キヨシさん&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="110" y="440" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="240" y="360" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="" style="endArrow=none;html=1;" parent="1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="259.5" y="440" as="sourcePoint"/>
-                        <mxPoint x="259.5" y="400" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="39" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ヨッちゃん&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="230" y="440" width="60" height="30" as="geometry"/>
+                <mxCell id="39" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;12.エミリ母&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="400" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="360" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="" style="endArrow=none;html=1;" parent="1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="339.5" y="440" as="sourcePoint"/>
-                        <mxPoint x="339.5" y="400" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="42" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ミチユキ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="440" width="60" height="30" as="geometry"/>
+                <mxCell id="42" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;13.ホノ母&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="400" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="43" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="440" y="360" width="40" height="40" as="geometry"/>
@@ -157,7 +145,7 @@
                         <mxPoint x="459.5" y="400" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="45" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;マタヒラ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="45" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;14.ベンさん&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="430" y="440" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -169,7 +157,7 @@
                         <mxPoint x="199.5" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="56" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;兄&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="56" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;15.テツオ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="170" y="520" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -181,7 +169,7 @@
                         <mxPoint x="399.5" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="59" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ソウヨウ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="59" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;16.エミリ父&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="370" y="520" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="62" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -190,20 +178,32 @@
                 <mxCell id="63" value="馬" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="560" width="40" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ハセガワ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="64" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;18.ハセガワ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="170" y="600" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;ショウ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="65" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;21.ショウ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="220" y="630" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="66" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="380" y="560" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;コウタロウ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="68" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;19.コウタロウ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="370" y="600" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;カツヨシ&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="69" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;22.カツヨシ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="320" y="630" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="538" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="538" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;17.ヤスナリ&lt;BR&gt;⇨コウスケ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="578" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;20.タロウ&lt;BR&gt;⚫︎&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="578" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

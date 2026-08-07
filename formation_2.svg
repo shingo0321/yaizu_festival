@@ -9,8 +9,6 @@
 <path d="M 139.5,320.0 L 139.5,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 459.5,320.0 L 459.5,280.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 139.5,440.0 L 139.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 259.5,440.0 L 259.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M 339.5,440.0 L 339.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 459.5,440.0 L 459.5,400.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 199.5,520.0 L 199.5,480.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M 399.5,520.0 L 399.5,480.0" fill="none" stroke="#999999" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round"/>
@@ -23,58 +21,80 @@
 <rect x="280.0" y="160.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <rect x="260.0" y="40.0" width="80.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <text x="300.0" y="63.5" font-size="12" text-anchor="middle" fill="#222222">大丸</text>
-<rect x="205.2" y="128.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="230.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">ケイスケ</text>
-<rect x="275.2" y="128.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="300.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">カワムラ</text>
-<rect x="339.5" y="128.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
-<text x="370.0" y="138.5" font-size="12" text-anchor="middle" fill="#222222">ケイちゃん</text>
-<rect x="80.9" y="48.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="100.0" y="58.5" font-size="12" text-anchor="middle" fill="#222222">サトシ</text>
+<rect x="198.40384615384616" y="129.20192307692307" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="230.0" y="138.02884615384613" font-size="10.384615384615385" text-anchor="middle" fill="#222222">3.サスケ父</text>
+<rect x="268.40384615384613" y="129.20192307692307" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="300.0" y="138.02884615384613" font-size="10.384615384615385" text-anchor="middle" fill="#222222">4.カワムラ</text>
+<rect x="338.40384615384613" y="129.20192307692307" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="370.0" y="138.02884615384613" font-size="10.384615384615385" text-anchor="middle" fill="#222222">5.リクト父</text>
+<rect x="68.40384615384616" y="43.144230769230774" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="100.0" y="51.97115384615385" font-size="10.384615384615385" text-anchor="middle" fill="#222222">1.コウスケ</text>
+<rect x="73.33653846153845" y="55.25961538461539" width="53.32692307692308" height="11.423076923076925" fill="#ffffff"/>
+<text x="100.0" y="64.08653846153847" font-size="10.384615384615385" text-anchor="middle" fill="#222222">⇨ヤスナリ</text>
 <rect x="480.0" y="0.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="486.6" y="48.3" width="26.799999999999997" height="13.200000000000001" fill="#ffffff"/>
-<text x="500.0" y="58.5" font-size="12" text-anchor="middle" fill="#222222">ケタ</text>
-<rect x="280.9" y="208.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="300.0" y="218.5" font-size="12" text-anchor="middle" fill="#222222">ナツメ</text>
+<rect x="468.40384615384613" y="49.20192307692308" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="500.0" y="58.02884615384615" font-size="10.384615384615385" text-anchor="middle" fill="#222222">2.ケイスケ</text>
+<rect x="269.5" y="208.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
+<text x="300.0" y="218.5" font-size="12" text-anchor="middle" fill="#222222">6.ユウシ</text>
 <rect x="400.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <rect x="440.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <rect x="480.0" y="200.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="120.9" y="328.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="140.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">タロウ</text>
-<rect x="240.9" y="328.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="260.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">サスケ</text>
-<rect x="320.9" y="328.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="340.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">リクト</text>
-<rect x="435.2" y="328.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="460.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">ソウスケ</text>
+<rect x="115.2" y="328.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="140.0" y="338.5" font-size="12" text-anchor="middle" fill="#222222">7.ケタ</text>
+<rect x="228.40384615384616" y="329.20192307692304" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="260.0" y="338.02884615384613" font-size="10.384615384615385" text-anchor="middle" fill="#222222">8.ユウスケ</text>
+<rect x="308.40384615384613" y="329.20192307692304" width="63.192307692307686" height="11.423076923076925" fill="#ffffff"/>
+<text x="340.0" y="338.02884615384613" font-size="10.384615384615385" text-anchor="middle" fill="#222222">9.ソウスケ</text>
+<rect x="425.9375" y="328.71875" width="68.12500000000001" height="12.375000000000004" fill="#ffffff"/>
+<text x="460.0" y="338.28125" font-size="11.250000000000002" text-anchor="middle" fill="#222222">10.サトシ</text>
 <rect x="120.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="120.9" y="448.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="140.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">ヒロキ</text>
+<rect x="107.82352941176471" y="450.56617647058823" width="64.35294117647058" height="8.73529411764706" fill="#ffffff"/>
+<text x="140.0" y="457.31617647058823" font-size="7.9411764705882355" text-anchor="middle" fill="#222222">11.キヨシさん</text>
 <rect x="240.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="229.5" y="448.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
-<text x="260.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">ヨッちゃん</text>
+<rect x="227.04310344827587" y="409.80172413793105" width="65.91379310344828" height="10.24137931034483" fill="#ffffff"/>
+<text x="260.0" y="417.7155172413793" font-size="9.310344827586208" text-anchor="middle" fill="#222222">12.エミリ母</text>
 <rect x="320.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="315.2" y="448.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="340.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">ミチユキ</text>
+<rect x="305.9375" y="408.71875" width="68.12500000000001" height="12.375000000000004" fill="#ffffff"/>
+<text x="340.0" y="418.28125" font-size="11.250000000000002" text-anchor="middle" fill="#222222">13.ホノ母</text>
 <rect x="440.0" y="360.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="435.2" y="448.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="460.0" y="458.5" font-size="12" text-anchor="middle" fill="#222222">マタヒラ</text>
+<rect x="427.0431034482759" y="449.80172413793105" width="65.91379310344828" height="10.24137931034483" fill="#ffffff"/>
+<text x="460.0" y="457.7155172413793" font-size="9.310344827586208" text-anchor="middle" fill="#222222">14.ベンさん</text>
 <rect x="180.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="192.3" y="528.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
-<text x="200.0" y="538.5" font-size="12" text-anchor="middle" fill="#222222">兄</text>
+<rect x="165.9375" y="528.71875" width="68.12500000000001" height="12.375000000000004" fill="#ffffff"/>
+<text x="200.0" y="538.28125" font-size="11.250000000000002" text-anchor="middle" fill="#222222">15.テツオ</text>
 <rect x="380.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="375.2" y="528.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="400.0" y="538.5" font-size="12" text-anchor="middle" fill="#222222">ソウヨウ</text>
+<rect x="367.0431034482759" y="529.801724137931" width="65.91379310344828" height="10.24137931034483" fill="#ffffff"/>
+<text x="400.0" y="537.7155172413793" font-size="9.310344827586208" text-anchor="middle" fill="#222222">16.エミリ父</text>
 <rect x="180.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <rect x="280.0" y="560.0" width="40.0" height="80.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
 <text x="300.0" y="603.5" font-size="12" text-anchor="middle" fill="#222222">馬</text>
-<rect x="175.2" y="608.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="200.0" y="618.5" font-size="12" text-anchor="middle" fill="#222222">ハセガワ</text>
-<rect x="230.9" y="638.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
-<text x="250.0" y="648.5" font-size="12" text-anchor="middle" fill="#222222">ショウ</text>
+<rect x="167.04310344827587" y="604.3706896551724" width="65.91379310344828" height="10.24137931034483" fill="#ffffff"/>
+<text x="200.0" y="612.2844827586207" font-size="9.310344827586208" text-anchor="middle" fill="#222222">18.ハセガワ</text>
+<rect x="189.1551724137931" y="615.2327586206897" width="21.689655172413794" height="10.24137931034483" fill="#ffffff"/>
+<text x="200.0" y="623.1465517241379" font-size="9.310344827586208" text-anchor="middle" fill="#222222">⚫︎</text>
+<rect x="215.9375" y="632.15625" width="68.12500000000001" height="12.375000000000004" fill="#ffffff"/>
+<text x="250.0" y="641.71875" font-size="11.250000000000002" text-anchor="middle" fill="#222222">21.ショウ</text>
+<rect x="237.3125" y="645.28125" width="25.375000000000004" height="12.375000000000004" fill="#ffffff"/>
+<text x="250.0" y="654.84375" font-size="11.250000000000002" text-anchor="middle" fill="#222222">⚫︎</text>
 <rect x="380.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
-<rect x="369.5" y="608.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
-<text x="400.0" y="618.5" font-size="12" text-anchor="middle" fill="#222222">コウタロウ</text>
-<rect x="325.2" y="638.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
-<text x="350.0" y="648.5" font-size="12" text-anchor="middle" fill="#222222">カツヨシ</text>
+<rect x="367.8235294117647" y="605.9338235294118" width="64.35294117647058" height="8.73529411764706" fill="#ffffff"/>
+<text x="400.0" y="612.6838235294118" font-size="7.9411764705882355" text-anchor="middle" fill="#222222">19.コウタロウ</text>
+<rect x="390.45588235294116" y="615.1985294117648" width="19.088235294117645" height="8.73529411764706" fill="#ffffff"/>
+<text x="400.0" y="621.9485294117648" font-size="7.9411764705882355" text-anchor="middle" fill="#222222">⚫︎</text>
+<rect x="317.0431034482759" y="634.3706896551724" width="65.91379310344828" height="10.24137931034483" fill="#ffffff"/>
+<text x="350.0" y="642.2844827586207" font-size="9.310344827586208" text-anchor="middle" fill="#222222">22.カツヨシ</text>
+<rect x="339.1551724137931" y="645.2327586206897" width="21.689655172413794" height="10.24137931034483" fill="#ffffff"/>
+<text x="350.0" y="653.1465517241379" font-size="9.310344827586208" text-anchor="middle" fill="#222222">⚫︎</text>
+<rect x="80.0" y="538.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="480.0" y="538.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="69.5" y="578.2142857142857" width="61.0" height="9.428571428571429" fill="#ffffff"/>
+<text x="100.0" y="585.5" font-size="8.571428571428571" text-anchor="middle" fill="#222222">17.ヤスナリ</text>
+<rect x="77.64285714285714" y="588.2142857142857" width="44.71428571428571" height="9.428571428571429" fill="#ffffff"/>
+<text x="100.0" y="595.5" font-size="8.571428571428571" text-anchor="middle" fill="#222222">⇨コウスケ</text>
+<rect x="89.85714285714286" y="598.2142857142857" width="20.285714285714285" height="9.428571428571429" fill="#ffffff"/>
+<text x="100.0" y="605.5" font-size="8.571428571428571" text-anchor="middle" fill="#222222">⚫︎</text>
+<rect x="465.9375" y="580.15625" width="68.12500000000001" height="12.375000000000004" fill="#ffffff"/>
+<text x="500.0" y="589.71875" font-size="11.250000000000002" text-anchor="middle" fill="#222222">20.タロウ</text>
+<rect x="487.3125" y="593.28125" width="25.375000000000004" height="12.375000000000004" fill="#ffffff"/>
+<text x="500.0" y="602.84375" font-size="11.250000000000002" text-anchor="middle" fill="#222222">⚫︎</text>
 </svg>

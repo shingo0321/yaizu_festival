@@ -15,7 +15,7 @@ def main():
     for name in TARGETS:
         src = DIR / name
         vertices, edges = parse(src)
-        svg = render_svg(vertices, edges)
+        svg = render_svg(vertices, edges, fit_font=True)
         out = src.with_suffix(".svg")
         out.write_text(svg, encoding="utf-8")
         print(f"generated: {out} ({len(vertices)} vertices, {len(edges)} edges)")

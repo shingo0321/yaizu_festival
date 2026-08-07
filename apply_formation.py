@@ -41,7 +41,8 @@ def apply(dio_path, mapping):
 
     def repl(m):
         num = int(m.group(2))
-        content = mapping.get(num, m.group(2))
+        name = mapping.get(num)
+        content = f"{num}.{name}" if name else str(num)
         content = escape(content, {'"': "&quot;"})
         return m.group(1) + content + m.group(3)
 
