@@ -192,13 +192,13 @@ const FESTIVAL_DATA = {
 
   // 焼津神社大祭要綱のスキャンPDF（work/フォルダの原本スキャンを結合・傾き補正した27ページ版）
   guidelines: {
-    title: "令和8年度 焼津神社大祭要綱",
+    title: "焼津神社大祭要綱",
     pdf: "taisai-yoko.pdf",
     // formation.md（隊列の配置）をapply_formation.pyでformation_1〜3.dioに反映し、
     // gen_formation_svg.py/gen_formation_pdf.shでSVG・PDFを生成したもの。
     // 見出し（title）はformation.mdの「# formation_N:タイトル」から転記。
     formations: {
-      title: "御神子神事",
+      title: "陣形",
       items: [
         { title: "御神子神事（1回目）", src: "formation_1.svg", pdf: "formation_1.pdf" },
         { title: "御神子神事（２回目）", src: "formation_2.svg", pdf: "formation_2.pdf" },

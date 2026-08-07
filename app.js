@@ -181,7 +181,7 @@ function renderGuidelines() {
   container.innerHTML = `
     <div class="venue-card">
       <h2>${data.title}</h2>
-      <a class="pdf-link" href="${data.pdf}" target="_blank" rel="noopener">要綱PDFを開く</a>
+      <a class="pdf-link" href="${data.pdf}" target="_blank" rel="noopener">${data.title}のPDFを開く</a>
     </div>
     ${
       formations
@@ -195,7 +195,7 @@ function renderGuidelines() {
         <div class="route-image">
           ${
             f.pdf
-              ? `<a class="pdf-link" href="${f.pdf}" target="_blank" rel="noopener">PDFを開く</a>`
+              ? `<a class="pdf-link" href="${f.pdf}" target="_blank" rel="noopener">${f.title}のPDFを開く</a>`
               : ""
           }
           <img class="zoomable" src="${f.src}" alt="${f.title}" loading="lazy" />
