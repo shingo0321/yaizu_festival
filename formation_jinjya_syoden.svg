@@ -114,8 +114,8 @@
 <text x="540.0" y="830.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
 <rect x="520.9" y="840.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
 <text x="540.0" y="850.5" font-size="12" text-anchor="middle" fill="#222222">ユウタ</text>
-<rect x="120.0" y="420.0" width="520.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="120.0" y="420.0" width="520.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0" stroke-dasharray="6,4"/>
 <text x="380.0" y="443.5" font-size="12" text-anchor="middle" fill="#222222">（距離を空ける）</text>
-<rect x="120.0" y="580.0" width="520.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<rect x="120.0" y="580.0" width="520.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0" stroke-dasharray="6,4"/>
 <text x="380.0" y="603.5" font-size="12" text-anchor="middle" fill="#222222">（ここから下はスペース次第）</text>
 </svg>

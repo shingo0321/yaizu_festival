@@ -210,6 +210,7 @@ def parse(src_path):
                 "fill": style.get("fillColor", "#ffffff"),
                 "stroke": style.get("strokeColor", "#999999"),
                 "stroke_width": float(style.get("strokeWidth", 1)),
+                "dashed": style.get("dashed") == "1",
                 "align": style.get("align", "center"),
                 "valign": style.get("verticalAlign", "middle"),
                 "lines": html_to_lines(cell.get("value")),
@@ -287,9 +288,10 @@ def render_svg(vertices, edges, fit_font=False):
             # mxgraph's default rectangle style renders white fill + black
             # border even when fillColor/strokeColor are omitted, so always
             # draw the box (edge labels have no box of their own, though).
+            dash = ' stroke-dasharray="6,4"' if v["dashed"] else ""
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{w}" height="{h}" '
-                f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="{v["stroke_width"]}"/>'
+                f'fill="{v["fill"]}" stroke="{v["stroke"]}" stroke-width="{v["stroke_width"]}"{dash}/>'
             )
 
         lines = v["lines"]
