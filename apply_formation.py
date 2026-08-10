@@ -5,9 +5,9 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 BASE = Path(__file__).parent
-MD_PATH = BASE / "formation.md"
-SOURCE_DIO = BASE / "formation.dio"
-TARGETS = {1: "formation_1.dio", 2: "formation_2.dio", 3: "formation_3.dio"}
+MD_PATH = BASE / "formation_shinji.md"
+SOURCE_DIO = BASE / "formation_shinji.dio"
+TARGETS = {1: "formation_shinji_1.dio", 2: "formation_shinji_2.dio", 3: "formation_shinji_3.dio"}
 
 NUM_CELL_RE = re.compile(
     r'(value="&lt;span style=&quot;font-size: 11px;&quot;&gt;)(\d+)(&lt;/span&gt;")'
@@ -33,10 +33,10 @@ def parse_formation_md(path):
 
 
 def apply(dio_path, mapping):
-    # Always start from formation.dio (the numbered source of truth), never
-    # from a previously-generated formation_N.dio, whose number boxes have
-    # already been overwritten with content and would no longer match
-    # NUM_CELL_RE on a second run.
+    # Always start from formation_shinji.dio (the numbered source of truth),
+    # never from a previously-generated formation_shinji_N.dio, whose number
+    # boxes have already been overwritten with content and would no longer
+    # match NUM_CELL_RE on a second run.
     text = SOURCE_DIO.read_text(encoding="utf-8")
 
     def repl(m):

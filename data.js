@@ -192,14 +192,18 @@ const FESTIVAL_DATA = {
   guidelines: {
     title: "焼津神社大祭要綱",
     pdf: "taisai-yoko.pdf",
-    // formation.md（隊列の配置）をapply_formation.pyでformation_1〜3.dioに反映し、
-    // gen_formation_svg.py/gen_formation_pdf.shでSVG・PDFを生成したもの。
-    // 見出し（title）はformation.mdの「# formation_N:タイトル」から転記。
+    // 御神子神事: formation_shinji.md（隊列の配置）をapply_formation.pyでformation_shinji_1〜3.dioに
+    // 反映し、gen_formation_svg.py/gen_formation_pdf.shでSVG・PDFを生成したもの。
+    // 見出し（title）はformation_shinji.mdの「# formation_N:タイトル」から転記。
+    // 昇殿・降殿: formation_jinjya_syoden.dio/formation_jinjya_koden.dio（実名入りの独立した
+    // 手描き陣形図、.mdマッピング不要）をgen_formation_svg.py/gen_formation_pdf.shでSVG・PDF化。
     formations: {
       title: "陣形",
       items: [
-        { title: "御神子神事（1回目）", src: "formation_1.svg", pdf: "formation_1.pdf" },
-        { title: "御神子神事（２回目）", src: "formation_2.svg", pdf: "formation_2.pdf" }
+        { title: "昇殿", src: "formation_jinjya_syoden.svg", pdf: "formation_jinjya_syoden.pdf" },
+        { title: "降殿", src: "formation_jinjya_koden.svg", pdf: "formation_jinjya_koden.pdf" },
+        { title: "御神子神事（1回目）", src: "formation_shinji_1.svg", pdf: "formation_shinji_1.pdf" },
+        { title: "御神子神事（２回目）", src: "formation_shinji_2.svg", pdf: "formation_shinji_2.pdf" }
       ]
     }
   }

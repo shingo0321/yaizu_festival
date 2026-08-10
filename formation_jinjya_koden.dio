@@ -1,0 +1,178 @@
+<mxfile host="65bd71144e">
+    <diagram id="NzZ7ycKAh72VE33CHtdQ" name="Page-1">
+        <mxGraphModel dx="855" dy="1031" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="階段" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="40" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="本人" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="400" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="クリス" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="360" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/span&gt;&lt;/div&gt;&lt;div&gt;①&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="440" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="カツヨシ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="400" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/span&gt;&lt;/div&gt;&lt;div&gt;②&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="440" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="ショウ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="400" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="コウタロウ" style="text;html=1;align=left;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="360" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="ハセガワ" style="text;html=1;align=right;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="360" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;div&gt;うちわ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="320" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;div&gt;うちわ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="320" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="カワムラ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="280" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="タロウ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="280" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="カツヨシ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="200" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/span&gt;&lt;/div&gt;&lt;div&gt;③&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="240" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="シンゴ" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="200" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/span&gt;&lt;/div&gt;&lt;div&gt;④&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="240" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;　提灯①　御神子⚪︎みなみ&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent;&quot;&gt;　提灯②　御神子⚫︎&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;湊美&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent;&quot;&gt;　提灯③　御神子⚫︎&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;湊美&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent;&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent;&quot;&gt;　提灯④　御神子　湊美&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="240" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="両親" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="180" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="兄" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="80" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="&lt;div&gt;うちわ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="田中父" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="80" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;div&gt;うちわ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="120" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="中野父" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="80" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="&lt;div&gt;うちわ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="120" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;div&gt;竹3&lt;/div&gt;&lt;div&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="560" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="キヨシさん" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="560" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="ターボー" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="久美子" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="コウスケ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="両親" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="&lt;div&gt;大丸&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="640" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="ダイム" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="640" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="&lt;div&gt;竹3&lt;/div&gt;&lt;div&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="720" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="ショウタ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="サトシ" style="text;html=1;align=left;verticalAlign=bottom;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="600" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="ケタ" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="680" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;div&gt;竹1&lt;/div&gt;&lt;div&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="560" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="ソウシ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="560" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="&lt;div&gt;竹1&lt;/div&gt;&lt;div&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="720" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="ユウタ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;手持&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;div style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="540" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="友達" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="540" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;手持&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;div style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="580" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="ソウヨウ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="580" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;手持&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;div style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(63, 63, 63);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="720" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="友達" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="720" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;竹1&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="540" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="ベンさん" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="540" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;竹1&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="580" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="カンナ父" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="580" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;竹1&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="700" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="テツオ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="700" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;竹1&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;提灯&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="740" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="ユウシ" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="740" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="（ここから下は松の後ろで待機）" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="480" width="480" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40.0 0.0 920.0 820.0" width="920" height="820" font-family="sans-serif">
+<rect x="-40.0" y="0.0" width="920.0" height="820.0" fill="#ffffff"/>
+<defs><marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6c8ebf"/></marker><marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#82b366"/></marker></defs>
+<rect x="80.0" y="40.0" width="200.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="180.0" y="63.5" font-size="12" text-anchor="middle" fill="#222222">階段</text>
+<rect x="160.0" y="400.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="180.0" y="423.5" font-size="12" text-anchor="middle" fill="#222222">本人</text>
+<rect x="160.9" y="386.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="180.0" y="396.5" font-size="12" text-anchor="middle" fill="#222222">クリス</text>
+<rect x="240.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="260.0" y="456.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<text x="260.0" y="470.5" font-size="12" text-anchor="middle" fill="#222222">①</text>
+<rect x="235.2" y="426.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="436.5" font-size="12" text-anchor="middle" fill="#222222">カツヨシ</text>
+<rect x="80.0" y="440.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="100.0" y="456.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<text x="100.0" y="470.5" font-size="12" text-anchor="middle" fill="#222222">②</text>
+<rect x="80.9" y="426.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="100.0" y="436.5" font-size="12" text-anchor="middle" fill="#222222">ショウ</text>
+<rect x="224.0" y="386.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
+<text x="224.0" y="396.5" font-size="12" text-anchor="start" fill="#222222">コウタロウ</text>
+<rect x="86.4" y="386.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="136.0" y="396.5" font-size="12" text-anchor="end" fill="#222222">ハセガワ</text>
+<rect x="240.0" y="320.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="260.0" y="343.3055555555556" font-size="11.333333333333334" text-anchor="middle" fill="#222222">うちわ</text>
+<rect x="80.0" y="320.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="100.0" y="343.3055555555556" font-size="11.333333333333334" text-anchor="middle" fill="#222222">うちわ</text>
+<rect x="235.2" y="306.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="316.5" font-size="12" text-anchor="middle" fill="#222222">カワムラ</text>
+<rect x="80.9" y="306.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="100.0" y="316.5" font-size="12" text-anchor="middle" fill="#222222">タロウ</text>
+<rect x="235.2" y="226.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="236.5" font-size="12" text-anchor="middle" fill="#222222">カツヨシ</text>
+<rect x="240.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="260.0" y="256.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<text x="260.0" y="270.5" font-size="12" text-anchor="middle" fill="#222222">③</text>
+<rect x="80.9" y="226.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="100.0" y="236.5" font-size="12" text-anchor="middle" fill="#222222">シンゴ</text>
+<rect x="80.0" y="240.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="100.0" y="256.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<text x="100.0" y="270.5" font-size="12" text-anchor="middle" fill="#222222">④</text>
+<rect x="360.0" y="240.0" width="160.0" height="80.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="364.0" y="250.0" font-size="11.428571428571429" text-anchor="start" fill="#222222">提灯①　御神子⚪︎みなみ</text>
+<text x="364.0" y="263.3333333333333" font-size="11.428571428571429" text-anchor="start" fill="#222222">提灯②　御神子⚫︎湊美</text>
+<text x="364.0" y="276.6666666666667" font-size="11.428571428571429" text-anchor="start" fill="#222222">提灯③　御神子⚫︎湊美</text>
+<text x="364.0" y="303.3333333333333" font-size="11.428571428571429" text-anchor="start" fill="#222222">提灯④　御神子　湊美</text>
+<rect x="160.0" y="180.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="180.0" y="203.5" font-size="12" text-anchor="middle" fill="#222222">両親</text>
+<rect x="92.3" y="106.3" width="15.399999999999999" height="13.200000000000001" fill="#ffffff"/>
+<text x="100.0" y="116.5" font-size="12" text-anchor="middle" fill="#222222">兄</text>
+<rect x="80.0" y="120.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="100.0" y="143.30555555555554" font-size="11.333333333333334" text-anchor="middle" fill="#222222">うちわ</text>
+<rect x="160.9" y="106.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="180.0" y="116.5" font-size="12" text-anchor="middle" fill="#222222">田中父</text>
+<rect x="160.0" y="120.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="180.0" y="143.30555555555554" font-size="11.333333333333334" text-anchor="middle" fill="#222222">うちわ</text>
+<rect x="240.9" y="106.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="260.0" y="116.5" font-size="12" text-anchor="middle" fill="#222222">中野父</text>
+<rect x="240.0" y="120.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="260.0" y="143.30555555555554" font-size="11.333333333333334" text-anchor="middle" fill="#222222">うちわ</text>
+<rect x="360.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="380.0" y="576.5" font-size="12" text-anchor="middle" fill="#222222">竹3</text>
+<text x="380.0" y="590.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="404.0" y="573.3" width="61.0" height="13.200000000000001" fill="#ffffff"/>
+<text x="404.0" y="583.5" font-size="12" text-anchor="start" fill="#222222">キヨシさん</text>
+<rect x="95.2" y="733.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="120.0" y="743.5" font-size="12" text-anchor="middle" fill="#222222">ターボー</text>
+<rect x="180.9" y="733.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="200.0" y="743.5" font-size="12" text-anchor="middle" fill="#222222">久美子</text>
+<rect x="255.2" y="733.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="280.0" y="743.5" font-size="12" text-anchor="middle" fill="#222222">コウスケ</text>
+<rect x="26.6" y="733.3" width="26.799999999999997" height="13.200000000000001" fill="#ffffff"/>
+<text x="40.0" y="743.5" font-size="12" text-anchor="middle" fill="#222222">両親</text>
+<rect x="360.0" y="640.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="380.0" y="663.5" font-size="12" text-anchor="middle" fill="#222222">大丸</text>
+<rect x="404.0" y="653.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="404.0" y="663.5" font-size="12" text-anchor="start" fill="#222222">ダイム</text>
+<rect x="360.0" y="720.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="380.0" y="736.5" font-size="12" text-anchor="middle" fill="#222222">竹3</text>
+<text x="380.0" y="750.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="404.0" y="733.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="404.0" y="743.5" font-size="12" text-anchor="start" fill="#222222">ショウタ</text>
+<rect x="404.0" y="626.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="404.0" y="636.5" font-size="12" text-anchor="start" fill="#222222">サトシ</text>
+<rect x="404.0" y="680.3" width="26.799999999999997" height="13.200000000000001" fill="#ffffff"/>
+<text x="404.0" y="690.5" font-size="12" text-anchor="start" fill="#222222">ケタ</text>
+<rect x="480.0" y="560.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="500.0" y="576.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="500.0" y="590.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="524.0" y="573.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="524.0" y="583.5" font-size="12" text-anchor="start" fill="#222222">ソウシ</text>
+<rect x="480.0" y="720.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="500.0" y="736.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="500.0" y="750.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="524.0" y="733.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="524.0" y="743.5" font-size="12" text-anchor="start" fill="#222222">ユウタ</text>
+<rect x="600.0" y="540.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="620.0" y="556.5" font-size="12" text-anchor="middle" fill="#222222">手持</text>
+<text x="620.0" y="570.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="644.0" y="553.3" width="26.799999999999997" height="13.200000000000001" fill="#ffffff"/>
+<text x="644.0" y="563.5" font-size="12" text-anchor="start" fill="#222222">友達</text>
+<rect x="600.0" y="580.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="620.0" y="596.5" font-size="12" text-anchor="middle" fill="#222222">手持</text>
+<text x="620.0" y="610.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="644.0" y="593.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="644.0" y="603.5" font-size="12" text-anchor="start" fill="#222222">ソウヨウ</text>
+<rect x="600.0" y="720.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="620.0" y="736.5" font-size="12" text-anchor="middle" fill="#222222">手持</text>
+<text x="620.0" y="750.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="644.0" y="733.3" width="26.799999999999997" height="13.200000000000001" fill="#ffffff"/>
+<text x="644.0" y="743.5" font-size="12" text-anchor="start" fill="#222222">友達</text>
+<rect x="720.0" y="540.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="740.0" y="556.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="740.0" y="570.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="764.0" y="553.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="764.0" y="563.5" font-size="12" text-anchor="start" fill="#222222">ベンさん</text>
+<rect x="720.0" y="580.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="740.0" y="596.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="740.0" y="610.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="764.0" y="593.3" width="49.599999999999994" height="13.200000000000001" fill="#ffffff"/>
+<text x="764.0" y="603.5" font-size="12" text-anchor="start" fill="#222222">カンナ父</text>
+<rect x="720.0" y="700.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="740.0" y="716.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="740.0" y="730.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="764.0" y="713.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="764.0" y="723.5" font-size="12" text-anchor="start" fill="#222222">テツオ</text>
+<rect x="720.0" y="740.0" width="40.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="740.0" y="756.5" font-size="12" text-anchor="middle" fill="#222222">竹1</text>
+<text x="740.0" y="770.5" font-size="12" text-anchor="middle" fill="#222222">提灯</text>
+<rect x="764.0" y="753.3" width="38.199999999999996" height="13.200000000000001" fill="#ffffff"/>
+<text x="764.0" y="763.5" font-size="12" text-anchor="start" fill="#222222">ユウシ</text>
+<rect x="360.0" y="480.0" width="470.0" height="40.0" fill="#ffffff" stroke="#999999" stroke-width="1.0"/>
+<text x="595.0" y="503.5" font-size="12" text-anchor="middle" fill="#222222">（ここから下は松の後ろで待機）</text>
+</svg>
