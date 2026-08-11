@@ -138,6 +138,11 @@ function renderMapPins() {
         ? `
     <div class="venue-card">
       <h2 hidden>${data.restAreas.title}</h2>
+      ${
+        data.restAreas.pdf
+          ? `<a class="pdf-link" href="${data.restAreas.pdf}" target="_blank" rel="noopener">休憩所一覧のPDFを開く</a>`
+          : ""
+      }
       ${data.restAreas.groups
         .map(
           (g) => `

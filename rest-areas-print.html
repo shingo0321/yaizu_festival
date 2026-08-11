@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>焼津祭 休憩所一覧 印刷用</title>
+<style>
+  @page { size: 210mm 297mm; margin: 10mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Hiragino Sans", "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 22px;
+    color: #0f4c81;
+    border-bottom: 2px solid #0f4c81;
+    padding-bottom: 6px;
+    margin: 0 0 16px;
+  }
+  .area-block {
+    margin-bottom: 12px;
+  }
+  .area-block h2 {
+    font-size: 16px;
+    background: #e8eef5;
+    color: #0f4c81;
+    padding: 3px 8px;
+    margin: 0 0 6px;
+  }
+  ul.points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.points li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .point-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .point-label {
+    display: block;
+    font-weight: bold;
+  }
+  .point-url {
+    display: block;
+    font-size: 12px;
+    color: #0f4c81;
+    word-break: break-all;
+  }
+  .point-photo img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ccc;
+    flex: none;
+  }
+</style>
+</head>
+<body>
+  <h1>焼津祭 休憩所一覧</h1>
+  <div id="areas"></div>
+
+  <script src="data.js"></script>
+  <script>
+    function pointHtml(p) {
+      return `
+        <li>
+          <div class="point-text">
+            <span class="point-label">${p.label}</span>
+            ${p.mapUrl ? `<a class="point-url" href="${p.mapUrl}">${p.mapUrl}</a>` : ""}
+          </div>
+          ${
+            p.image
+              ? `<div class="point-photo"><img src="${p.image}" alt="${p.label}" /></div>`
+              : ""
+          }
+        </li>
+      `;
+    }
+
+    function areaBlockHtml(group) {
+      return `
+        <div class="area-block">
+          <h2>${group.area}</h2>
+          <ul class="points">${group.points.map(pointHtml).join("")}</ul>
+        </div>
+      `;
+    }
+
+    document.getElementById("areas").innerHTML = FESTIVAL_DATA.mapPins.restAreas.groups
+      .map(areaBlockHtml)
+      .join("");
+  </script>
+</body>
+</html>
