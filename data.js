@@ -183,10 +183,10 @@ const FESTIVAL_DATA = {
     },
     // 焼津神社公式サイトに掲載の神輿渡御順路図（地図の下に参考画像として表示）
     officialRouteImage: {
-      src: "https://yaizujinja.or.jp/wp-content/uploads/2025/08/571efb92fa406a257b34aa688ce0e0c5.jpg",
-      alt: "焼津神社大祭「荒祭」神輿渡御順路略図（令和7年）",
-      sourceUrl: "https://yaizujinja.or.jp/news/20250801/1495/",
-      caption: "出典: 焼津神社公式サイト（令和7年 神輿渡御順路略図）"
+      src: "https://yaizujinja.or.jp/wp-content/uploads/2026/08/815ce415c821bada330f32cb1bb81c04-2-723x1024.jpg",
+      alt: "焼津神社大祭「荒祭」神輿渡御順路略図（令和8年）",
+      sourceUrl: "https://yaizujinja.or.jp/news/20260810/1593/",
+      caption: "出典: 焼津神社公式サイト（令和8年 神輿渡御順路略図）"
     }
   },
 
