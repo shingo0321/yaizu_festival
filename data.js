@@ -19,7 +19,7 @@ const FESTIVAL_DATA = {
     {
       date: "8月12日(水)",
       items: [
-        { time: "12:00", title: "丸久テント設営、ギャングスター下準備", place: "" },
+        { time: "13:00", title: "丸久テント設営、ギャングスター下準備", place: "" },
         { time: "16:00", title: "裏方集合", place: "中野家" },
         { time: "16:30", title: "手伝い手集合", place: "中野家" },
         { time: "17:00", title: "挨拶、乾杯", place: "" },
