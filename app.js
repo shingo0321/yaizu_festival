@@ -484,8 +484,8 @@ function setupLightbox() {
 renderHero();
 renderSchedule();
 renderMapPins();
-renderRoles();
 renderGuidelines();
+renderRoles();
 setupTabs();
 setupSwipe();
 setupLightbox();
