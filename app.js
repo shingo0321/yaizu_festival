@@ -158,6 +158,40 @@ function renderMapPins() {
   `;
 }
 
+function renderTraffic() {
+  const container = document.getElementById("traffic-panel");
+  const data = FESTIVAL_DATA.traffic;
+  container.innerHTML = `
+    <div class="venue-card">
+      <h2>${data.title}</h2>
+      ${(data.sections || [])
+        .map(
+          (s) => `
+        <h3>${s.heading}</h3>
+        ${
+          s.notes
+            ? `<ul class="access-list access-list-dot">${s.notes
+                .map((n) => `<li>${n}</li>`)
+                .join("")}</ul>`
+            : ""
+        }
+        ${(s.signals || [])
+          .map(
+            (sig) => `
+          <p><strong>${sig.label}</strong></p>
+          <ul class="access-list access-list-dot">
+            ${sig.items.map((i) => `<li>${i}</li>`).join("")}
+          </ul>
+        `
+          )
+          .join("")}
+      `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function renderRoles() {
   const container = document.getElementById("roles-panel");
   container.innerHTML = `
@@ -484,6 +518,7 @@ function setupLightbox() {
 renderHero();
 renderSchedule();
 renderMapPins();
+renderTraffic();
 renderGuidelines();
 renderRoles();
 setupTabs();
